@@ -1,0 +1,112 @@
+.project {
+  width: 85%;
+  height: 100%;
+  // &--header {
+  //   margin-left: 20%;
+  // }
+  &--nav {
+    transition: translateY(-10%) 0.4s ease-in;
+    &.fixed {
+      position: fixed;
+      top: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
+      transition: translateY(-10%) 0.4s ease-in;
+    }
+    & > a {
+      &.active {
+        background-color: green;
+      }
+      width: 170px;
+      min-width: 150px;
+      height: auto;
+      font-size: 14px;
+      background-color: orange;
+      &:hover {
+        background-color: green;
+      }
+    }
+  }
+  &--list {
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+  &--item {
+    margin: 75px 0;
+    .row {
+      height: 360px;
+      overflow-x: hidden;
+      & > * {
+        padding: 0;
+      }
+    }
+    &__image {
+      height: 360px;
+      .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-position: center;
+      }
+    }
+    &__desc {
+      display: -webkit-box;
+      -webkit-line-clamp: 8;
+      -webkit-box-orient: vertical;
+      padding: 0;
+      overflow-y: hidden;
+    }
+  }
+}
+.btn {
+  background-color: orange;
+  position: relative;
+  color: #fff;
+  transition: 0.4s all ease-in-out 0s;
+  border: none;
+  z-index: 1;
+  &:hover {
+    color: #fff;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    z-index: -1;
+    border-radius: 3px;
+    transition: 0.4s all ease-in-out 0s;
+  }
+  &--hover::after {
+    left: unset;
+    right: 0;
+    width: 0;
+  }
+  &--hover:hover::after {
+    right: unset;
+    left: 0;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .project {
+    &--item {
+      &__title {
+        font-size: 24px;
+        margin-top: 15px;
+      }
+      &__desc {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        padding: 0;
+        overflow-y: hidden;
+      }
+    }
+  }
+}

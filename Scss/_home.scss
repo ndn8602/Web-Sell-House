@@ -1,0 +1,174 @@
+/** Section 1 - intro
+--------------------------------------**/
+#intro {
+  height: 100%;
+}
+.carousel {
+  &-indicators {
+    margin-bottom: 0;
+  }
+  &-inner {
+    position: relative;
+  }
+  &-item {
+    position: relative;
+    img {
+      width: 100%;
+      object-fit: cover;
+      min-height: 100vh;
+      max-height: 100vh;
+    }
+    &-desc {
+      z-index: 2;
+      width: 600px;
+      height: 200px;
+      position: absolute;
+      right: 20px;
+      bottom: 100px;
+      opacity: 0.9;
+      background-color: #fff;
+      font-family: "Times New Roman", Times, serif;
+      padding: 10px 15px;
+      &-more {
+        position: absolute;
+        right: 10px;
+        color: #666666;
+        padding: 3px 10px;
+        border-radius: 10px;
+        transition: 0.3s ease;
+        @include flex(center);
+        i {
+          margin-left: 10px;
+          font-size: 30px;
+        }
+        &:hover {
+          text-decoration: none;
+          color: #fff;
+          background-color: rgb(51, 51, 51);
+          transition: 0.3s ease;
+        }
+      }
+      p {
+        width: 100%;
+        color: #000;
+        text-align: start;
+        padding: 10px;
+        font-size: 16px;
+        opacity: 1;
+        margin: 0;
+        padding: 0;
+      }
+      animation: slideInRight 2s;
+    }
+  }
+  &-control {
+    &-prev {
+      width: 5%;
+    }
+    &-next {
+      width: 5%;
+    }
+  }
+  &-indicators {
+    li {
+      width: 200px;
+      height: 5px;
+    }
+    li.active {
+      background-color: orange;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .carousel {
+    &-item {
+      &-desc {
+        width: 400px;
+        height: 120px;
+        padding: 10px;
+        p {
+          line-height: 1.5;
+          display: -webkit-box;
+          transition: 0.3s ease;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          padding: 0;
+          overflow-y: hidden;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    .carousel {
+      &-item {
+        max-height: 800px;
+        min-height: 800px;
+        img {
+          max-height: 600px;
+          min-height: 600px;
+          width: 100%;
+        }
+        &-desc {
+          bottom: 60px;
+          right: 0;
+          height: 120px;
+          width: 100%;
+          opacity: 1;
+          p {
+            font-size: 24px;
+            line-height: 1.5;
+            display: -webkit-box;
+            transition: 0.3s ease;
+            -webkit-line-clamp: 10;
+            -webkit-box-orient: vertical;
+            padding: 0;
+            overflow-y: hidden;
+          }
+        }
+      }
+      &-indicators {
+        bottom: 35%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .header {
+      position: fixed;
+      z-index: 10;
+    }
+    .carousel {
+      &-item {
+        max-height: 600px;
+        min-height: 600px;
+        img {
+          max-height: 400px;
+          min-height: 400px;
+          width: 100%;
+        }
+        &-desc {
+          bottom: 100px;
+          right: 0;
+          height: 120px;
+          width: 100%;
+          opacity: 1;
+          p {
+            font-size: 14px;
+            line-height: 1.5;
+            transition: 0.3s ease;
+            display: -webkit-box;
+            -webkit-line-clamp: 10;
+            -webkit-box-orient: vertical;
+            overflow-y: hidden;
+            padding: 0;
+          }
+        }
+      }
+      &-indicators {
+        bottom: 40%;
+      }
+    }
+  }
+}

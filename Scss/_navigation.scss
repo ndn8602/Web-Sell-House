@@ -1,0 +1,235 @@
+/** navigation
+--------------------------------------**/
+@import "variables";
+@import "mixin";
+
+.header {
+  height: fit-content;
+  font-size: 12px;
+  font-weight: 700;
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+  border-bottom: 2px solid #fff;
+  background-color: transparent;
+  box-shadow: 0 4px 2px -1px rgba(128, 128, 128, 0.1);
+}
+.navbar {
+  &-brand {
+    margin-left: 70px;
+    img {
+      width: 20%;
+    }
+  }
+  &-nav {
+    &-tool {
+      @include flex(center, center);
+    }
+  }
+  .nav {
+    &-item {
+      @include flex(center, center);
+      height: 100px;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2.5px;
+        background: orange;
+        left: 0;
+        bottom: 0;
+      }
+      &--hover::after {
+        transform: scale(0, 1);
+        transition: 0.3s ease;
+      }
+      &--hover:hover:after {
+        transform: scale(1, 1);
+      }
+    }
+    &-link {
+      color: #fff;
+      @include flex(center, center);
+    }
+    &-rounded {
+      font-size: 18px;
+      height: 40px;
+      width: 40px;
+      border: 2px solid currentColor;
+      border-radius: 30px;
+      margin-right: 5px !important;
+      &:first-child {
+        margin-left: 30px;
+      }
+    }
+    &-rounded:hover {
+      color: #fff;
+      background-color: #000;
+    }
+  }
+  button {
+    outline: none;
+    border: none;
+    background: none;
+    i {
+      font-size: 30px;
+      color: #7c7c7c;
+    }
+  }
+}
+//siderbar
+.rounded {
+  @include flex(center, center);
+  font-size: 18px;
+  height: 32px;
+  width: 32px;
+  border: 1px solid currentColor;
+  border-radius: 45px !important;
+  transition: 0.3s ease-in;
+  &:hover {
+    border: 1px #fff solid;
+    color: #fff;
+    background: #000;
+  }
+}
+
+.dropdown {
+  &:hover {
+    .dropdown-menu {
+      text-align: start;
+      height: fit-content;
+      width: 170px;
+      display: block;
+      padding: 0;
+      margin-top: 0px;
+      border-radius: 10px;
+    }
+  }
+  &-item {
+    font-size: 14px;
+    padding: 5px;
+    border-bottom: 1px solid #dad9d9;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 997px) {
+  .navbar {
+    @include flex();
+    &-brand {
+      margin-left: 20px;
+      img {
+        width: 15%;
+      }
+    }
+  }
+}
+
+/** sidebar
+--------------------------------------**/
+.menu {
+  height: 100%;
+  width: 0;
+  background-color: #fff;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  overflow-x: hidden;
+  transition: 0.5s;
+  a {
+    color: #000;
+  }
+  &--header {
+    height: 80px;
+    @include flex(center, space-around);
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center;
+    width: 100%;
+    padding: 18px;
+  }
+  &--body {
+    font-weight: bold;
+    font-size: 12px;
+    .nav-item {
+      @include flex(center, space-between);
+      cursor: pointer;
+    }
+    .nav {
+      &-item {
+        height: 40px;
+        position: relative;
+        padding: 11px 20px;
+        border-bottom: 1px solid #dad9d9;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1.5px;
+          background: orange;
+          left: 0;
+          bottom: 0;
+        }
+        &--hover::after {
+          transform: scale(0, 1);
+          transition: 0.3s ease;
+        }
+        &--hover:hover:after {
+          transform: scale(1, 1);
+        }
+      }
+      &-link {
+        font-size: 12px;
+        display: block;
+        font-weight: 700 !important;
+      }
+    }
+    .sub {
+      &-link {
+        padding: 8px 10px 4px;
+        span {
+          color: #0870d1;
+          font-size: 10px;
+          padding-right: 5px;
+        }
+      }
+      &-item {
+        height: 30px;
+        font-size: 15px;
+        letter-spacing: 0.5px;
+        text-decoration: none;
+        border-bottom: 1px solid #dad9d9;
+        box-shadow: 0 4px 2px -1px rgba(128, 128, 128, 0.1);
+        padding: 2px 10px;
+        cursor: pointer;
+      }
+    }
+  }
+  &--bottom {
+    @include flex(center, space-around, column);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    .btn {
+      box-shadow: 3px 3px 6px 0 rgb(0 0 0 / 16%);
+      min-width: 150px;
+      min-height: 60px;
+      border-radius: 50px;
+      @include flex(center, center);
+      font-size: 15px;
+      font-weight: 700;
+      margin: 8px;
+      &-register {
+        background-color: #fff !important;
+        color: #000;
+      }
+      &-start {
+        background-color: #007bff !important;
+        color: #fff;
+      }
+    }
+  }
+}

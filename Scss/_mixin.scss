@@ -1,0 +1,23 @@
+@import "variables";
+@mixin flex($align: center, $justify: space-between, $dir: row, $wrap: nowrap) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+}
+body {
+  font-family: $primary-font !important;
+}
+
+.fp-tableCell {
+  h1,
+  p {
+    color: #333;
+  }
+}
+.container {
+  max-width: 1720px !important;
+  padding-top: 110px;
+  height: 100%;
+}

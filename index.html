@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clone Website</title>
+    <!--Animation-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!--Fullpage-->
+    <link rel="stylesheet" type="text/css" href="fullpage.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/fullpage.js@3.1.2/dist/fullpage.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://alvarotrigo.com/fullPage/examples/examples.css"
+    />
+    <!--BootTrap-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+
+    <!--Owl carousel-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+    />
+    <!--Boxicon-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./Scss/style.css" />
+  </head>
+  <body>
+    <header class="header container-fluid">
+      <nav class="navbar navbar-expand-xl p-0">
+        <a class="navbar-brand" href="#">
+          <img src="Images/logo.png" alt="" />
+        </a>
+        <button class="navbar-toggler" type="button">
+          <i class="bx bx-menu" onclick="openMenu()"></i>
+        </button>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item nav-item--hover dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                GIỚI THIỆU
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">HĐQT & Ban Điều Hành</a>
+                <a class="dropdown-item" href="#">Lĩnh Vực Hoạt Động</a>
+              </div>
+            </li>
+            <li class="nav-item nav-item--hover">
+              <a class="nav-link" href="#">KHU NGHỈ DƯỠNG</a>
+            </li>
+            <li class="nav-item nav-item--hover dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                KỲ NGHỈ TRAO ĐỔI
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Bộ Sưu Tập</a>
+                <a class="dropdown-item" href="#">Các Điểm Khác</a>
+              </div>
+            </li>
+            <li class="nav-item nav-item--hover">
+              <a class="nav-link" href="#">TRẢI NGHIỆM CỦA BẠN</a>
+            </li>
+            <li class="navbar-nav-tool">
+              <a class="nav-link nav-rounded" href="#">VN</a>
+              <a class="nav-link nav-rounded" href="#">X</a>
+              <a class="nav-link nav-rounded" href="#"
+                ><i class="bx bx-search"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="menu" id="myMenu">
+      <div class="menu--header">
+        <a class="nav-link rounded" href="#">VN</a>
+        <a class="nav-link rounded" href="#">X</a>
+        <a class="nav-link rounded" href="#"><i class="bx bx-search"></i></a>
+        <a
+          onclick="closeMenu()"
+          class="nav-link rounded"
+          style="cursor: pointer"
+          ><i class="bx bx-x"></i
+        ></a>
+      </div>
+      <div class="menu--body">
+        <ul class="navbar-nav ml-auto">
+          <li
+            class="nav-item dropdown nav-item--hover"
+            data-toggle="collapse"
+            href="#GioiThieu"
+          >
+            <a class="nav-link" href="#GioiThieu" role="button">GIỚI THIỆU</a>
+
+            <span><i class="bx bxs-down-arrow"></i></span>
+          </li>
+          <div class="collapse multi-collapse sub-link" id="GioiThieu">
+            <a href="" class="d-block sub-item lead">
+              <span><i class="bx bxs-square"></i></span>HĐQT & Ban Điều Hành
+            </a>
+            <a href="" class="d-block sub-item lead">
+              <span><i class="bx bxs-square"></i></span>Lĩnh Vực Hoạt Động
+            </a>
+          </div>
+          <li class="nav-item nav-item--hover">
+            <a class="nav-link" href="#">KHU NGHỈ DƯỠNG</a>
+          </li>
+          <li
+            class="nav-item nav-item--hover dropdown"
+            data-toggle="collapse"
+            href="#TraoDoi"
+          >
+            <a
+              class="nav-link"
+              data-toggle="collapse"
+              href="#TraoDoi"
+              role="button"
+              >KỲ NGHỈ TRAO ĐỔI</a
+            >
+            <span><i class="bx bxs-down-arrow"></i></span>
+          </li>
+          <div class="collapse multi-collapse sub-link" id="TraoDoi">
+            <a class="d-block sub-item lead">
+              <span><i class="bx bxs-square"></i></span>Bộ Sưu Tập</a
+            >
+            <a class="d-block sub-item lead">
+              <span><i class="bx bxs-square"></i></span>Các Điểm Khác
+            </a>
+          </div>
+          <li class="nav-item nav-item--hover">
+            <a class="nav-link" href="#">TRẢI NGHIỆM CỦA BẠN</a>
+          </li>
+        </ul>
+      </div>
+      <div class="menu--bottom">
+        <a href="" class="btn btn-register">Đăng Ký</a>
+        <a href="" class="btn btn-start">Bắt Đầu</a>
+      </div>
+    </div>
+
+    <!--start-->
+    <div id="myContainer">
+      <div class="section introPage">
+        <section id="intro" class="intro">
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slide"
+            data-ride="carousel"
+            data-touch="true"
+          >
+            <ol class="carousel-indicators">
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="1"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="2"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="3"
+              ></li>
+              <li
+                data-target="#carouselExampleIndicators"
+                data-slide-to="4"
+              ></li>
+            </ol>
+            <div class="carousel-item active">
+              <div class="">
+                <img src="./Images/img1.jpg" class="w-100" alt="..." />
+              </div>
+              <div class="carousel-item-desc">
+                <p>
+                  Như chính tên gọi của mình, Tập đoàn Hoàng Gia Land luôn luôn
+                  coi vẻ đẹp của thiên nhiên, văn hoá, con người tại dải đất ven
+                  biển Việt Nam là những viên Pha lê xinh đẹp.Như chính tên gọi
+                  của mình, Tập đoàn Hoàng Gia Land luôn luôn coi vẻ đẹp của
+                  thiên nhiên, văn hoá, con người tại dải đất ven biển Việt Nam
+                  là những viên Pha lê xinh đẹp.
+                </p>
+                <a href="#!" class="carousel-item-desc-more">
+                  Xem Thêm <i class="bx bx-right-arrow-circle"></i>
+                </a>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div><img src="./Images/img2.jpg" class="w-100" alt="..." /></div>
+              <div class="carousel-item-desc">
+                <p>
+                  Như chính tên gọi của mình, Tập đoàn Hoàng Gia Land luôn luôn
+                  coi vẻ đẹp của thiên nhiên, văn hoá, con người tại dải đất ven
+                  biển Việt Nam là những viên Pha lê xinh đẹp.Như chính tên gọi
+                  của mình, Tập đoàn Hoàng Gia Land luôn luôn coi vẻ đẹp của
+                  thiên nhiên, văn hoá, con người tại dải đất ven biển Việt Nam
+                  là những viên Pha lê xinh đẹp.
+                </p>
+
+                <a href="#!" class="carousel-item-desc-more">
+                  Xem Thêm <i class="bx bx-right-arrow-circle"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div><img src="./Images/img3.jpg" class="w-100" alt="..." /></div>
+              <div class="carousel-item-desc">
+                <p>
+                  Như chính tên gọi của mình, Tập đoàn Hoàng Gia Land luôn luôn
+                  coi vẻ đẹp của thiên nhiên, văn hoá, con người tại dải đất ven
+                  biển Việt Nam là những viên Pha lê xinh đẹp.Như chính tên gọi
+                  của mình, Tập đoàn Hoàng Gia Land luôn luôn coi vẻ đẹp của
+                  thiên nhiên, văn hoá, con người tại dải đất ven biển Việt Nam
+                  là những viên Pha lê xinh đẹp.
+                </p>
+
+                <a href="#!" class="carousel-item-desc-more">
+                  Xem Thêm <i class="bx bx-right-arrow-circle"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div><img src="./Images/img3.jpg" class="w-100" alt="..." /></div>
+              <div class="carousel-item-desc">
+                <p>
+                  Như chính tên gọi của mình, Tập đoàn Hoàng Gia Land luôn luôn
+                  coi vẻ đẹp của thiên nhiên, văn hoá, con người tại dải đất ven
+                  biển Việt Nam là những viên Pha lê xinh đẹp.Như chính tên gọi
+                  của mình, Tập đoàn Hoàng Gia Land luôn luôn coi vẻ đẹp của
+                  thiên nhiên, văn hoá, con người tại dải đất ven biển Việt Nam
+                  là những viên Pha lê xinh đẹp.
+                </p>
+
+                <a href="#!" class="carousel-item-desc-more">
+                  Xem Thêm <i class="bx bx-right-arrow-circle"></i>
+                </a>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div><img src="./Images/img3.jpg" class="w-100" alt="..." /></div>
+              <div class="carousel-item-desc">
+                <p>
+                  Như chính tên gọi của mình, Tập đoàn Hoàng Gia Land luôn luôn
+                  coi vẻ đẹp của thiên nhiên, văn hoá, con người tại dải đất ven
+                  biển Việt Nam là những viên Pha lê xinh đẹp.Như chính tên gọi
+                  của mình, Tập đoàn Hoàng Gia Land luôn luôn coi vẻ đẹp của
+                  thiên nhiên, văn hoá, con người tại dải đất ven biển Việt Nam
+                  là những viên Pha lê xinh đẹp.
+                </p>
+
+                <a href="#!" class="carousel-item-desc-more">
+                  Xem Thêm <i class="bx bx-right-arrow-circle"></i>
+                </a>
+              </div>
+            </div>
+
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-target="#carouselExampleIndicators"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-target="#carouselExampleIndicators"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </button>
+          </div>
+        </section>
+      </div>
+      <!--Service-->
+
+      <!--ABOUT US-->
+      <div class="section">
+        <div class="container service-box">
+          <h3
+            class="text-center service-box-title"
+            data-aos="fade-up"
+            data-aos-duration="700"
+            data-aos-delay="50"
+            data-aos-anchor-placement="top-bottom"
+          >
+            Nói về chúng tôi
+          </h3>
+          <p
+            class="text-left lead service-box-desc"
+            data-aos="fade-up"
+            data-aos-delay="50"
+            data-aos-duration="700"
+          >
+            Hoàng Gia Land và các đối tác kiến tạo với hàng trăm tiện ích quốc
+            tế và những trải nghiệm chưa từng có: nhà tuyết top 3 thế giới, công
+            viên chuyên đề, Interactive Sea - Khu giải trí tương tác biển công
+            nghệ cao đầu tiên tại Việt Nam,…. mang đến cho du khách những trải
+            nghiệm đẹp.
+          </p>
+          <div class="service owl-carousel owl-theme">
+            <div
+              class="item"
+              data-aos="fade-right"
+              data-aos-offset="200"
+              data-aos-delay="100"
+              data-aos-duration="700"
+              data-aos-easing="ease-in-out"
+            >
+              <img src="Images/trademark-1.jpg" alt="" class="item__img" />
+              <div class="item__overlay item__overlay-color">
+                <a class="item__overlay-title">UNI TOWN</a>
+                <div class="item__overlay-desc">
+                  Là dự án thành phần của TP Mới Bình Dương, dự án UniTown đươc
+                  xây dựng trên diện tích 54.503m2, được thiết kế xây dựng thành
+                  285 nhà phố đáp ứng cho mục đích thương mại và dịch vụ. Giai
+                  đoạn 2 bao gồm 54 căn trong tổng số 426 căn nhà phố liền kề
+                  kiểu biệt thự hiện hữu.Giai đoạn 2 bao gồm 54 căn trong tổng
+                  số 426 căn nhà phố liền kề kiểu biệt thự hiện hữu.
+                </div>
+                <a class="item__overlay-btn"
+                  >Khám Phá <i class="bx bx-chevrons-right"></i
+                ></a>
+              </div>
+            </div>
+            <div
+              class="item"
+              data-aos="fade-up"
+              data-aos-offset="200"
+              data-aos-delay="100"
+              data-aos-duration="700"
+              data-aos-easing="ease-in-out"
+            >
+              <img src="Images/trademark-2.jpg" alt="" class="item__img" />
+              <div class="item__overlay item__overlay-color">
+                <a class="item__overlay-title">THỊNH GIA TOWER</a>
+                <div class="item__overlay-desc">
+                  Dự án Thịnh Gia Tower được hình thành trong khu đô thị Thịnh
+                  Gia với tòa nhà chung cư cao cấp 22 tầng. Trong đó, 19 tầng
+                  căn hộ với 912 căn, 3 tầng trung tâm thương mại với 34 căn
+                  shophouse .Giai đoạn 2 bao gồm 54 căn trong tổng số 426 căn
+                  nhà phố liền kề kiểu biệt thự hiện hữu.
+                </div>
+                <a class="item__overlay-btn"
+                  >Khám Phá <i class="bx bx-chevrons-right"></i
+                ></a>
+              </div>
+            </div>
+            <div
+              class="item"
+              data-aos="fade-left"
+              data-aos-offset="200"
+              data-aos-delay="100"
+              data-aos-duration="700"
+              data-aos-easing="ease-in-out"
+            >
+              <img src="Images/trademark-3.jpg" alt="" class="item__img" />
+              <div class="item__overlay item__overlay-color">
+                <a class="item__overlay-title">ECOHOME</a>
+                <div class="item__overlay-desc">
+                  Là dự án thành phần của TP Mới Bình Dương, dự án UniTown đươc
+                  xây dựng trên diện tích 54.503m2, được thiết kế xây dựng thành
+                  285 nhà phố đáp ứng cho mục đích thương mại và dịch vụ. Giai
+                  đoạn 2 bao gồm 54 căn trong tổng số 426 căn nhà phố liền kề
+                  kiểu biệt thự hiện hữu.Giai đoạn 2 bao gồm 54 căn trong tổng
+                  số 426 căn nhà phố liền kề kiểu biệt thự hiện hữu.
+                </div>
+                <a class="item__overlay-btn btn-zoom"
+                  >Khám Phá <i class="bx bx-chevrons-right"></i
+                ></a>
+              </div>
+            </div>
+            <div class="item">
+              <img src="Images/trademark-4.jpg" alt="" class="item__img" />
+              <div class="item__overlay item__overlay-color">
+                <a class="item__overlay-title">ECOLAKES VƯỜN THIÊN ĐÀNG</a>
+                <div class="item__overlay-desc">
+                  Là dự án thành phần của TP Mới Bình Dương, dự án UniTown đươc
+                  xây dựng trên diện tích 54.503m2, được thiết kế xây dựng thành
+                  285 nhà phố đáp ứng cho mục đích thương mại và dịch vụ. Giai
+                  đoạn 2 bao gồm 54 căn trong tổng số 426 căn nhà phố liền kề
+                  kiểu biệt thự hiện hữu. Giai đoạn 2 bao gồm 54 căn trong tổng
+                  số 426 căn nhà phố liền kề kiểu biệt thự hiện hữu. Giai đoạn 2
+                  bao gồm 54 căn trong tổng số 426 căn nhà phố liền kề kiểu biệt
+                  thự hiện hữu.
+                </div>
+                <a class="item__overlay-btn"
+                  >Khám Phá <i class="bx bx-chevrons-right"></i
+                ></a>
+              </div>
+            </div>
+            <div class="item">
+              <img src="Images/trademark-5.jpg" alt="" class="item__img" />
+              <div class="item__overlay item__overlay-color">
+                <a class="item__overlay-title">SHOP HOUSE ECOLAKES</a>
+                <div class="item__overlay-desc">
+                  Shophouse được xây dựng ngay bên cạnh Văn phòng EcoLakes, sở
+                  hữu vị trí Đẹp nhất, Tốt nhất và Đắc địa nhất trong Khu đô thị
+                  sinh thái EcoLakes Mỹ Phước. Dự án có tổng cộng 19 căn được
+                  xây dựng theo kết cấu 1 trệt 2 lầu (căn giữa) và 1 trệt 3 lầu
+                  (căn góc và kế góc).Giai đoạn 2 bao gồm 54 căn trong tổng số
+                  426 căn nhà phố liền kề kiểu biệt thự hiện hữu.
+                </div>
+                <a class="item__overlay-btn"
+                  >Khám Phá <i class="bx bx-chevrons-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--ABOUT US-->
+      <div class="section">
+        <div class="container">
+          <div class="resort">
+            <div
+              class="resort_title"
+              data-aos-delay="50"
+              data-aos="fade-down"
+              data-aos-duration="700"
+              data-aos-anchor-placement="top-bottom"
+            >
+              Về Chúng Tôi
+            </div>
+            <div
+              class="resort_desc"
+              data-aos="fade-down"
+              data-aos-delay="50"
+              data-aos-duration="700"
+              data-aos-anchor-placement="top-bottom"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+              quis veniam mollitia ex aspernatur dolor aliquam labore! Amet
+              vitae accusantium provident incidunt culpa perspiciatis autem,
+              unde laudantium et dolor voluptates.
+            </div>
+            <div class="resort_lists">
+              <div
+                class="resort_item"
+                data-aos="fade-down"
+                data-aos-offset="300"
+                data-aos-delay="400"
+                data-aos-duration="700"
+                data-aos-easing="ease-in-out"
+              >
+                <div class="resort_item--info">
+                  <img src="Images/resort-info-1.jpg" alt="" />
+                  <div class="info">
+                    <div class="info--title">ABC</div>
+                    <div class="info--date">12.06.2022</div>
+                    <div class="info--desc">TRY HARD TO SUCCESS</div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="resort_item move"
+                data-aos="fade-down"
+                data-aos-offset="300"
+                data-aos-delay="600"
+                data-aos-duration="700"
+                data-aos-easing="ease-in-out"
+              >
+                <div class="resort_item--info">
+                  <img src="Images/resort-info-2.jpg" alt="" />
+                  <div class="info">
+                    <div class="info--title">ABC</div>
+                    <div class="info--date">12.06.2022</div>
+                    <div class="info--desc">TRY HARD TO SUCCESS</div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="resort_item"
+                data-aos="fade-down"
+                data-aos-offset="300"
+                data-aos-delay="800"
+                data-aos-duration="600"
+                data-aos-easing="ease-in-out"
+              >
+                <div class="resort_item--info">
+                  <img src="Images/resort-info-3.jpg" alt="" />
+                  <div class="info">
+                    <div class="info--title">ABC</div>
+                    <div class="info--date">12.06.2022</div>
+                    <div class="info--desc">TRY HARD TO SUCCESS</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--News-->
+      <div class="section bg-warning">
+        <div class="container news">
+          <div class="news--center text-left">
+            <div
+              class="news--title display-2 font-weight-bold"
+              data-aos="fade-down"
+              data-aos-offset="300"
+              data-aos-delay="100"
+              data-aos-duration="700"
+              data-aos-easing="ease-in-out"
+            >
+              TIN TỨC
+            </div>
+            <div class="news--content row mx-0">
+              <a
+                href="#"
+                class="col-xl-6 col-md-6 col-sm-12"
+                data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-delay="50"
+                data-aos-duration="700"
+                data-aos-easing="ease-in-out"
+              >
+                <div class="news--content__main mb-2">
+                  <img
+                    src="https://images.unsplash.com/photo-1661458079058-dff4d487c7f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+                    alt=""
+                    class="thumb"
+                  />
+                </div>
+                <div class="news--content__date date">
+                  26 <span>8-2022</span>
+                </div>
+                <h3 class="news--content__title">Tin Tức Nổi Bật Trong Ngày</h3>
+                <p class="news--content__link">Xem Chi Tiết</p>
+              </a>
+              <div class="col-xl-6 col-md-6 col-sm-12">
+                <div class="row">
+                  <div
+                    class="col-md-6 col-sm-6 col-xs-12 col-lg-6"
+                    data-aos="fade-down"
+                    data-aos-offset="500"
+                    data-aos-delay="50"
+                    data-aos-duration="700"
+                    data-aos-easing="ease-in-out"
+                  >
+                    <a href="#" class="news--content__more">
+                      <div class="news--content__img mb-2">
+                        <img src="Images/img2.jpg" alt="" class="thumb" />
+                      </div>
+                      <div class="news--content__date date">
+                        26 <span>8-2022</span>
+                      </div>
+                      <h3 class="news--content__title">
+                        Best practice is to attach to the resize event..
+                        window.addEventListener('resize', function(event)
+                      </h3>
+                      <p class="news--content__link">Xem Chi Tiết</p>
+                    </a>
+                  </div>
+                  <div
+                    class="col-md-6 col-sm-6 col-xs-12 col-lg-6"
+                    data-aos="fade-down"
+                    data-aos-offset="500"
+                    data-aos-delay="50"
+                    data-aos-duration="700"
+                    data-aos-easing="ease-in-out"
+                  >
+                    <a href="#" class="news--content__more">
+                      <div class="news--content__img mb-2">
+                        <img src="Images/img5.jpg" alt="" class="thumb" />
+                      </div>
+                      <div class="news--content__date date">
+                        26 <span>8-2022</span>
+                      </div>
+                      <h3 class="news--content__title">
+                        Tin Tức Nổi Bật Trong Ngày
+                      </h3>
+                      <p class="news--content__link">Xem Chi Tiết</p>
+                    </a>
+                  </div>
+                </div>
+                <div class="row">
+                  <div
+                    class="col-md-6 col-sm-6 col-xs-12 col-lg-6"
+                    data-aos="fade-down"
+                    data-aos-delay="50"
+                    data-aos-offset="500"
+                    data-aos-duration="700"
+                    data-aos-easing="ease-in-out"
+                  >
+                    <a href="#" class="news--content__more">
+                      <div class="news--content__img mb-2">
+                        <img src="Images/img3.jpg" alt="" class="thumb" />
+                      </div>
+                      <div class="news--content__date date">
+                        26 <span>8-2022</span>
+                      </div>
+                      <h3 class="news--content__title">
+                        The onresize event occurs when the browser window has
+                        been resized. Tip: To get the
+                      </h3>
+                      <p class="news--content__link">Xem Chi Tiết</p>
+                    </a>
+                  </div>
+                  <div
+                    class="col-md-6 col-sm-6 col-xs-12 col-lg-6"
+                    data-aos="fade-down"
+                    data-aos-offset="500"
+                    data-aos-delay="50"
+                    data-aos-duration="700"
+                    data-aos-easing="ease-in-out"
+                  >
+                    <a href="#" class="news--content__more">
+                      <div class="news--content__img mb-2">
+                        <img src="Images/img4.jpg" alt="" class="thumb" />
+                      </div>
+                      <div class="news--content__date date">
+                        26 <span>8-2022</span>
+                      </div>
+                      <h3 class="news--content__title">
+                        Tin Tức Nổi Bật Trong Ngày
+                      </h3>
+                      <p class="news--content__link">Xem Chi Tiết</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Footer-->
+      <div class="section">
+        <footer class="footer d-flex flex-column justify-content-center">
+          <div class="footer--head">
+            <img
+              src="Images/pexels-pixabay-147411.jpg"
+              alt=""
+              class="footer--img__top img-fluid"
+            />
+            <div class="footer--head__box">
+              <h2
+                class="footer--head__title shadow bg-white rounded-sm"
+                data-aos="fade-up"
+              >
+                Add captions to your slides easily with the
+              </h2>
+              <a href="" class="btn btn--hover" data-aos="fade-up">contact</a>
+            </div>
+          </div>
+          <div
+            class="footer--body bg-transparent d-flex justify-content-center"
+          >
+            <div class="row p-3">
+              <div
+                class="col-xl-6 col-md-6 col-sm-12 d-flex justify-content-start flex-column align-items-start"
+              >
+                <img
+                  src="Images/logo.png"
+                  alt=""
+                  class="footer--body__img"
+                  data-aos="fade-up"
+                />
+                <h5 class="text-white" data-aos="fade-up">
+                  CÔNG TY CỔ PHẦN ABC
+                </h5>
+                <div class="footer--info text-left">
+                  <p data-aos="fade-up">
+                    <span>Trụ sở: </span> 158 Ngô Gia Tự, Khu 11, P. Chánh
+                    Nghĩa, TP. Thủ Dầu Một, Bình Dương.
+                  </p>
+                  <p data-aos="fade-up">
+                    <span>Chi nhánh: </span> Số 12C, Đại Lộ Bình Dương, Kp. Đông
+                    Nhì, P. Lái Thiêu, TP. Thuận An, Bình Dương.
+                  </p>
+                  <p data-aos="fade-up">
+                    <span>Chi nhánh: </span> Số 1338 Phạm Văn Đồng, P. Linh Tây,
+                    TP. Thủ Đức, TP.HCM.
+                  </p>
+                  <p data-aos="fade-up"><span>Hotline:</span> 0938 61 61 61</p>
+                </div>
+              </div>
+              <div class="col-xl-6 col-md-6 col-sm-12">
+                <h3 class="text-success font-weight-bold" data-aos="fade-up">
+                  FORM LIÊN HỆ
+                </h3>
+                <form action="">
+                  <div class="form-group" data-aos="fade-up">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Họ Tên (*)"
+                    />
+                  </div>
+                  <div class="form-group" data-aos="fade-up">
+                    <input
+                      type="text"
+                      maxlength="10"
+                      class="form-control"
+                      placeholder="Số Điện Thoại(*)"
+                    />
+                  </div>
+                  <div class="form-group" data-aos="fade-up">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <div class="form-group" data-aos="fade-up">
+                    <textarea
+                      class="form-control"
+                      placeholder="Nội Dung (*)"
+                      rows="3"
+                    ></textarea>
+                  </div>
+                  <button
+                    data-aos="fade-up"
+                    type="submit"
+                    class="btn btn--hover px-4 shadow-lg"
+                  >
+                    Gửi
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!--FullPage-->
+    <script src="Js/fullpage.dropEffect.min.js"></script>
+    <script
+      type="text/javascript"
+      src="fullpage.responsiveSlides.min.js?v=2"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/fullpage.js@3.1.2/dist/fullpage.extensions.min.js"
+    ></script>
+    <!--JQUERY-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--OWL CAROUSEL-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+    ></script>
+
+    <!--Animation-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        delay: 500,
+      });
+    </script>
+    <script src="Js/animation.js"></script>
+    <script src="Js/app.js"></script>
+  </body>
+</html>
