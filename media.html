@@ -24,6 +24,15 @@
     <link rel="stylesheet" href="./Scss/style.css" />
   </head>
   <body>
+    <!--Page Load-->
+    <div class="page-loader">
+      <div class="spinner"></div>
+      <div class="txt">
+        ACBD <br />
+        Company
+      </div>
+    </div>
+    <!--navigation-->
     <header class="header container-fluid">
       <nav class="navbar navbar-expand-xl p-0">
         <a class="navbar-brand" href="#">
@@ -499,6 +508,7 @@
       integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--Animation-->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
@@ -506,6 +516,7 @@
         delay: 500,
       });
     </script>
+    <script src="Js/pageload.js"></script>
     <script src="Js/app.js"></script>
     <script>
       $(document).ready(function () {
