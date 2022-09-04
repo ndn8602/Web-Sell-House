@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Media Website</title>
+    <!--Animation-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!--BootTrap-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <!--Owl carousel-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+    />
+    <!--Boxicon-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./Scss/style.css" />
+  </head>
+  <body>
+    <!--Page Load-->
+    <div class="page-loader">
+      <div class="spinner"></div>
+      <div class="txt">
+        ACBD <br />
+        Company
+      </div>
+    </div>
+    <!--navigation-->
+    <header class="header container-fluid">
+      <nav class="navbar navbar-expand-xl p-0">
+        <a class="navbar-brand" href="#">
+          <img src="Images/logo.png" alt="" />
+        </a>
+        <button class="navbar-toggler" type="button">
+          <i class="bx bx-menu" onclick="openMenu()"></i>
+        </button>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item nav-item--hover dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                GIỚI THIỆU
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">HĐQT & Ban Điều Hành</a>
+                <a class="dropdown-item" href="#">Lĩnh Vực Hoạt Động</a>
+              </div>
+            </li>
+            <li class="nav-item nav-item--hover">
+              <a class="nav-link" href="#">KHU NGHỈ DƯỠNG</a>
+            </li>
+            <li class="nav-item nav-item--hover dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                KỲ NGHỈ TRAO ĐỔI
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Bộ Sưu Tập</a>
+                <a class="dropdown-item" href="#">Các Điểm Khác</a>
+              </div>
+            </li>
+            <li class="nav-item nav-item--hover">
+              <a class="nav-link" href="#">TRẢI NGHIỆM CỦA BẠN</a>
+            </li>
+            <li class="navbar-nav-tool">
+              <a class="nav-link nav-rounded py-3" href="#">VN</a>
+              <a class="nav-link nav-rounded py-3" href="#">X</a>
+              <a class="nav-link nav-rounded py-3" href="#"
+                ><i class="bx bx-search"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="menu" id="myMenu">
+      <div class="menu--header">
+        <a class="nav-link rounded" href="#">VN</a>
+        <a class="nav-link rounded" href="#">X</a>
+        <a class="nav-link rounded" href="#"><i class="bx bx-search"></i></a>
+        <a
+          onclick="closeMenu()"
+          class="nav-link rounded"
+          style="cursor: pointer"
+          ><i class="bx bx-x"></i
+        ></a>
+      </div>
+      <div class="menu--body">
+        <ul class="navbar-nav ml-auto">
+          <li
+            class="nav-item dropdown nav-item--hover"
+            data-toggle="collapse"
+            href="#GioiThieu"
+          >
+            <a class="nav-link" href="#GioiThieu" role="button">GIỚI THIỆU</a>
+
+            <span><i class="bx bxs-down-arrow"></i></span>
+          </li>
+          <div class="collapse multi-collapse sub-link" id="GioiThieu">
+            <a href="" class="d-block sub-item lead">
+              <span><i class="bx bxs-square"></i></span>HĐQT & Ban Điều Hành
+            </a>
+            <a href="" class="d-block sub-item lead">
+              <span><i class="bx bxs-square"></i></span>Lĩnh Vực Hoạt Động
+            </a>
+          </div>
+          <li class="nav-item nav-item--hover">
+            <a class="nav-link" href="#">KHU NGHỈ DƯỠNG</a>
+          </li>
+          <li
+            class="nav-item nav-item--hover dropdown"
+            data-toggle="collapse"
+            href="#TraoDoi"
+          >
+            <a
+              class="nav-link"
+              data-toggle="collapse"
+              href="#TraoDoi"
+              role="button"
+              >KỲ NGHỈ TRAO ĐỔI</a
+            >
+            <span><i class="bx bxs-down-arrow"></i></span>
+          </li>
+          <div class="collapse multi-collapse sub-link" id="TraoDoi">
+            <a class="d-block sub-item lead">
+              <span><i class="bx bxs-square"></i></span>Bộ Sưu Tập</a
+            >
+            <a class="d-block sub-item lead">
+              <span><i class="bx bxs-square"></i></span>Các Điểm Khác
+            </a>
+          </div>
+          <li class="nav-item nav-item--hover">
+            <a class="nav-link" href="#">TRẢI NGHIỆM CỦA BẠN</a>
+          </li>
+        </ul>
+      </div>
+      <div class="menu--bottom">
+        <a href="" class="btn btn-register">Đăng Ký</a>
+        <a href="" class="btn btn-start">Bắt Đầu</a>
+      </div>
+    </div>
+
+    <!--start-->
+    <div class="container project mb-5">
+      <div
+        class="project--header d-flex justify-content-start flex-column ml-md-5"
+      >
+        <h2 class="project--header__title display-2 text-warning mt-5">
+          DỰ ÁN
+        </h2>
+        <div
+          class="project--nav d-flex justify-content-start flex-wrap align-items-center"
+        >
+          <a
+            href=""
+            class="project--nav__all btn--hover btn btn-xl mr-2 mb-2 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm2 active"
+            >TẤT CẢ</a
+          >
+          <a
+            href=""
+            class="project--nav__ground btn btn--hover btn-xl mr-2 mb-2 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
+            >ĐẤT NỀN</a
+          >
+          <a
+            href=""
+            class="project--nav__homeCity btn btn--hover btn-xl mr-2 mb-2 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
+            >NHÀ PHỐ</a
+          >
+          <a
+            href=""
+            class="project--nav__apartment btn btn--hover btn-xl mr-2 mb-2 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
+            >CĂN HỘ</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="details shadow-lg mb-5">
+      <div class="details--content">
+        <div
+          class="details--title d-flex flex-row justify-content-start align-items-stretch flex-wrap"
+        >
+          <div class="details--date">04 <span>9-2022</span></div>
+          <h4>ĐỘNG LỰC TĂNG TRƯỞNG MỚI CHO THỊ TRƯỜNG BẤT ĐỘNG SẢN</h4>
+        </div>
+        <p>
+          Thị trường bất động sản đang đứng trước cơ hội phát triển minh bạch
+          hơn, bền vững hơn trong thời gian tới khi Chỉ thị 13 được triển khai.
+          Đặc biệt, các bất động sản đáp ứng nhu cầu ở thực, tiềm năng thực sẽ
+          là tâm điểm của thị trường.
+        </p>
+        <div class="details--img">
+          <img src="Images/img1.jpg" alt="" />
+          <div class="details--img__comment">
+            Công nghiệp phát triển kéo theo dân cư sinh sống sầm uất, giúp thị
+            trường bất động sản Bình Dương phát triển bền vững.
+          </div>
+        </div>
+        <h5>Kiến tạo thị trường phát triển bền vững</h5>
+        <p>
+          Thị trường bất động sản thời gian vừa qua đang bộc lộ một số bất cập,
+          giá sản phẩm khá cao so với thu nhập của người dân, cơ sở dữ liệu
+          thông tin về thị trường chưa đồng bộ, thiếu minh bạch... Để khắc phục
+          điều này, các cơ quan quản lý nhà nước đang tiến hành rà soát quy định
+          pháp luật, tìm cách đa dạng nguồn vốn và đề xuất chính sách để tạo
+          động lực phát triển mới cho thị trường.
+        </p>
+        <p>
+          Theo Chỉ thị 13, tín dụng vào bất động sản sắp tới sẽ không bị siết
+          chặt mà điều chỉnh hợp lý, linh hoạt. Các hành vi sai phạm như trốn
+          thuế hay nạn đầu cơ, thao túng thị trường sẽ bị kiểm soát gắt gao. Các
+          ngân hàng cũng sẽ tập trung cho vay các dự án nhà ở xã hội, nhà ở công
+          nhân, nhà ở thương mại giá rẻ...
+        </p>
+        <p>
+          Về công tác quản lý, theo Chỉ thị 13, Bộ Kế hoạch và Đầu tư sẽ hướng
+          dẫn các địa phương, đề xuất giải pháp tháo gỡ khó khăn, vướng mắc
+          trong thực hiện thủ tục đầu tư, cấp giấy chứng nhận đăng ký đầu tư dự
+          án bất động sản... Bộ Tài nguyên và Môi trường cùng Bộ Tài chính, Bộ
+          Tư pháp sửa các quy định về đấu giá quyền sử dụng đất để thống nhất,
+          phù hợp với tình hình thực tế.
+        </p>
+        <p>
+          Một giải pháp khác hứa hẹn thúc đẩy thị trường bất động sản phát triển
+          ổn định là đánh giá chính xác cung - cầu và xây dựng hệ thống thông
+          tin liên thông giữa thị trường bất động sản và đất đai, mở rộng phân
+          khúc nhà ở cho người thu nhập thấp... Bộ Xây dựng được giao sớm hướng
+          dẫn địa phương bổ sung quy hoạch và bố trí quỹ đất để phát triển nhà ở
+          xã hội, nhà ở công nhân theo hướng dành 20% quỹ đất trong các dự án
+          nhà ở, khu đô thị để phát triển sản phẩm này.
+        </p>
+        <div class="details--img">
+          <img src="Images/pexels-terry-magallanes-2635038.jpg" alt="" />
+          <div class="details--img__comment">
+            Hệ thống giao thông phát triển mạnh ở tam giác công nghiệp Tân Uyên
+            – Phú Giáo – Bến Cát.
+          </div>
+        </div>
+        <p>
+          Đặc biệt, theo Chỉ thị 13, các hành vi chia tách, phân lô bán nền tại
+          các khu vực chưa được cấp phép đầu tư... sắp tới sẽ được chấn chỉnh để
+          tránh tình trạng “thổi giá” gây nhiễu loạn thị trường. Khi các giải
+          pháp này đồng loạt được triển khai thì chắc chắn sẽ thanh lọc thị
+          trường, hướng đến kiến tạo một động lực mới cho lĩnh vực bất động sản
+          phát triển lành mạnh, bền vững.
+        </p>
+        <h5>Cơ hội cho bất động sản giá trị thật</h5>
+        <p>
+          Trước đây, khi thị trường tăng trưởng nóng, các nhà đầu tư lướt sóng
+          hầu hết đều thắng. Nhưng từ quý 2-2022 đến nay thì không ít nhà đầu tư
+          rất khó ra hàng vì thị trường giảm nhiệt. Đặc biệt, tình trạng thổi
+          giá mua bán đất sào, đất rẫy tại các khu vực hoang vắng ở Bình Phước,
+          Daklak… đang khiến nhiều nhà đầu tư lướt sóng “tiến thoái lưỡng nan”.
+        </p>
+        <p>
+          Theo các chuyên gia, sắp tới, khi ngày càng nhiều nhà doanh nghiệp đầu
+          tư vào các khu vực lân cận TPHCM thì mức độ cạnh tranh sẽ cao hơn. Khi
+          đó, xu hướng điều chỉnh giá sẽ trở nên mạnh mẽ và giá trị thật của bất
+          động sản có thể sẽ được xác lập. Việc đầu tư, đầu cơ sử dụng đòn bẩy
+          tài chính cũng giảm xuống và dòng tiền chủ yếu chảy vào các dự án thực
+          sự tiềm năng. Đây sẽ là cơ hội tốt cho những nhà đầu tư có tài chính
+          mạnh sàng lọc, lựa chọn được những sản phẩm tốt nhất.
+        </p>
+        <div class="details--img">
+          <img src="Images/pexels-pixabay-147411.jpg" alt="" />
+          <div class="details--img__comment">
+            Hệ thống giao thông phát triển mạnh ở tam giác công nghiệp Tân Uyên
+            – Phú Giáo – Bến Cát.
+          </div>
+        </div>
+        <p>
+          Thực tế, gần đây khi thị trường TPHCM giá đất tăng cao thì Bình Dương
+          là một trong những khu vực ghi nhận giao dịch bất động sản vẫn ổn
+          định. Trong đó, tam giác công nghiệp Tân Uyên – Phú Giáo – Bến Cát là
+          khu vực nổi bật khi Bình Dương dịch chuyển phát triển công nghiệp về
+          phía Bắc. Mới đây, cùng lúc hai khu công nghiệp đều có quy mô 1.000 ha
+          gồm VSIP 3 và Cây Trường đã bắt đầu khởi công xây dựng tại đây. Đặc
+          biệt, từ nay đến 2025 Phú Giáo sẽ phát triển thêm 5 khu công nghiệp
+          lớn để đón đầu dòng vốn FDI.
+        </p>
+        <p>
+          Về hạ tầng, Bình Dương đang tập trung đầu tư hệ thống giao thông quy
+          mô lớn nhằm thúc đẩy phát triển kinh tế trong giai đoạn mới. Các dự án
+          điển hình gồm mở rộng, nâng cấp đường ĐT 741; các tuyến đường tạo lực
+          Tân Uyên – Phú Giáo – Bàu Bàng, Phú Giáo – Đồng Phú, quốc lộ 13; quốc
+          lộ 14; đại lộ Mỹ Phước - Tân Vạn; xây dựng cao tốc TP HCM - Thủ Dầu
+          Một - Chơn Thành, Vành đai 3, Vành đai 4... Bên cạnh đó, hai địa
+          phương Bến Cát, Tân Uyên dự kiến lên thành phố vào năm 2025 cũng tạo
+          nên cú hích cho phát triển kinh tế - xã hội nói chung, thị trường bất
+          động sản nói riêng.
+        </p>
+        <p>
+          Những yếu tố nói trên đang giúp Bình Dương tăng tốc thu hút vốn FDI và
+          kéo theo nguồn lao động nhập cư rất lớn. Không chỉ lao động thông
+          thường, Bình Dương đang là nơi “đất lành chim đậu” của lực lượng lao
+          động kỹ thuật cao và chuyên gia trong cũng như ngoài nước. Hiện Bình
+          Dương đang có khoảng 2,8 triệu dân và mỗi năm tăng thêm khoảng 5-7%.
+          Đây là động lực lớn của thị trường bất động sản bởi nhu cầu nhà ở rất
+          cao, nhất là các dự án ở những đô thị đang phát triển hoặc liền kề các
+          khu công nghiệp lớn đang hoạt động.
+        </p>
+        <p>Trích nguồn: <span>https://tienphong.vn/</span></p>
+      </div>
+      <div
+        class="details--choices d-flex bg-warning justify-content-center align-items-center"
+      >
+        <div class="save">
+          <i class="bx bxs-star"></i> <span>LƯU TRANG</span>
+        </div>
+        <div class="print">
+          <i class="bx bx-printer"></i> <span>IN TRANG</span>
+        </div>
+        <div class="share">
+          <i class="bx bx-share-alt"></i> <span>CHIA SẺ</span>
+        </div>
+      </div>
+    </div>
+    <div class="details mb-5">
+      <div class="news--more d-flex flex-column align-items-center">
+        <h3>TIN TỨC TƯƠNG TỰ</h3>
+        <div class="details--news owl-carousel owl-theme">
+          <div class="item shadow-sm">
+            <div class="card">
+              <div class="news--content__date date">
+                04 <span>09-2022</span>
+              </div>
+              <img src="Images/img1.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="item shadow-sm">
+            <div class="card">
+              <div class="news--content__date date">
+                04 <span>09-2022</span>
+              </div>
+              <img src="Images/img3.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="item shadow-sm">
+            <div class="card">
+              <div class="news--content__date date">
+                04 <span>09-2022</span>
+              </div>
+              <img src="Images/img5.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="item shadow-sm">
+            <div class="card">
+              <div class="news--content__date date">
+                04 <span>09-2022</span>
+              </div>
+              <img src="Images/img4.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="item shadow-sm">
+            <div class="news--content__date date">04 <span>09-2022</span></div>
+            <div class="card">
+              <img src="Images/img2.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Footer-->
+    <footer class="footer" data-aos="fade-up">
+      <div class="footer--body bg-transparent d-flex justify-content-center">
+        <div class="row py-3">
+          <div
+            class="col-xl-6 col-md-6 col-sm-12 d-flex justify-content-start flex-column align-items-start"
+          >
+            <img
+              src="Images/logo.png"
+              alt=""
+              class="footer--body__img mb-3"
+              data-aos="fade-up"
+            />
+            <h5 class="text-white" data-aos="fade-up">CÔNG TY CỔ PHẦN ABC</h5>
+            <div
+              class="footer--info d-flex flex-column justify-content-start align-items-start"
+              data-aos="fade-up"
+            >
+              <p>
+                <span>Trụ sở: </span> 158 Ngô Gia Tự, Khu 11, P. Chánh Nghĩa,
+                TP. Thủ Dầu Một, Bình Dương.
+              </p>
+              <p>
+                <span>Chi nhánh: </span> Số 12C, Đại Lộ Bình Dương, Kp. Đông
+                Nhì, P. Lái Thiêu, TP. Thuận An, Bình Dương.
+              </p>
+              <p>
+                <span>Chi nhánh: </span> Số 1338 Phạm Văn Đồng, P. Linh Tây, TP.
+                Thủ Đức, TP.HCM.
+              </p>
+              <p><span>Hotline:</span> 0938 61 61 61</p>
+            </div>
+          </div>
+
+          <div class="col-xl-6 col-md-6 col-sm-12" data-aos="fade-up">
+            <h3 class="text-white font-weight-bold">THÔNG TIN LIÊN HỆ</h3>
+            <form action="">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Họ Tên (*)"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  maxlength="10"
+                  class="form-control"
+                  placeholder="Số Điện Thoại(*)"
+                />
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" />
+              </div>
+              <div class="form-group">
+                <textarea
+                  class="form-control"
+                  placeholder="Nội Dung (*)"
+                  rows="3"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn--hover px-4 shadow-lg">
+                Gửi
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--JQUERY-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--OWL CAROUSEL-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+    ></script>
+    <!--Animation-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        delay: 500,
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $("header").css("backgroundColor", "white");
+        $(".navbar-nav-tool a").css("color", "orange");
+        $(".nav-item a").css("color", "orange");
+      });
+    </script>
+    <script src="Js/pageload.js"></script>
+    <script src="Js/app.js"></script>
+    <script src="Js/project.js"></script>
+  </body>
+</html>
