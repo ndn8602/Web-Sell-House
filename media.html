@@ -14,6 +14,19 @@
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
       crossorigin="anonymous"
     />
+    <!--Owl carousel-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+    />
     <!--Boxicon-->
     <link
       href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
@@ -160,9 +173,7 @@
     <!--start-->
     <div class="container project">
       <div class="project--header d-flex justify-content-start flex-column">
-        <h2 class="project--header__title mt-2 text-warning">
-          TRUYỀN THÔNG
-        </h2>
+        <h2 class="project--header__title mt-2 display-4 text-warning">TRUYỀN THÔNG</h2>
         <div
           class="project--nav d-flex justify-content-start flex-wrap align-items-center"
         >
@@ -211,7 +222,9 @@
               tỉnh Bình Dương, đô thị vệ tinh của TP. Thủ Dầu Một và là trung
               tâm hành chính, văn hóa, thương mại - dịch vụ, y tế của Phú Giáo.
             </p>
-            <a href="detail_media.html" class="--item__btn btn btn--hover">XEM DỰ ÁN</a>
+            <a href="detail_media.html" class="--item__btn btn btn--hover"
+              >XEM DỰ ÁN</a
+            >
           </div>
         </div>
         <div class="row overflow-hidden">
@@ -434,12 +447,13 @@
           <div
             class="col-xl-6 col-md-6 col-sm-12 d-flex justify-content-start flex-column align-items-start"
           >
-            <img
-              src="Images/logo.png"
-              alt=""
-              class="footer--body__img mb-3"
-              data-aos="fade-up"
-            />
+            <div class="media-img" data-aos="fade-up">
+              <img
+                src="Images/logo.png"
+                alt=""
+                class="footer--body__img mb-3"
+              />
+            </div>
             <h5 class="text-white" data-aos="fade-up">CÔNG TY CỔ PHẦN ABC</h5>
             <div
               class="footer--info d-flex flex-column justify-content-start align-items-start"

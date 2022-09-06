@@ -1,6 +1,5 @@
 function openMenu() {
   let w = window.innerWidth;
-  console.log(w);
   if (w > 400) {
     document.getElementById("myMenu").style.width = "400px";
     document.getElementById("myDIV").style.opacity = "0.5";
@@ -72,7 +71,6 @@ defaultbox();
 for (let i = 0; i < cards.length; i++) {
   const element = cards[i];
   element.addEventListener("mouseover", () => {
-    console.log("in");
     if (element.className.split(" ").includes("move")) {
       return;
     } else {
@@ -85,7 +83,6 @@ for (let i = 0; i < cards.length; i++) {
 for (let i = 0; i < cards.length; i++) {
   const element = cards[i];
   element.addEventListener("mouseout", () => {
-    console.log("out");
     element.classList.remove("move");
     check = false;
     defaultbox();

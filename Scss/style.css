@@ -1144,7 +1144,7 @@ a:hover {
   }
 }
 .project {
-  width: 85%;
+  width: 95%;
   height: 100%;
 }
 .project--nav {
@@ -1159,7 +1159,7 @@ a:hover {
   transition: translateY(-10%) 0.4s ease-in;
 }
 .project--nav > a {
-  width: auto;
+  width: 180px;
   min-width: 120px;
   height: auto;
   font-size: 14px;
@@ -1180,7 +1180,7 @@ a:hover {
   margin: 75px 0;
 }
 .project--item .row {
-  height: 360px;
+  height: 400px;
   overflow-x: hidden;
 }
 .project--item .row > * {

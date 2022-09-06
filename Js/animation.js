@@ -2,14 +2,12 @@ const header = document.querySelector(".header");
 const nav_links = header.querySelectorAll(".nav-link");
 const changeColorHeader = (e) => {
   if (e.includes("introPage")) {
-    console.log("ok");
     header.style.backgroundColor = "transparent";
     nav_links.forEach((nav_link) => {
       nav_link.style.color = "white";
     });
     header.style.transition = "all 0.5";
   } else {
-    console.log("not ok");
     header.style.backgroundColor = "#fff";
     nav_links.forEach((nav_link) => {
       nav_link.style.color = "orange";
