@@ -22,8 +22,15 @@ new fullpage("#myContainer", {
   // handler
   onLeave: (origin, destination, direction) => {
     const section = destination.item;
-    if (destination.index === 1) console.log("first");
     changeColorHeader(section.className.split(" "));
+    if (destination.index === 3) {
+      header.style.backgroundColor = "transparent";
+      nav_links.forEach((nav_link) => {
+        nav_link.style.color = "white";
+      });
+      header.style.transition = "all 0.5";
+    }
+
     jQuery(".section [data-aos]").removeClass("aos-animate");
   },
 

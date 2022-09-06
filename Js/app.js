@@ -16,7 +16,7 @@ function closeMenu() {
 }
 $(".details--news").owlCarousel({
   dotsEach: 6,
-  nav:true,
+  nav: true,
   loop: true,
   margin: 20,
   autoplayTimeout: 2000,
