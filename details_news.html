@@ -185,17 +185,18 @@
             class="d-block"
             alt="..."
           />
-          <div class="carousel-caption d-none d-md-block bg-warning">
+          <div class="carousel-caption d-md-block bg-warning">
             <h1>5F STELLA</h1>
-            <a href="#overview">Xem Thông Tin Dự Án</a>
+            <p href="#overview" class="text-white">Xem Thông Tin Dự Án</p>
+            <a href="#"><i class="bx bx-chevrons-down"></i></a>
           </div>
         </div>
       </div>
     </div>
-    <div class="ml-auto">
-      <div class="project--header d-flex justify-content-start flex-column">
+    <div class="">
+      <div class="project--header d-flex justify-content-center flex-column">
         <div
-          class="project--nav d-flex justify-content-start flex-wrap align-items-center"
+          class="project--nav d-flex justify-content-center flex-wrap align-items-center"
         >
           <a
             href=""
@@ -222,11 +223,13 @@
     </div>
     <div class="overview" id="overview">
       <div class="row m-0 py-5">
-        <div class="col-md-6">
+        <div class="col-sm-12 col-md-6">
           <img src="Images/logo.png" alt="" class="m-auto" />
         </div>
-        <div class="col-md-6">
-          <div class="overview-title display-4 text-warning">TỔNG QUAN</div>
+        <div class="col-sm-12 col-md-6">
+          <div class="overview-title display-4 text-warning text-center">
+            TỔNG QUAN
+          </div>
           <div class="overview-sub">
             <p>
               <span>Vị trí: </span>Đường ĐT 741, trung tâm thị trấn Phước Vĩnh,
@@ -248,7 +251,7 @@
     </div>
     <div class="location bg-warning">
       <div class="row m-0">
-        <div class="col-md-6">
+        <div class="col-sm-12 col-md-6">
           <div class="location-box">
             <div class="location-title text-white">VỊ TRÍ</div>
             <div class="location-desc text-white">
@@ -272,7 +275,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-sm-12 col-md-6">
           <img
             src="https://unilandvietnam.com.vn/pictures/catalog/hinh-du-an/5f-stella/vi-tri.png"
             alt=""
@@ -362,34 +365,32 @@
     </div>
     <div class="perspective">
       <div class="perspective-title">PHỐI CẢNH</div>
-      <!-- TESTIMONIALS -->
-      <section class="testimonials">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <div id="customers-testimonials" class="owl-carousel">
-                <!--TESTIMONIAL 1 -->
-                <div class="item">
-                  <div class="shadow-effect">
-                    <img class="img-circle" src="Images/img1.jpg" alt="" />
-                    <p>
-                      Dramatically maintain clicks-and-mortar solutions without
-                      functional solutions. Completely synergize resource taxing
-                      relationships via premier niche markets. Professionally
-                      cultivate.
-                    </p>
-                  </div>
-                  <div class="testimonial-name">EMILIANO AQUILANI</div>
-                </div>
-                <!--END OF TESTIMONIAL 1 -->
-              </div>
+      <div class="perspective-box">
+        <div class="perspective-img owl-carousel">
+          <div class="item">
+            <div class="shadow-effect">
+              <img class="img-circle" src="Images/img1.jpg" alt="" />
+            </div>
+          </div>
+          <div class="item">
+            <div class="shadow-effect">
+              <img class="img-circle" src="Images/img2.jpg" alt="" />
+            </div>
+          </div>
+          <div class="item">
+            <div class="shadow-effect">
+              <img class="img-circle" src="Images/img3.jpg" alt="" />
+            </div>
+          </div>
+          <div class="item">
+            <div class="shadow-effect">
+              <img class="img-circle" src="Images/img4.jpg" alt="" />
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
 
-    <!-- END OF TESTIMONIALS -->
     <!--Footer-->
     <footer class="footer d-flex flex-column justify-content-center">
       <div class="footer--head">
@@ -502,30 +503,26 @@
     <!--Animation-->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      jQuery(document).ready(function ($) {
-        "use strict";
-        //  TESTIMONIALS CAROUSEL HOOK
-        $("#customers-testimonials").owlCarousel({
-          loop: true,
-          center: true,
-          items: 3,
-          margin: 0,
-          autoplay: true,
-          dots: true,
-          autoplayTimeout: 8500,
-          smartSpeed: 450,
-          responsive: {
-            0: {
-              items: 1,
-            },
-            768: {
-              items: 2,
-            },
-            1170: {
-              items: 3,
-            },
+      $(".perspective-img").owlCarousel({
+        loop: true,
+        dotsEach: 3,
+        nav: true,
+        center: true,
+        margin: 10,
+        dots: true,
+        autoplayTimeout: 8500,
+        smartSpeed: 450,
+        responsive: {
+          0: {
+            items: 1,
           },
-        });
+          768: {
+            items: 2,
+          },
+          1170: {
+            items: 3,
+          },
+        },
       });
     </script>
     <script>
@@ -539,6 +536,18 @@
         $("header").css("backgroundColor", "transparent");
         $(".navbar-nav-tool a").css("color", "white");
         $(".nav-item a").css("color", "white");
+      });
+      $(window).scroll(function () {
+        let scroll = $(window).scrollTop();
+        if (scroll <= 196) {
+          $("header").css("backgroundColor", "transparent");
+          $(".navbar-nav-tool a").css("color", "white");
+          $(".nav-item a").css("color", "white");
+        } else {
+          $("header").css("backgroundColor", "white");
+          $(".navbar-nav-tool a").css("color", "orange");
+          $(".nav-item a").css("color", "orange");
+        }
       });
     </script>
     <script src="Js/pageload.js"></script>
