@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalis News</title>
+    <!--Animation-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!--BootTrap-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <!--Owl carousel-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+    />
+    <!--Boxicon-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./Scss/style.css" />
+  </head>
+  <body>
+    <!--Page Load-->
+    <div class="page-loader">
+      <div class="spinner"></div>
+      <div class="txt">
+        ACBD <br />
+        Company
+      </div>
+    </div>
+    <!--navigation-->
+    <header class="header container-fluid">
+      <nav class="navbar navbar-expand-xl p-0">
+        <a class="navbar-brand" href="#">
+          <img src="Images/logo.png" alt="" />
+        </a>
+        <button class="navbar-toggler" type="button">
+          <i class="bx bx-menu" onclick="openMenu()"></i>
+        </button>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item nav-item--hover dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                GIỚI THIỆU
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">HĐQT & Ban Điều Hành</a>
+                <a class="dropdown-item" href="#">Lĩnh Vực Hoạt Động</a>
+              </div>
+            </li>
+            <li class="nav-item nav-item--hover">
+              <a class="nav-link" href="#">KHU NGHỈ DƯỠNG</a>
+            </li>
+            <li class="nav-item nav-item--hover dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                KỲ NGHỈ TRAO ĐỔI
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Bộ Sưu Tập</a>
+                <a class="dropdown-item" href="#">Các Điểm Khác</a>
+              </div>
+            </li>
+            <li class="nav-item nav-item--hover">
+              <a class="nav-link" href="#">TRẢI NGHIỆM CỦA BẠN</a>
+            </li>
+            <li class="navbar-nav-tool">
+              <a class="nav-link nav-rounded py-3" href="#">VN</a>
+              <a class="nav-link nav-rounded py-3" href="#">X</a>
+              <a class="nav-link nav-rounded py-3" href="#"
+                ><i class="bx bx-search"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="menu" id="myMenu">
+      <div class="menu--header">
+        <a class="nav-link rounded" href="#">VN</a>
+        <a class="nav-link rounded" href="#">X</a>
+        <a class="nav-link rounded" href="#"><i class="bx bx-search"></i></a>
+        <a
+          onclick="closeMenu()"
+          class="nav-link rounded"
+          style="cursor: pointer"
+          ><i class="bx bx-x"></i
+        ></a>
+      </div>
+      <div class="menu--body">
+        <ul class="navbar-nav ml-auto">
+          <li
+            class="nav-item dropdown nav-item--hover"
+            data-toggle="collapse"
+            href="#GioiThieu"
+          >
+            <a class="nav-link" href="#GioiThieu" role="button">GIỚI THIỆU</a>
+
+            <span><i class="bx bxs-down-arrow"></i></span>
+          </li>
+          <div class="collapse multi-collapse sub-link" id="GioiThieu">
+            <a href="" class="d-block sub-item lead">
+              <span><i class="bx bxs-square"></i></span>HĐQT & Ban Điều Hành
+            </a>
+            <a href="" class="d-block sub-item lead">
+              <span><i class="bx bxs-square"></i></span>Lĩnh Vực Hoạt Động
+            </a>
+          </div>
+          <li class="nav-item nav-item--hover">
+            <a class="nav-link" href="#">KHU NGHỈ DƯỠNG</a>
+          </li>
+          <li
+            class="nav-item nav-item--hover dropdown"
+            data-toggle="collapse"
+            href="#TraoDoi"
+          >
+            <a
+              class="nav-link"
+              data-toggle="collapse"
+              href="#TraoDoi"
+              role="button"
+              >KỲ NGHỈ TRAO ĐỔI</a
+            >
+            <span><i class="bx bxs-down-arrow"></i></span>
+          </li>
+          <div class="collapse multi-collapse sub-link" id="TraoDoi">
+            <a class="d-block sub-item lead">
+              <span><i class="bx bxs-square"></i></span>Bộ Sưu Tập</a
+            >
+            <a class="d-block sub-item lead">
+              <span><i class="bx bxs-square"></i></span>Các Điểm Khác
+            </a>
+          </div>
+          <li class="nav-item nav-item--hover">
+            <a class="nav-link" href="#">TRẢI NGHIỆM CỦA BẠN</a>
+          </li>
+        </ul>
+      </div>
+      <div class="menu--bottom">
+        <a href="" class="btn btn-register">Đăng Ký</a>
+        <a href="" class="btn btn-start">Bắt Đầu</a>
+      </div>
+    </div>
+
+    <!--start-->
+
+    <!--Content-->
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="false"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="Images/pexels-terry-magallanes-2635038.jpg"
+            class="d-block"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block bg-warning">
+            <h1>5F STELLA</h1>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ml-auto">
+      <div class="project--header d-flex justify-content-start flex-column">
+        <div
+          class="project--nav d-flex justify-content-start flex-wrap align-items-center"
+        >
+          <a
+            href=""
+            class="project--nav__all btn--hover btn btn-xl mr-2 mb-2 px-4 text-white border rounded-0 py-2 shadow-sm2 active"
+            >TẤT CẢ</a
+          >
+          <a
+            href=""
+            class="project--nav__all btn--hover btn btn-xl mb-2 mr-2 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm mb-2"
+            >TIN THỊ TRƯỜNG</a
+          >
+          <a
+            href=""
+            class="project--nav__ground btn btn--hover btn-xl mb-2 mr-2 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
+            >TIN DỰ ÁN</a
+          >
+          <a
+            href=""
+            class="project--nav__homeCity btn btn--hover btn-xl mb-2 mr-2 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
+            >TIN CÔNG TY</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="overview">
+      <div class="row m-0">
+        <div class="col-4"><img src="Images/logo.png" alt="" class="" /></div>
+        <div class="col-8">
+          <div class="overview-title">TỔNG QUAN</div>
+          <div class="overview-sub">
+            <p>
+              <span>Vị trí: </span>Đường ĐT 741, trung tâm thị trấn Phước Vĩnh,
+              Phú Giáo, Bình Dương
+            </p>
+            <p>
+              <span>Quy mô: </span>5,9 ha, gồm hơn 400 căn nhà phố thương mại
+            </p>
+            <p><span>Pháp lý: </span>Hoàn thiện, sở hữu lâu dài</p>
+            <p><span>Phát triển và phân phối: </span> Hệ thống 5F</p>
+            <p>Công ty Cổ phần Uniland</p>
+            <p>Công ty cổ phần Tập đoàn Nam Dương</p>
+            <p>Công ty Cổ phần Phát triển Địa ốc Á Châu</p>
+            <p>Công ty TNHH Đầu tư Phát triển Bất động sản Minh Dương</p>
+            <p>Công ty Cổ phần Kinh doanh Địa ốc Nhất Việt</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="location bg-warning">
+      <div class="row m-0">
+        <div class="col-md-6">
+          <div class="location-title">VỊ TRÍ</div>
+          <div class="location-desc">
+            Khu đô thị 5F Stella nằm trên tuyến đường ĐT 741 - trục giao thương
+            chiến lược kết nối hai thành phố lớn là Thủ Dầu Một (Bình Dương) và
+            Đồng Xoài (Bình Phước). Bao quanh dự án là hàng loạt khu công nghiệp
+            sạch, khu khoa học công nghệ cao của Bình Dương, Bình Phước. Đặc
+            biệt, khu vực 5F Stella tọa lạc được định hướng phát triển thành đô
+            thị trung tâm của khu vực cửa ngõ phía Đông Bắc tỉnh Bình Dương, đô
+            thị vệ tinh của TP. Thủ Dầu Một và là trung tâm hành chính, văn hóa,
+            thương mại - dịch vụ, y tế của Phú Giáo. Hiện nay, Phú Giáo và khu
+            vực lân cận đang xây dựng một loạt KCN thế hệ mới hứa hẹn trở thành
+            “bến đỗ” của các tập đoàn quốc tế, đưa nơi đây thành “cứ điểm” sản
+            xuất thông minh hàng đầu Việt Nam và Đông Nam Á. Có thể kể đến như
+            các KCN Tam Lập 1-4, VSIP IV 1.000ha, An Linh 1.000ha, An Bình gần
+            1.000ha, Vĩnh Lập 1 hơn 750ha, Vĩnh Lập 2 với 500ha và Becamex Đồng
+            Phú 6.300ha… Công nghiệp và bất động sản luôn song hành. Như vậy,
+            Phú Giáo sắp tới cũng sẽ là “tọa độ kim cương” cực kỳ hấp dẫn cho
+            các nhà phát triển bất động sản.
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img
+            src="https://unilandvietnam.com.vn/pictures/catalog/hinh-du-an/5f-stella/vi-tri.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <div class="utilities">
+      <div class="utilities-title">TIỆN ÍCH</div>
+      <div class="utilities-box">
+        <h3>Trăm tiện, ngàn lợi</h3>
+        <p>
+          Tọa lạc ngay tâm điểm phát triển của Phú Giáo, 5F Stella được thụ
+          hưởng trọn vẹn hệ thống tiện ích có sẵn như chợ Phước Vĩnh, trung tâm
+          y tế huyện Phú Giáo, bệnh viện đa khoa, trung tâm thể thao, trường học
+          cấp 1,2,3… Hơn nữa, nhờ lợi thế mặt tiền đường lớn và mật độ cư dân
+          xung quanh đông đúc, khu đô thị 5F Stella còn mở ra cơ hội kinh doanh
+          và tiềm năng sinh lời rất lớn. Là một trung tâm sản xuất công nghiệp
+          mới, chắc chắn sắp tới khu vực này sẽ còn được bổ sung hàng loạt dự án
+          về thương mại – dịch vụ cao cấp phục vụ cho lực lượng chuyên gia và
+          người dân cũng được hưởng lợi.
+        </p>
+        <img
+          src="https://unilandvietnam.com.vn/pictures/catalog/hinh-du-an/5f-stella/tien-ich.png"
+          alt=""
+        />
+      </div>
+      <div class="utilities-box">
+        <h3>Hạ tầng bứt phá</h3>
+        <p>
+          Bên cạnh các tuyến đường huyết mạch hiện hữu như ĐT 741, ĐT 750, quốc
+          lộ 13, quốc lộ 14, đường Bình Dương - Đồng Phú…, xung quanh khu đô thị
+          5F Stella đang được đầu tư thêm nhiều dự án mang tính chiến lược. Nổi
+          bật là đường tạo lực Tân Uyên - Phú Giáo - Đồng Xoài, cao tốc TPHCM -
+          Thủ Dầu Một - Đồng Xoài, Vành đai 3, Vành đai 4, cao tốc TPHCM – Thủ
+          Dầu Một – Phú Giáo - Chơn Thành – Hoa Lư, đường sắt Dĩ An - Lộc Ninh,
+          đường sắt Xuyên Á… Đây là những trục giao thông trọng điểm kết nối tất
+          cả các trung tâm đô thị - công nghiệp ở phía Đông Bắc tỉnh Bình Dương
+          và Bình Phước, hình thành trục thương mại – công nghiệp - dịch vụ
+          logistic theo hướng Đông - Tây, mở ra hướng phát triển đưa Phú Giáo
+          lên tầm cao mới.
+        </p>
+        <img
+          src="https://unilandvietnam.com.vn/pictures/catalog/hinh-du-an/5f-stella/05.jpg"
+          alt=""
+        />
+      </div>
+      <div class="utilities-box">
+        <h3>Hưởng lợi từ quy hoạch kép</h3>
+        <p>
+          Trong bối cảnh quỹ đất trung tâm ngày càng hạn hẹp, Bình Dương đang
+          hướng đến xây dựng vùng sản xuất thông minh và mở rộng không gian đô
+          thị lên khu vực phía Bắc mà trọng điểm là trục Tân Uyên - Phú Giáo -
+          Đồng Xoài. Tỉnh Bình Phước cũng đang tập trung nguồn lực phát triển
+          công nghiệp, thương mại - dịch vụ tam giác kinh tế Đồng Phú - Chơn
+          Thành - Đồng Xoài, liền kề huyện Phú Giáo. Hai định hướng này kết hợp
+          với cơ sở hạ tầng ngày càng hoàn thiện sẽ tạo thêm “xung lực” mới cho
+          bất động sản Phú Giáo bùng nổ, mà hưởng lợi trực tiếp nhất chính là
+          khu đô thị 5F Stella.
+        </p>
+        <img
+          src="https://unilandvietnam.com.vn/pictures/catalog/hinh-du-an/5f-stella/07.jpg"
+          alt=""
+        />
+      </div>
+      <div class="utilities-box">
+        <h3>Phú Giáo - Trung tâm công nghiệp thế hệ mới của Bình Dương</h3>
+        <p>
+          Nắm giữ lợi thế vượt trội khi nằm giữa các KCN thế hệ mới gồm Tam Lập
+          1-4, VSIP IV 1.000ha, An Linh 1.000ha, An Bình gần 1.000ha, Vĩnh Lập 1
+          hơn 750ha, Vĩnh Lập 2 với 500ha và Becamex Đồng Phú 6.300 ha…, Phú
+          Giáo là vùng đô thị - công nghiệp đang được tỉnh Bình Dương đầu tư
+          mạnh mẽ về hạ tầng, dịch vụ theo hướng phát triển đô thị thông minh.
+          Đặc biệt, theo đồ án quy hoạch chung của huyện Phú Giáo tầm nhìn đến
+          năm 2030, Phước Vĩnh - Vĩnh Hòa sẽ là đô thị vệ tinh của TP.Thủ Dầu
+          Một, đô thị trung tâm khu vực cửa ngõ Đông Bắc của tỉnh Bình Dương và
+          là trung tâm hành chính, văn hóa, thương mại - dịch vụ, y tế của huyện
+          Phú Giáo. Điều này mở ra cho thị trường bất động sản Phú Giáo cơ hội
+          bứt phá, trở thành những điểm sáng tiếp theo tương tự Dĩ An, Thuận An
+          và Thủ Dầu Một trước đây.
+        </p>
+        <img
+          src="https://unilandvietnam.com.vn/pictures/catalog/hinh-du-an/5f-stella/02.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="perspective"></div>
+    <!--Footer-->
+    <footer class="footer d-flex flex-column justify-content-center">
+      <div class="footer--head">
+        <img
+          src="Images/pexels-pixabay-147411.jpg"
+          alt=""
+          class="footer--img__top img-fluid"
+        />
+        <div class="footer--head__box">
+          <h2
+            class="footer--head__title shadow bg-white rounded-sm"
+            data-aos="fade-up"
+          >
+            Add captions to your slides easily with the
+          </h2>
+          <a href="" class="btn btn--hover" data-aos="fade-up">contact</a>
+        </div>
+      </div>
+      <div class="footer--body bg-transparent d-flex justify-content-center">
+        <div class="row p-3">
+          <div
+            class="col-xl-6 col-md-6 col-sm-12 d-flex justify-content-start flex-column align-items-start"
+          >
+            <div class="media-img" data-aos="fade-up">
+              <img
+                src="Images/logo.png"
+                alt=""
+                class="footer--body__img mb-3"
+              />
+            </div>
+            <h5 class="text-white" data-aos="fade-up">CÔNG TY CỔ PHẦN ABC</h5>
+            <div class="footer--info text-left">
+              <p data-aos="fade-up">
+                <span>Trụ sở: </span> 158 Ngô Gia Tự, Khu 11, P. Chánh Nghĩa,
+                TP. Thủ Dầu Một, Bình Dương.
+              </p>
+              <p data-aos="fade-up">
+                <span>Chi nhánh: </span> Số 12C, Đại Lộ Bình Dương, Kp. Đông
+                Nhì, P. Lái Thiêu, TP. Thuận An, Bình Dương.
+              </p>
+              <p data-aos="fade-up">
+                <span>Chi nhánh: </span> Số 1338 Phạm Văn Đồng, P. Linh Tây, TP.
+                Thủ Đức, TP.HCM.
+              </p>
+              <p data-aos="fade-up"><span>Hotline:</span> 0938 61 61 61</p>
+            </div>
+          </div>
+          <div class="col-xl-6 col-md-6 col-sm-12">
+            <h3 class="text-success font-weight-bold" data-aos="fade-up">
+              FORM LIÊN HỆ
+            </h3>
+            <form action="">
+              <div class="form-group" data-aos="fade-up">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Họ Tên (*)"
+                />
+              </div>
+              <div class="form-group" data-aos="fade-up">
+                <input
+                  type="text"
+                  maxlength="10"
+                  class="form-control"
+                  placeholder="Số Điện Thoại(*)"
+                />
+              </div>
+              <div class="form-group" data-aos="fade-up">
+                <input type="email" class="form-control" placeholder="Email" />
+              </div>
+              <div class="form-group" data-aos="fade-up">
+                <textarea
+                  class="form-control"
+                  placeholder="Nội Dung (*)"
+                  rows="3"
+                ></textarea>
+              </div>
+              <button
+                data-aos="fade-up"
+                type="submit"
+                class="btn btn--hover px-4 shadow-lg"
+              >
+                Gửi
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--JQUERY-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--Animation-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        delay: 500,
+      });
+    </script>
+    <script src="Js/pageload.js"></script>
+    <script src="Js/app.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("header").css("backgroundColor", "transparent");
+        $(".navbar-nav-tool a").css("color", "white");
+        $(".nav-item a").css("color", "white");
+      });
+    </script>
+    <script src="Js/project.js"></script>
+  </body>
+</html>
