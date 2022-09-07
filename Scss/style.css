@@ -1149,14 +1149,19 @@ a:hover {
 }
 .project--nav {
   transition: translateY(-10%) 0.4s ease-in;
+  background-color: rgba(255, 166, 0, 0.349);
+  position: relative;
 }
 .project--nav.fixed {
   position: fixed;
-  top: 100px;
+  top: 102px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 9999;
   transition: translateY(-10%) 0.4s ease-in;
+  width: 100%;
+  opacity: 1;
+  height: auto;
 }
 .project--nav > a {
   width: auto;
@@ -1380,15 +1385,19 @@ a:hover {
 .hero .carousel-caption {
   left: 0;
   width: 100%;
+  height: 150px;
   bottom: 0;
+  opacity: 0.9;
 }
-.hero .carousel-caption a i {
+.hero .carousel-caption > a i {
+  font-size: 28px;
+  color: #fff;
+  animation: movedown 1.1s infinite ease-in-out;
   -webkit-animation: movedown 1.1s infinite ease-in-out;
-          animation: movedown 1.1s infinite ease-in-out;
 }
 
 .location-box {
-  padding-left: 200px;
+  padding-left: 100px;
 }
 .location-title {
   font-size: 60px;
@@ -1396,10 +1405,10 @@ a:hover {
 
 .utilities {
   width: 80%;
-  margin-top: 40px;
   margin: 0 auto;
 }
 .utilities-title {
+  margin-top: 40px;
   text-align: center;
   font-size: 60px;
   font-weight: 200;
@@ -1477,10 +1486,17 @@ a:hover {
 .perspective-img .owl-nav .owl-prev,
 .perspective-img .owl-nav .owl-next {
   font-size: 24px !important;
-  margin-left: 20px;
+  margin: 0 20px;
 }
 
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 993px) {
+  .hero .carousel-caption {
+    bottom: 50px;
+  }
+  .overview-title {
+    text-align: center;
+    margin-top: 20px;
+  }
   .location {
     padding: 10px 0;
   }
@@ -1494,23 +1510,23 @@ a:hover {
 }
 @-webkit-keyframes movedown {
   0% {
-    margin-top: 0;
+    -webkit-transform: translateY(-10px);
   }
   50% {
-    margin-top: 10px;
+    -webkit-transform: translateY(10px);
   }
   100% {
-    margin-top: 0;
+    -webkit-transform: translateY(-10px);
   }
 }
 @keyframes movedown {
   0% {
-    margin-top: 0;
+    transform: translateY(-10px);
   }
   50% {
-    margin-top: 10px;
+    transform: translateY(5px);
   }
   100% {
-    margin-top: 0;
+    transform: translateY(-10px);
   }
 }/*# sourceMappingURL=style.css.map */
