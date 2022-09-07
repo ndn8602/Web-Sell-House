@@ -175,31 +175,9 @@
     <!--Content-->
     <div
       id="carouselExampleCaptions"
-      class="carousel slide"
+      class="carousel slide hero"
       data-bs-ride="false"
     >
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
-      </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img
@@ -209,7 +187,7 @@
           />
           <div class="carousel-caption d-none d-md-block bg-warning">
             <h1>5F STELLA</h1>
-            <p>Some representative placeholder content for the first slide.</p>
+            <a href="#overview">Xem Thông Tin Dự Án</a>
           </div>
         </div>
       </div>
@@ -242,11 +220,13 @@
         </div>
       </div>
     </div>
-    <div class="overview">
-      <div class="row m-0">
-        <div class="col-4"><img src="Images/logo.png" alt="" class="" /></div>
-        <div class="col-8">
-          <div class="overview-title">TỔNG QUAN</div>
+    <div class="overview" id="overview">
+      <div class="row m-0 py-5">
+        <div class="col-md-6">
+          <img src="Images/logo.png" alt="" class="m-auto" />
+        </div>
+        <div class="col-md-6">
+          <div class="overview-title display-4 text-warning">TỔNG QUAN</div>
           <div class="overview-sub">
             <p>
               <span>Vị trí: </span>Đường ĐT 741, trung tâm thị trấn Phước Vĩnh,
@@ -269,24 +249,27 @@
     <div class="location bg-warning">
       <div class="row m-0">
         <div class="col-md-6">
-          <div class="location-title">VỊ TRÍ</div>
-          <div class="location-desc">
-            Khu đô thị 5F Stella nằm trên tuyến đường ĐT 741 - trục giao thương
-            chiến lược kết nối hai thành phố lớn là Thủ Dầu Một (Bình Dương) và
-            Đồng Xoài (Bình Phước). Bao quanh dự án là hàng loạt khu công nghiệp
-            sạch, khu khoa học công nghệ cao của Bình Dương, Bình Phước. Đặc
-            biệt, khu vực 5F Stella tọa lạc được định hướng phát triển thành đô
-            thị trung tâm của khu vực cửa ngõ phía Đông Bắc tỉnh Bình Dương, đô
-            thị vệ tinh của TP. Thủ Dầu Một và là trung tâm hành chính, văn hóa,
-            thương mại - dịch vụ, y tế của Phú Giáo. Hiện nay, Phú Giáo và khu
-            vực lân cận đang xây dựng một loạt KCN thế hệ mới hứa hẹn trở thành
-            “bến đỗ” của các tập đoàn quốc tế, đưa nơi đây thành “cứ điểm” sản
-            xuất thông minh hàng đầu Việt Nam và Đông Nam Á. Có thể kể đến như
-            các KCN Tam Lập 1-4, VSIP IV 1.000ha, An Linh 1.000ha, An Bình gần
-            1.000ha, Vĩnh Lập 1 hơn 750ha, Vĩnh Lập 2 với 500ha và Becamex Đồng
-            Phú 6.300ha… Công nghiệp và bất động sản luôn song hành. Như vậy,
-            Phú Giáo sắp tới cũng sẽ là “tọa độ kim cương” cực kỳ hấp dẫn cho
-            các nhà phát triển bất động sản.
+          <div class="location-box">
+            <div class="location-title text-white">VỊ TRÍ</div>
+            <div class="location-desc text-white">
+              Khu đô thị 5F Stella nằm trên tuyến đường ĐT 741 - trục giao
+              thương chiến lược kết nối hai thành phố lớn là Thủ Dầu Một (Bình
+              Dương) và Đồng Xoài (Bình Phước). Bao quanh dự án là hàng loạt khu
+              công nghiệp sạch, khu khoa học công nghệ cao của Bình Dương, Bình
+              Phước. Đặc biệt, khu vực 5F Stella tọa lạc được định hướng phát
+              triển thành đô thị trung tâm của khu vực cửa ngõ phía Đông Bắc
+              tỉnh Bình Dương, đô thị vệ tinh của TP. Thủ Dầu Một và là trung
+              tâm hành chính, văn hóa, thương mại - dịch vụ, y tế của Phú Giáo.
+              Hiện nay, Phú Giáo và khu vực lân cận đang xây dựng một loạt KCN
+              thế hệ mới hứa hẹn trở thành “bến đỗ” của các tập đoàn quốc tế,
+              đưa nơi đây thành “cứ điểm” sản xuất thông minh hàng đầu Việt Nam
+              và Đông Nam Á. Có thể kể đến như các KCN Tam Lập 1-4, VSIP IV
+              1.000ha, An Linh 1.000ha, An Bình gần 1.000ha, Vĩnh Lập 1 hơn
+              750ha, Vĩnh Lập 2 với 500ha và Becamex Đồng Phú 6.300ha… Công
+              nghiệp và bất động sản luôn song hành. Như vậy, Phú Giáo sắp tới
+              cũng sẽ là “tọa độ kim cương” cực kỳ hấp dẫn cho các nhà phát
+              triển bất động sản.
+            </div>
           </div>
         </div>
         <div class="col-md-6">
@@ -299,8 +282,8 @@
     </div>
     <div class="utilities">
       <div class="utilities-title">TIỆN ÍCH</div>
-      <div class="utilities-box">
-        <h3>Trăm tiện, ngàn lợi</h3>
+      <div class="utilities-box mt-5">
+        <h5>Trăm tiện, ngàn lợi</h5>
         <p>
           Tọa lạc ngay tâm điểm phát triển của Phú Giáo, 5F Stella được thụ
           hưởng trọn vẹn hệ thống tiện ích có sẵn như chợ Phước Vĩnh, trung tâm
@@ -317,8 +300,8 @@
           alt=""
         />
       </div>
-      <div class="utilities-box">
-        <h3>Hạ tầng bứt phá</h3>
+      <div class="utilities-box mt-5">
+        <h5>Hạ tầng bứt phá</h5>
         <p>
           Bên cạnh các tuyến đường huyết mạch hiện hữu như ĐT 741, ĐT 750, quốc
           lộ 13, quốc lộ 14, đường Bình Dương - Đồng Phú…, xung quanh khu đô thị
@@ -337,8 +320,8 @@
           alt=""
         />
       </div>
-      <div class="utilities-box">
-        <h3>Hưởng lợi từ quy hoạch kép</h3>
+      <div class="utilities-box mt-5">
+        <h5>Hưởng lợi từ quy hoạch kép</h5>
         <p>
           Trong bối cảnh quỹ đất trung tâm ngày càng hạn hẹp, Bình Dương đang
           hướng đến xây dựng vùng sản xuất thông minh và mở rộng không gian đô
@@ -355,8 +338,8 @@
           alt=""
         />
       </div>
-      <div class="utilities-box">
-        <h3>Phú Giáo - Trung tâm công nghiệp thế hệ mới của Bình Dương</h3>
+      <div class="utilities-box mt-5">
+        <h5>Phú Giáo - Trung tâm công nghiệp thế hệ mới của Bình Dương</h5>
         <p>
           Nắm giữ lợi thế vượt trội khi nằm giữa các KCN thế hệ mới gồm Tam Lập
           1-4, VSIP IV 1.000ha, An Linh 1.000ha, An Bình gần 1.000ha, Vĩnh Lập 1
@@ -377,7 +360,36 @@
         />
       </div>
     </div>
-    <div class="perspective"></div>
+    <div class="perspective">
+      <div class="perspective-title">PHỐI CẢNH</div>
+      <!-- TESTIMONIALS -->
+      <section class="testimonials">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div id="customers-testimonials" class="owl-carousel">
+                <!--TESTIMONIAL 1 -->
+                <div class="item">
+                  <div class="shadow-effect">
+                    <img class="img-circle" src="Images/img1.jpg" alt="" />
+                    <p>
+                      Dramatically maintain clicks-and-mortar solutions without
+                      functional solutions. Completely synergize resource taxing
+                      relationships via premier niche markets. Professionally
+                      cultivate.
+                    </p>
+                  </div>
+                  <div class="testimonial-name">EMILIANO AQUILANI</div>
+                </div>
+                <!--END OF TESTIMONIAL 1 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- END OF TESTIMONIALS -->
     <!--Footer-->
     <footer class="footer d-flex flex-column justify-content-center">
       <div class="footer--head">
@@ -397,7 +409,7 @@
         </div>
       </div>
       <div class="footer--body bg-transparent d-flex justify-content-center">
-        <div class="row p-3">
+        <div class="row py-3">
           <div
             class="col-xl-6 col-md-6 col-sm-12 d-flex justify-content-start flex-column align-items-start"
           >
@@ -409,35 +421,37 @@
               />
             </div>
             <h5 class="text-white" data-aos="fade-up">CÔNG TY CỔ PHẦN ABC</h5>
-            <div class="footer--info text-left">
-              <p data-aos="fade-up">
+            <div
+              class="footer--info d-flex flex-column justify-content-start align-items-start"
+              data-aos="fade-up"
+            >
+              <p>
                 <span>Trụ sở: </span> 158 Ngô Gia Tự, Khu 11, P. Chánh Nghĩa,
                 TP. Thủ Dầu Một, Bình Dương.
               </p>
-              <p data-aos="fade-up">
+              <p>
                 <span>Chi nhánh: </span> Số 12C, Đại Lộ Bình Dương, Kp. Đông
                 Nhì, P. Lái Thiêu, TP. Thuận An, Bình Dương.
               </p>
-              <p data-aos="fade-up">
+              <p>
                 <span>Chi nhánh: </span> Số 1338 Phạm Văn Đồng, P. Linh Tây, TP.
                 Thủ Đức, TP.HCM.
               </p>
-              <p data-aos="fade-up"><span>Hotline:</span> 0938 61 61 61</p>
+              <p><span>Hotline:</span> 0938 61 61 61</p>
             </div>
           </div>
-          <div class="col-xl-6 col-md-6 col-sm-12">
-            <h3 class="text-success font-weight-bold" data-aos="fade-up">
-              FORM LIÊN HỆ
-            </h3>
+
+          <div class="col-xl-6 col-md-6 col-sm-12" data-aos="fade-up">
+            <h3 class="text-white">THÔNG TIN LIÊN HỆ</h3>
             <form action="">
-              <div class="form-group" data-aos="fade-up">
+              <div class="form-group">
                 <input
                   type="text"
                   class="form-control"
                   placeholder="Họ Tên (*)"
                 />
               </div>
-              <div class="form-group" data-aos="fade-up">
+              <div class="form-group">
                 <input
                   type="text"
                   maxlength="10"
@@ -445,23 +459,23 @@
                   placeholder="Số Điện Thoại(*)"
                 />
               </div>
-              <div class="form-group" data-aos="fade-up">
+              <div class="form-group">
                 <input type="email" class="form-control" placeholder="Email" />
               </div>
-              <div class="form-group" data-aos="fade-up">
+              <div class="form-group">
                 <textarea
                   class="form-control"
                   placeholder="Nội Dung (*)"
                   rows="3"
                 ></textarea>
               </div>
-              <button
-                data-aos="fade-up"
-                type="submit"
-                class="btn btn--hover px-4 shadow-lg"
+              <div
+                class="form-btn d-flex justify-content-center align-items-center"
               >
-                Gửi
-              </button>
+                <button type="submit" class="btn btn--hover px-4 shadow-lg">
+                  Gửi
+                </button>
+              </div>
             </form>
           </div>
         </div>
@@ -479,15 +493,47 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--OWL CAROUSEL-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+    ></script>
     <!--Animation-->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      jQuery(document).ready(function ($) {
+        "use strict";
+        //  TESTIMONIALS CAROUSEL HOOK
+        $("#customers-testimonials").owlCarousel({
+          loop: true,
+          center: true,
+          items: 3,
+          margin: 0,
+          autoplay: true,
+          dots: true,
+          autoplayTimeout: 8500,
+          smartSpeed: 450,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            768: {
+              items: 2,
+            },
+            1170: {
+              items: 3,
+            },
+          },
+        });
+      });
+    </script>
     <script>
       AOS.init({
         delay: 500,
       });
     </script>
-    <script src="Js/pageload.js"></script>
-    <script src="Js/app.js"></script>
+
     <script>
       $(document).ready(function () {
         $("header").css("backgroundColor", "transparent");
@@ -495,6 +541,8 @@
         $(".nav-item a").css("color", "white");
       });
     </script>
+    <script src="Js/pageload.js"></script>
+    <script src="Js/app.js"></script>
     <script src="Js/project.js"></script>
   </body>
 </html>
