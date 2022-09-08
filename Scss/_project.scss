@@ -1,9 +1,7 @@
 .project {
+  margin-top: -100px;
   width: 95%;
   height: 100%;
-  // &--header {
-  //   margin-left: 20%;
-  // }
   &--nav {
     transition: translateY(-10%) 0.4s ease-in;
     background-color: rgba(255, 166, 0, 0.349);
@@ -20,12 +18,13 @@
       height: auto;
     }
     & > a {
+      
       &.active {
         background-color: green;
       }
       width: auto;
       min-width: 120px;
-      height: auto;
+      height: fit-content;
       font-size: 12px;
       font-weight: 600;
       background-color: orange;
