@@ -1151,7 +1151,6 @@ a:hover {
 }
 .project--nav {
   transition: translateY(-10%) 0.4s ease-in;
-  background-color: rgba(255, 166, 0, 0.349);
   position: relative;
 }
 .project--nav.fixed {
@@ -1166,7 +1165,7 @@ a:hover {
   height: auto;
 }
 .project--nav > a {
-  width: auto;
+  width: calc(50% - 10px);
   min-width: 120px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -1248,7 +1247,7 @@ a:hover {
   width: 100%;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .media-img {
     width: 100%;
   }
@@ -1256,10 +1255,13 @@ a:hover {
     margin: 0 auto;
   }
   .project {
-    margin-top: 80px;
+    margin-top: -10px;
   }
   .project--nav > a {
     width: calc(50% - 10px);
+  }
+  .project--item {
+    margin: 20px 0;
   }
   .project--item__image {
     height: 350px;
@@ -1281,6 +1283,17 @@ a:hover {
     -webkit-box-orient: vertical;
     padding: 0;
     overflow-y: hidden;
+  }
+}
+@media screen and (max-width: 600px) {
+  .project {
+    margin-top: -10px;
+  }
+  .project--nav > a {
+    width: calc(50% - 10px);
+  }
+  .project--item {
+    margin: 10px 0;
   }
 }
 .card-img-top {
@@ -1705,7 +1718,7 @@ a:hover {
 }
 @media screen and (max-width: 600px) {
   .overviews-background {
-    margin-top: 13%;
+    margin-top: 47px;
   }
   .overviews-background .owl-stage-outer {
     height: 300px;
