@@ -1070,6 +1070,7 @@ a:hover {
 /** Section 4 - footer
 --------------------------------------**/
 .footer {
+  padding-bottom: 50px;
   height: auto;
   width: 100%;
   background-color: orange !important;
@@ -1497,6 +1498,10 @@ a:hover {
     text-align: center;
     margin-top: 20px;
   }
+  .perspective {
+    max-height: auto;
+    min-height: 400px;
+  }
   .location {
     padding: 10px 0;
   }
@@ -1528,5 +1533,160 @@ a:hover {
   }
   100% {
     transform: translateY(-10px);
+  }
+}
+.overviews {
+  width: 90%;
+  overflow: hidden;
+}
+.overviews-background .owl-stage-outer {
+  position: relative;
+  height: 600px;
+}
+.overviews-background .owl-stage-outer .owl-stage {
+  height: inherit;
+}
+.overviews-background .owl-stage-outer .owl-stage .owl-item {
+  height: inherit;
+}
+.overviews-background .owl-stage-outer .owl-stage .owl-item .item {
+  width: 100%;
+  height: inherit;
+}
+.overviews-background .owl-stage-outer .owl-stage .owl-item .item img {
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+  background-position: center;
+}
+.overviews-content h2 {
+  font-size: 60px;
+  letter-spacing: 5px;
+  color: orange;
+}
+.overviews-content_box h5 {
+  color: #494949;
+  font-weight: 700;
+  font-size: 18px;
+}
+.overviews-content_box p {
+  letter-spacing: 0.7px;
+}
+.overviews-history {
+  height: 500px;
+  margin: 40px 0 0 0;
+  padding: 20px 40px 80px 40px;
+  text-align: start;
+  color: #fff;
+  position: relative;
+  z-index: 10;
+}
+.overviews-history::before {
+  position: absolute;
+  content: "";
+  background: rgba(255, 166, 0, 0.993);
+  opacity: 0.7;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.overviews-history_title {
+  font-size: 40px;
+  color: white;
+  padding-left: 5%;
+  letter-spacing: 5px;
+}
+.overviews-history_box {
+  margin-top: 20px;
+  padding: 0 5%;
+}
+.overviews-value {
+  width: 100%;
+  padding: 0 8%;
+  margin-top: 4%;
+}
+
+.box-year {
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+.box-txt p {
+  margin-bottom: 5px;
+  letter-spacing: 0.7px;
+}
+
+.value-title {
+  display: flex;
+  align-items: flex-end;
+}
+.value-title h2 {
+  font-size: 60px;
+  letter-spacing: 3px;
+  margin-bottom: 0;
+  color: orange;
+}
+.value-title h5 {
+  font-size: 30px;
+  color: green;
+  margin-left: 50px;
+}
+.value-list {
+  margin-top: 40px;
+  padding: 0 25%;
+}
+.value-box {
+  margin-bottom: 20%;
+}
+.value-box h5 {
+  font-size: 50px;
+  font-weight: 700;
+  color: orange;
+  opacity: 0.7;
+}
+.value-box p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .overviews-background {
+    margin-top: 8.5%;
+  }
+  .overviews-background .owl-stage-outer {
+    height: 300px;
+  }
+  .overviews-background .owl-stage-outer .owl-stage .owl-item .item {
+    overflow: hidden;
+  }
+  .overviews-content h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+  .overviews-content_box h5 {
+    color: #494949;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  .overviews-content_box p {
+    letter-spacing: 0px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .overviews-background {
+    margin-top: 13%;
+  }
+  .overviews-background .owl-stage-outer {
+    height: 300px;
+  }
+  .overviews-background .owl-stage-outer .owl-stage .owl-item .item {
+    overflow: hidden;
   }
 }/*# sourceMappingURL=style.css.map */

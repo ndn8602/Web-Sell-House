@@ -13,6 +13,48 @@ function closeMenu() {
   document.getElementById("myMenu").style.width = "0";
   document.body.style.backgroundColor = "white";
 }
+
+$(".overviews-history_box").owlCarousel({
+  nav: true,
+  margin: 20,
+  autoplayTimeout: 2000,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    400: {
+      items: 1,
+    },
+    600: {
+      items: 1,
+    },
+    1000: {
+      items: 3,
+    },
+  },
+});
+$(".overviews-background").owlCarousel({
+  dotsEach: 6,
+  nav: true,
+  loop: true,
+  margin: 20,
+  autoplayTimeout: 2000,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    400: {
+      items: 1,
+    },
+    600: {
+      items: 1,
+    },
+    1000: {
+      items: 1,
+    },
+  },
+});
+
 $(".details--news").owlCarousel({
   dotsEach: 6,
   nav: true,
