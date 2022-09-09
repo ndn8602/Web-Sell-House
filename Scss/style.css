@@ -77,6 +77,8 @@
   width: 100%;
   height: 100vh;
   position: fixed;
+  top: 0;
+  left: 0;
   background: #272727;
   z-index: 10000;
   overflow: hidden;
@@ -299,6 +301,9 @@ body {
   background: #000;
 }
 
+.dropdown-menu {
+  z-index: 99999;
+}
 .dropdown:hover .dropdown-menu {
   text-align: start;
   height: -webkit-fit-content;
@@ -849,7 +854,7 @@ body {
   width: 450px;
   height: calc(100vh - 300px);
   margin: 0 5px;
-  transition: 0.3s ease;
+  transition: 0.5s ease !important;
 }
 .resort_item--info {
   height: 100%;
@@ -895,6 +900,7 @@ body {
 }
 .resort_item.move {
   width: 800px;
+  transition: all 3s ease-in-out;
 }
 
 @media screen and (max-width: 899px) {
@@ -1164,7 +1170,7 @@ a:hover {
   top: 102px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 9999;
+  z-index: 99;
   transition: translateY(-10%) 0.4s ease-in;
   width: 100%;
   opacity: 1;

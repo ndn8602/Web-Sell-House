@@ -95,6 +95,9 @@
 }
 
 .dropdown {
+  &-menu {
+    z-index: 99999;
+  }
   &:hover {
     .dropdown-menu {
       text-align: start;
