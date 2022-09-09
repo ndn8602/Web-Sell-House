@@ -13,11 +13,20 @@
     height: 100%;
     width: 100%;
     position: relative;
-    display: flex;
   }
   &--date {
+    height: fit-content !important;
+    width: 100px !important;
     font-size: 27px;
     background-color: #6666;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    overflow: hidden;
+    .row {
+      width: 100%;
+      margin: 0;
+    }
     span {
       width: 100%;
       font-size: 11px;

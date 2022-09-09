@@ -109,8 +109,6 @@
   &-item {
     font-size: 14px;
     padding: 5px;
-    border-bottom: 1px solid #dad9d9;
-    border-radius: 10px;
   }
 }
 
@@ -190,7 +188,7 @@
       &-link {
         padding: 8px 10px 4px;
         span {
-          color: #0870d1;
+          color: #0870d1 !important;
           font-size: 10px;
           padding-right: 5px;
         }
@@ -222,13 +220,22 @@
       font-size: 15px;
       font-weight: 700;
       margin: 8px;
+
       &-register {
-        background-color: #fff !important;
-        color: #000;
+        position: relative;
+        &::after {
+          background-color: #fff !important;
+          color: #000;
+          z-index: -1;
+        }
       }
       &-start {
-        background-color: #007bff !important;
-        color: #fff;
+        position: relative;
+        &::after {
+          background-color: #007bff !important;
+          color: #fff;
+          z-index: -1;
+        }
       }
     }
   }

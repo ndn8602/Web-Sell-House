@@ -313,8 +313,6 @@ body {
 .dropdown-item {
   font-size: 14px;
   padding: 5px;
-  border-bottom: 1px solid #dad9d9;
-  border-radius: 10px;
 }
 
 @media screen and (max-width: 997px) {
@@ -404,7 +402,7 @@ body {
   padding: 8px 10px 4px;
 }
 .menu--body .sub-link span {
-  color: #0870d1;
+  color: #0870d1 !important;
   font-size: 10px;
   padding-right: 5px;
 }
@@ -444,12 +442,20 @@ body {
   margin: 8px;
 }
 .menu--bottom .btn-register {
+  position: relative;
+}
+.menu--bottom .btn-register::after {
   background-color: #fff !important;
   color: #000;
+  z-index: -1;
 }
 .menu--bottom .btn-start {
+  position: relative;
+}
+.menu--bottom .btn-start::after {
   background-color: #007bff !important;
   color: #fff;
+  z-index: -1;
 }
 
 /** Section 1 - intro
@@ -1232,8 +1238,8 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: green;
   z-index: -1;
+  background-color: green;
   border-radius: 3px;
   transition: 0.4s all ease-in-out 0s;
 }
@@ -1338,11 +1344,24 @@ a:hover {
   height: 100%;
   width: 100%;
   position: relative;
-  display: flex;
 }
 .details--date {
+  height: -webkit-fit-content !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+  width: 100px !important;
   font-size: 27px;
   background-color: rgba(102, 102, 102, 0.4);
+  display: flex;
+  flex-direction: column;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  overflow: hidden;
+}
+.details--date .row {
+  width: 100%;
+  margin: 0;
 }
 .details--date span {
   width: 100%;
