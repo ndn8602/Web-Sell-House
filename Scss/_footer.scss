@@ -53,6 +53,14 @@
     }
   }
 }
+.btn--footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  a {
+    margin: 0 auto;
+  }
+}
 @media screen and (max-width: 968px) {
   .footer {
     &--head {

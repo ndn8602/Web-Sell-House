@@ -400,11 +400,13 @@
           >
             Add captions to your slides easily with the
           </h2>
-          <a href="" class="btn btn--hover" data-aos="fade-up">contact</a>
+          <div class="btn--footer"  data-aos="fade-up">
+            <a href="" class="btn btn--hover">contact</a>
+          </div>
         </div>
       </div>
       <div class="footer--body bg-transparent d-flex justify-content-center">
-        <div class="row py-3">
+        <div class="row p-3">
           <div
             class="col-xl-6 col-md-6 col-sm-12 d-flex justify-content-start flex-column align-items-start"
           >
@@ -416,37 +418,35 @@
               />
             </div>
             <h5 class="text-white" data-aos="fade-up">CÔNG TY CỔ PHẦN ABC</h5>
-            <div
-              class="footer--info d-flex flex-column justify-content-start align-items-start"
-              data-aos="fade-up"
-            >
-              <p>
+            <div class="footer--info text-left">
+              <p data-aos="fade-up">
                 <span>Trụ sở: </span> 158 Ngô Gia Tự, Khu 11, P. Chánh Nghĩa,
                 TP. Thủ Dầu Một, Bình Dương.
               </p>
-              <p>
+              <p data-aos="fade-up">
                 <span>Chi nhánh: </span> Số 12C, Đại Lộ Bình Dương, Kp. Đông
                 Nhì, P. Lái Thiêu, TP. Thuận An, Bình Dương.
               </p>
-              <p>
+              <p data-aos="fade-up">
                 <span>Chi nhánh: </span> Số 1338 Phạm Văn Đồng, P. Linh Tây, TP.
                 Thủ Đức, TP.HCM.
               </p>
-              <p><span>Hotline:</span> 0938 61 61 61</p>
+              <p data-aos="fade-up"><span>Hotline:</span> 0938 61 61 61</p>
             </div>
           </div>
-
-          <div class="col-xl-6 col-md-6 col-sm-12" data-aos="fade-up">
-            <h5 class="text-white">THÔNG TIN LIÊN HỆ</h5>
+          <div class="col-xl-6 col-md-6 col-sm-12">
+            <h3 class="text-success font-weight-bold" data-aos="fade-up">
+              FORM LIÊN HỆ
+            </h3>
             <form action="">
-              <div class="form-group">
+              <div class="form-group" data-aos="fade-up">
                 <input
                   type="text"
                   class="form-control"
                   placeholder="Họ Tên (*)"
                 />
               </div>
-              <div class="form-group">
+              <div class="form-group" data-aos="fade-up">
                 <input
                   type="text"
                   maxlength="10"
@@ -454,23 +454,23 @@
                   placeholder="Số Điện Thoại(*)"
                 />
               </div>
-              <div class="form-group">
+              <div class="form-group" data-aos="fade-up">
                 <input type="email" class="form-control" placeholder="Email" />
               </div>
-              <div class="form-group">
+              <div class="form-group" data-aos="fade-up">
                 <textarea
                   class="form-control"
                   placeholder="Nội Dung (*)"
                   rows="3"
                 ></textarea>
               </div>
-              <div
-                class="form-btn d-flex justify-content-center align-items-center"
+              <button
+                data-aos="fade-up"
+                type="submit"
+                class="btn btn--hover px-4 shadow-lg"
               >
-                <button type="submit" class="btn btn--hover px-4 shadow-lg">
-                  Gửi
-                </button>
-              </div>
+                Gửi
+              </button>
             </form>
           </div>
         </div>
@@ -502,33 +502,33 @@
       });
     </script>
 
-<script>
-  $(window).ready(function () {
-    $("header").css("backgroundColor", "transparent");
-    $(".navbar-nav-tool a").css("color", "white");
-    $(".nav-item").css("color", "white ");
-  });
-  $(window).scroll(function () {
-    let scroll = $(window).scrollTop();
-    let width = window.innerWidth;
-    if (width > 968) {
-      if (scroll <= 196) {
+    <script>
+      $(window).ready(function () {
         $("header").css("backgroundColor", "transparent");
         $(".navbar-nav-tool a").css("color", "white");
-        $(".nav-item a").css("color", "white");
-        $(".dropdown-item").css("color", "black");
-      } else {
-        $("header").css("backgroundColor", "white");
-        $(".navbar-nav-tool a").css("color", "orange");
-        $(".nav-item a").css("color", "orange");
-        $(".dropdown-item").css("color", "orange  ");
-      }
-    }
-    $(window).ready(() => {
-      $(".nav-menu").css("color", "black");
-    });
-  });
-</script>
+        $(".nav-item").css("color", "white ");
+      });
+      $(window).scroll(function () {
+        let scroll = $(window).scrollTop();
+        let width = window.innerWidth;
+        if (width > 968) {
+          if (scroll <= 196) {
+            $("header").css("backgroundColor", "transparent");
+            $(".navbar-nav-tool a").css("color", "white");
+            $(".nav-item a").css("color", "white");
+            $(".dropdown-item").css("color", "black");
+          } else {
+            $("header").css("backgroundColor", "white");
+            $(".navbar-nav-tool a").css("color", "orange");
+            $(".nav-item a").css("color", "orange");
+            $(".dropdown-item").css("color", "orange  ");
+          }
+        }
+        $(window).ready(() => {
+          $(".nav-menu").css("color", "black");
+        });
+      });
+    </script>
     <script src="Js/pageload.js"></script>
     <script src="Js/app.js"></script>
     <script src="Js/project.js"></script>

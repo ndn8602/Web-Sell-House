@@ -795,8 +795,8 @@ body {
   margin: 10px auto;
   margin-bottom: 10px;
   width: 70%;
-  display: -webkit-box;
   transition: 0.3s ease;
+  display: -webkit-box;
   text-align: justify;
   white-space: wrap;
   -webkit-line-clamp: 3;
@@ -1136,6 +1136,15 @@ a:hover {
   height: 80px;
 }
 
+.btn--footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.btn--footer a {
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 968px) {
   .footer--head {
     position: relative;
@@ -1423,6 +1432,35 @@ a:hover {
 .details--news .item .news--content__date {
   left: 0;
   top: 0;
+}
+.details--news .item .card {
+  height: 500px;
+  position: relative;
+}
+.details--news .item .card-body {
+  padding: 10px;
+}
+.details--news .item .card-title {
+  display: -webkit-box;
+  white-space: wrap;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow-y: hidden;
+  margin: 5px 0;
+  font-size: 18px;
+}
+.details--news .item .card-text {
+  display: -webkit-box;
+  white-space: wrap;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow-y: hidden;
+  margin: 10px 0;
+  font-size: 14px;
+}
+.details--news .item .card-btn {
+  position: absolute;
+  bottom: 10px;
 }
 .details-media_title {
   text-align: center;
