@@ -58,7 +58,7 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item nav-item--hover dropdown">
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link dropdown-toggle nav-menu"
                 href="#"
                 role="button"
                 data-toggle="dropdown"
@@ -72,11 +72,11 @@
               </div>
             </li>
             <li class="nav-item nav-item--hover">
-              <a class="nav-link" href="#">KHU NGHỈ DƯỠNG</a>
+              <a class="nav-link nav-menu" href="#">KHU NGHỈ DƯỠNG</a>
             </li>
             <li class="nav-item nav-item--hover dropdown">
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link dropdown-toggle nav-menu"
                 href="#"
                 role="button"
                 data-toggle="dropdown"
@@ -90,7 +90,7 @@
               </div>
             </li>
             <li class="nav-item nav-item--hover">
-              <a class="nav-link" href="#">TRẢI NGHIỆM CỦA BẠN</a>
+              <a class="nav-link nav-menu" href="#">TRẢI NGHIỆM CỦA BẠN</a>
             </li>
             <li class="navbar-nav-tool">
               <a class="nav-link nav-rounded py-3" href="#">VN</a>
@@ -124,7 +124,7 @@
           >
             <a class="nav-link" href="#GioiThieu" role="button">GIỚI THIỆU</a>
 
-            <span><i class="bx bxs-down-arrow"></i></span>
+            <span><i class="bx bxs-down-arrow text-dark"></i></span>
           </li>
           <div class="collapse multi-collapse sub-link" id="GioiThieu">
             <a href="" class="d-block sub-item lead">
@@ -149,7 +149,7 @@
               role="button"
               >KỲ NGHỈ TRAO ĐỔI</a
             >
-            <span><i class="bx bxs-down-arrow"></i></span>
+            <span><i class="bx bxs-down-arrow text-dark"></i></span>
           </li>
           <div class="collapse multi-collapse sub-link" id="TraoDoi">
             <a class="d-block sub-item lead">
@@ -567,23 +567,30 @@
     </script>
 
     <script>
-      $(document).ready(function () {
+      $(window).ready(function () {
         $("header").css("backgroundColor", "transparent");
         $(".navbar-nav-tool a").css("color", "white");
         $(".nav-item").css("color", "white ");
       });
       $(window).scroll(function () {
         let scroll = $(window).scrollTop();
-        if (scroll <= 196) {
-          $("header").css("backgroundColor", "transparent");
-          $(".navbar-nav-tool a").css("color", "white");
-          $(".nav-item a").css("color", "white");
-          $(".dropdown-item").css("color", "black");
-        } else {
-          $("header").css("backgroundColor", "white");
-          $(".navbar-nav-tool a").css("color", "orange");
-          $(".nav-item a").css("color", "orange");
-          $(".dropdown-item").css("color", "black"); }
+        let width = window.innerWidth;
+        if (width > 968) {
+          if (scroll <= 196) {
+            $("header").css("backgroundColor", "transparent");
+            $(".navbar-nav-tool a").css("color", "white");
+            $(".nav-item a").css("color", "white");
+            $(".dropdown-item").css("color", "black");
+          } else {
+            $("header").css("backgroundColor", "white");
+            $(".navbar-nav-tool a").css("color", "orange");
+            $(".nav-item a").css("color", "orange");
+            $(".dropdown-item").css("color", "orange  ");
+          }
+        }
+        $(window).ready(() => {
+          $(".nav-menu").css("color", "black");
+        });
       });
     </script>
     <script src="Js/pageload.js"></script>

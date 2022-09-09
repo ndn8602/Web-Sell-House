@@ -211,7 +211,9 @@
       <div class="details--content">
         <div class="details--title">
           <div class="row m-0 flex-row flex-nowrap">
-            <div class="col-sm-1 col-md-1 details--date text-center bg-secondary">
+            <div
+              class="col-sm-1 col-md-1 details--date text-center bg-secondary"
+            >
               04 <br />
               <span>9-2022</span>
             </div>
@@ -541,24 +543,22 @@
       });
     </script>
     <script>
-      $(document).ready(function () {
-        $("header").css("backgroundColor", "transparent");
-        $(".navbar-nav-tool a").css("color", "white");
-        $(".nav-item").css("color", "white ");
-      });
-      $(window).scroll(function () {
-        let scroll = $(window).scrollTop();
-        if (scroll <= 196) {
-          $("header").css("backgroundColor", "transparent");
-          $(".navbar-nav-tool a").css("color", "white");
-          $(".nav-item a").css("color", "white");
-          $(".dropdown-item").css("color", "black");
-        } else {
-          $("header").css("backgroundColor", "white");
-          $(".navbar-nav-tool a").css("color", "orange");
-          $(".nav-item a").css("color", "orange");
-          $(".dropdown-item").css("color", "black");}
-      });
+      let width = window.innerWidth;
+      console.log(width);
+      if (width < 968) {
+        $(window).ready(function () {
+          $("header").css("backgroundColor", "#fff");
+          $(".navbar-nav-tool a").css("color", "orange ");
+          $(".nav-link").css("color", "black  ");
+        });
+      } else {
+        $(window).ready(function () {
+          $("header").css("backgroundColor", "#fff");
+          $(".navbar-nav-tool a").css("color", "orange ");
+          $(".nav-link").css("color", "orange  ");
+          $(".nav-item a").css("color", "orange  ");
+        });
+      }
     </script>
     <script src="Js/project.js"></script>
     <script src="Js/pageload.js"></script>

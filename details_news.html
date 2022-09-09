@@ -118,7 +118,7 @@
       <div class="menu--body">
         <ul class="navbar-nav ml-auto">
           <li
-            class="nav-item dropdown nav-item--hover"
+            class="nav-item dropdown nav-item--hover text-dark"
             data-toggle="collapse"
             href="#GioiThieu"
           >
@@ -149,7 +149,7 @@
               role="button"
               >KỲ NGHỈ TRAO ĐỔI</a
             >
-            <span><i class="bx bxs-down-arrow"></i></span>
+            <span><i class="bx bxs-down-arrow text-dark"></i></span>
           </li>
           <div class="collapse multi-collapse sub-link" id="TraoDoi">
             <a class="d-block sub-item lead">
@@ -205,7 +205,7 @@
           >
           <a
             href=""
-            class="project--nav__all btn--hover btn btn-xl px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm  "
+            class="project--nav__all btn--hover btn btn-xl px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
             >TIN THỊ TRƯỜNG</a
           >
           <a
@@ -221,7 +221,7 @@
         </div>
       </div>
     </div>
-    <div class="overview overflow-hidden" id="overview"  data-aos="fade-down">
+    <div class="overview overflow-hidden" id="overview" data-aos="fade-down">
       <div class="row m-0 py-5">
         <div class="col-sm-12 col-md-6" data-aos="flip-up">
           <img src="Images/logo.png" alt="" class="m-auto" />
@@ -247,7 +247,7 @@
         </div>
       </div>
     </div>
-    <div class="location bg-warning overflow-hidden"  data-aos="fade-up">
+    <div class="location bg-warning overflow-hidden" data-aos="fade-up">
       <div class="row m-0">
         <div class="col-sm-12 col-md-6">
           <div class="location-box">
@@ -281,7 +281,7 @@
         </div>
       </div>
     </div>
-    <div class="utilities"  data-aos="fade-down">
+    <div class="utilities" data-aos="fade-down">
       <div class="utilities-title">TIỆN ÍCH</div>
       <div class="utilities-box mt-3" data-aos="fade-down">
         <h5>Trăm tiện, ngàn lợi</h5>
@@ -361,7 +361,7 @@
         />
       </div>
     </div>
-    <div class="perspective"  data-aos="fade-up">
+    <div class="perspective" data-aos="fade-up">
       <div class="perspective-title">PHỐI CẢNH</div>
       <div class="perspective-box">
         <div class="perspective-img owl-carousel">
@@ -530,25 +530,33 @@
     </script>
 
 <script>
-  $(document).ready(function () {
+  $(window).ready(function () {
     $("header").css("backgroundColor", "transparent");
     $(".navbar-nav-tool a").css("color", "white");
     $(".nav-item").css("color", "white ");
   });
   $(window).scroll(function () {
     let scroll = $(window).scrollTop();
-    if (scroll <= 196) {
-      $("header").css("backgroundColor", "transparent");
-      $(".navbar-nav-tool a").css("color", "white");
-      $(".nav-item a").css("color", "white");
-      $(".dropdown-item").css("color", "black");
-    } else {
-      $("header").css("backgroundColor", "white");
-      $(".navbar-nav-tool a").css("color", "orange");
-      $(".nav-item a").css("color", "orange");
-      $(".dropdown-item").css("color", "black"); }
+    let width = window.innerWidth;
+    if (width > 968) {
+      if (scroll <= 196) {
+        $("header").css("backgroundColor", "transparent");
+        $(".navbar-nav-tool a").css("color", "white");
+        $(".nav-item a").css("color", "white");
+        $(".dropdown-item").css("color", "black");
+      } else {
+        $("header").css("backgroundColor", "white");
+        $(".navbar-nav-tool a").css("color", "orange");
+        $(".nav-item a").css("color", "orange");
+        $(".dropdown-item").css("color", "orange  ");
+      }
+    }
+    $(window).ready(() => {
+      $(".nav-menu").css("color", "black");
+    });
   });
 </script>
+
     <script src="Js/pageload.js"></script>
     <script src="Js/app.js"></script>
     <script src="Js/project.js"></script>

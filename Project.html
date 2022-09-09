@@ -598,27 +598,33 @@
       });
     </script>
 
-    <script>
-      $(document).ready(function () {
+<script>
+  $(window).ready(function () {
+    $("header").css("backgroundColor", "transparent");
+    $(".navbar-nav-tool a").css("color", "white");
+    $(".nav-item").css("color", "white ");
+  });
+  $(window).scroll(function () {
+    let scroll = $(window).scrollTop();
+    let width = window.innerWidth;
+    if (width > 968) {
+      if (scroll <= 196) {
         $("header").css("backgroundColor", "transparent");
         $(".navbar-nav-tool a").css("color", "white");
         $(".nav-item a").css("color", "white");
-      });
-      $(window).scroll(function () {
-        let scroll = $(window).scrollTop();
-        if (scroll <= 196) {
-          $("header").css("backgroundColor", "transparent");
-          $(".navbar-nav-tool a").css("color", "white");
-          $(".nav-item a").css("color", "white");
-          $(".dropdown-item").css("color", "black");
-        } else {
-          $("header").css("backgroundColor", "white");
-          $(".navbar-nav-tool a").css("color", "orange");
-          $(".nav-item a").css("color", "orange");
-          $(".dropdown-item").css("color", "black");
-        }
-      });
-    </script>
+        $(".dropdown-item").css("color", "black");
+      } else {
+        $("header").css("backgroundColor", "white");
+        $(".navbar-nav-tool a").css("color", "orange");
+        $(".nav-item a").css("color", "orange");
+        $(".dropdown-item").css("color", "orange  ");
+      }
+    }
+    $(window).ready(() => {
+      $(".nav-menu").css("color", "black");
+    });
+  });
+</script>
     <script src="Js/pageload.js"></script>
     <script src="Js/app.js"></script>
     <script src="Js/project.js"></script>
