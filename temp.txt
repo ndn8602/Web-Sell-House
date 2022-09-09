@@ -1,108 +1,22 @@
-<footer
-          class="d-flex justify-content-around align-items-center mx-3 position-absolute"
-        >
-          <div class="row">
-            <div
-              class="col-md-3 col-xl-3 col-sm-12 col-xs-12 footer--info mb-3"
-            >
-              <div class="footer--logo mb-2">
-                <img src="Images/logo.png" alt="" class="img-fluid" />
-              </div>
-              <div class="text-left">
-                <div class="footer-info-hotline mb-2 text-dark">
-                  <i class="bx bxs-phone-call"></i>01235.1244.122
-                </div>
-                <div class="footer-info-email mb-2 text-dark">
-                  <i class="bx bxs-envelope"></i>Wowlandgroup@gmail.com
-                </div>
-                <div class="footer-info-address text-dark">
-                  <i class="bx bxs-map"></i>6 Phan Văn Trị Phường 12, Quận Bình
-                  thạnh, TP.Hồ Chí Minh
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-md-3 col-xl-3 col-sm-12 col-xs-12 footer--info mb-3"
-            >
-              <div
-                class="footer-service d-flex flex-column justify-content-start align-items-start"
-              >
-                <h3>Thông tin | Hỗ trợ</h3>
-                <div
-                  class="footer-service-list d-flex flex-column justify-content-start align-items-start"
-                >
-                  <a href="#" class="footer-service-item mb-3">Về chúng tôi</a>
-                  <a href="#" class="footer-service-item mb-3">Hỏi đáp</a>
-                  <a href="#" class="footer-service-item mb-3"
-                    >Hướng dẫn tìm căn hộ</a
-                  >
-                  <a href="#" class="footer-service-item mb-3"
-                    >Điều khoản thương lượng</a
-                  >
-                  <a href="#" class="footer-service-item mb-3"
-                    >Cơ hội nghề nghiệp</a
-                  >
-                  <a href="#" class="footer-service-item mb-3">Blog nhà đất</a>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-md-3 col-xl-3 col-sm-12 col-xs-12 footer--info mb-3"
-            >
-              <div
-                class="footer-service d-flex flex-column justify-content-start align-items-start"
-              >
-                <div
-                  class="footer-contact d-flex flex-column justify-content-start align-items-start"
-                >
-                  <h3>Liên Hệ</h3>
-                  <h5>Mua/Bán Bất động sản:</h5>
-                  <a href="" class="mb-4">hoanggialand@gmail.com</a>
-                  <h4>Hỗ trợ:</h4>
-                  <a href="" class="mb-4">hoanggialand@gmail.com</a>
-                  <h4>Môi giới:</h4>
-                  <a href="" class="mb-4">hoanggialand@gmail.com</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-xl-3 col-sm-12 col-xs-12 mb-4">
-              <form action="">
-                <div class="form-group" data-aos="fade-up">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Họ Tên (*)"
-                  />
-                </div>
-                <div class="form-group" data-aos="fade-up">
-                  <input
-                    type="text"
-                    maxlength="10"
-                    class="form-control"
-                    placeholder="Số Điện Thoại(*)"
-                  />
-                </div>
-                <div class="form-group" data-aos="fade-up">
-                  <input
-                    type="email"
-                    class="form-control"
-                    placeholder="Email"
-                  />
-                </div>
-                <div class="form-group" data-aos="fade-up">
-                  <textarea
-                    class="form-control"
-                    placeholder="Nội Dung (*)"
-                    rows="3"
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  class="footer-btn btn btn--hover px-4 shadow-lg bg-warning"
-                >
-                  Gửi
-                </button>
-              </form>
-            </div>
-          </div>
-        </footer>
+<div class="value-box">
+          <h5>SỨ MỆNH</h5>
+          <p>
+            - Góp phần xây dựng và phát triển thị trường bất động sản minh bạch,
+            bền vững
+          </p>
+          <p>- Góp phần tích cực vào lĩnh vực phát triển đô thị tại Việt Nam</p>
+          <p>- Kiến tạo những giá trị tốt đẹp cho cộng đồng và xã hội</p>
+          <p>
+            - Góp phần mang đến cơ hội an cư và đầu tư hấp dẫn cho khách hàng,
+            đối tác
+          </p>
+        </div>
+        <div class="value-box">
+          <h5>TRIẾT LÝ KINH DOANH</h5>
+          <p>- Luôn phục vụ khách hàng “TẬN TÂM”, “CHUYÊN NGHIỆP”, “UY TÍN”</p>
+          <p>
+            - Chú trọng xây dựng mối quan hệ tốt đẹp với các khách hàng và đối
+            tác
+          </p>
+          <p>- Góp phần xây dựng xã hội nhân văn</p>
+        </div>

@@ -46,7 +46,22 @@
         padding: 0;
       }
     }
-
+    &__title {
+      .details--date {
+        width: 50px;
+        color: #fff;
+        margin-bottom: 10px;
+        background-color: orange;
+      }
+      
+    }
+    &__sub{
+      &:hover {
+        .details--date {
+          background-color: green;
+        }
+      }
+    }
     &__image {
       height: 400px;
       .image {
@@ -74,7 +89,7 @@
   z-index: 1;
   &:hover {
     color: #fff;
-  } 
+  }
   &::after {
     content: "";
     position: absolute;
