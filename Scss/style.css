@@ -303,6 +303,7 @@ body {
 
 .dropdown-menu {
   z-index: 99999;
+  overflow: hidden;
 }
 .dropdown:hover .dropdown-menu {
   text-align: start;

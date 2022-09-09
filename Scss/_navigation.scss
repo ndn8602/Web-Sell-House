@@ -97,6 +97,7 @@
 .dropdown {
   &-menu {
     z-index: 99999;
+    overflow: hidden;
   }
   &:hover {
     .dropdown-menu {
