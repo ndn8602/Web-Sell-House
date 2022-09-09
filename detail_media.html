@@ -171,34 +171,37 @@
     </div>
 
     <!--start-->
-    <div class="container project mb-5">
+    <div class="container details-media mb-5">
       <div
-        class="project--header d-flex justify-content-start flex-column ml-md-5"
+        class="project--header d-flex justify-content-start flex-column ml-md-5 px-md-5"
       >
-        <h2 class="project--header__title display-4 text-warning mt-5">
+        <h2
+          class="project--header__title details-media_title display-4 text-warning"
+        >
           DỰ ÁN
         </h2>
         <div
-          class="project--nav d-flex justify-content-start flex-wrap align-items-center"
+          class="project--nav details-media_nav d-flex justify-content-start flex-wrap align-items-center"
+          id="project--nav"
         >
           <a
-            href=""
-            class="project--nav__all btn--hover btn btn-xl mr-2 mb-2 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm2 active"
+            href="#"
+            class="project--nav__btn btn--hover btn btn-xl mr-2 mb-2 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm2 active"
             >TẤT CẢ</a
           >
           <a
-            href=""
-            class="project--nav__ground btn btn--hover btn-xl mr-2 mb-2 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
+            href="#"
+            class="project--nav__btn btn btn--hover btn-xl mr-2 mb-2 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
             >ĐẤT NỀN</a
           >
           <a
-            href=""
-            class="project--nav__homeCity btn btn--hover btn-xl mr-2 mb-2 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
+            href="#"
+            class="project--nav__btn btn btn--hover btn-xl mr-2 mb-2 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
             >NHÀ PHỐ</a
           >
           <a
-            href=""
-            class="project--nav__apartment btn btn--hover btn-xl mr-2 mb-2 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
+            href="#"
+            class="project--nav__btn btn btn--hover btn-xl mr-2 mb-2 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
             >CĂN HỘ</a
           >
         </div>
@@ -206,11 +209,17 @@
     </div>
     <div class="details shadow-lg mb-5">
       <div class="details--content">
-        <div
-          class="details--title d-flex flex-row justify-content-start align-items-stretch flex-wrap"
-        >
-          <div class="details--date mr-5 mb-3">04 <span>9-2022</span></div>
-          <h4>ĐỘNG LỰC TĂNG TRƯỞNG MỚI CHO THỊ TRƯỜNG BẤT ĐỘNG SẢN</h4>
+        <div class="details--title">
+          <div class="row">
+            <div class="col-3 text-center bg-secondary h-75 p-3">
+              04 <br />
+              <span>9-2022</span>
+            </div>
+
+            <div class="col-9">
+              <h4>ĐỘNG LỰC TĂNG TRƯỞNG MỚI CHO THỊ TRƯỜNG BẤT ĐỘNG SẢN</h4>
+            </div>
+          </div>
         </div>
         <p>
           Thị trường bất động sản đang đứng trước cơ hội phát triển minh bạch
@@ -538,8 +547,8 @@
         $(".nav-item a").css("color", "orange");
       });
     </script>
+    <script src="Js/project.js"></script>
     <script src="Js/pageload.js"></script>
     <script src="Js/app.js"></script>
-    <script src="Js/project.js"></script>
   </body>
 </html>

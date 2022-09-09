@@ -13,17 +13,11 @@
     height: 100%;
     width: 100%;
     position: relative;
+    display: flex;
   }
   &--date {
-    width: 50px;
-    height: auto;
     font-size: 27px;
     background-color: #6666;
-    padding: 5px;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     span {
       width: 100%;
       font-size: 11px;
@@ -82,6 +76,14 @@
         left: 0;
         top: 0;
       }
+    }
+  }
+  &-media {
+    &_title {
+      text-align: center;
+    }
+    &_nav {
+      margin: 0 auto;
     }
   }
 }
