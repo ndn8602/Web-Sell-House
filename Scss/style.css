@@ -1279,13 +1279,14 @@ a:hover {
   width: 100%;
 }
 
+.media-img {
+  width: 100%;
+}
+.media-img img {
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 1024px) {
-  .media-img {
-    width: 100%;
-  }
-  .media-img img {
-    margin: 0 auto;
-  }
   .project {
     margin-top: -10px;
   }
