@@ -1172,19 +1172,19 @@ a:hover {
   margin-top: -100px;
 }
 .project--nav {
-  transition: translateY(-10%) 0.4s ease-in;
   position: relative;
 }
 .project--nav.fixed {
+  height: auto;
   position: fixed;
   top: 101px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 99;
-  transition: translateY(-10%) 0.4s ease-in;
   width: 100%;
   opacity: 1;
-  height: auto;
+  -webkit-animation: mymove 0.7s none;
+          animation: mymove 0.7s none;
 }
 .project--nav > a {
   width: auto;
@@ -1333,6 +1333,22 @@ a:hover {
   }
   .project--item {
     margin: 10px 0;
+  }
+}
+@-webkit-keyframes mymove {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 101px;
+  }
+}
+@keyframes mymove {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 101px;
   }
 }
 .card-img-top {

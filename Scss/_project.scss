@@ -3,18 +3,17 @@
   height: 100%;
   margin-top: -100px;
   &--nav {
-    transition: translateY(-10%) 0.4s ease-in;
     position: relative;
     &.fixed {
+      height: auto;
       position: fixed;
       top: 101px;
       left: 50%;
       transform: translateX(-50%);
       z-index: 99;
-      transition: translateY(-10%) 0.4s ease-in;
       width: 100%;
       opacity: 1;
-      height: auto;
+      animation: mymove 0.7s none;
     }
     & > a {
       &.active {
@@ -169,5 +168,13 @@
     &--item {
       margin: 10px 0;
     }
+  }
+}
+@keyframes mymove {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 101px;
   }
 }
