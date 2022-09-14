@@ -59,20 +59,6 @@
     opacity: 1;
   }
 }
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: orange;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: transparent;
-  height: 30px;
-}
-
 .page-loader {
   width: 100%;
   height: 100vh;
@@ -142,6 +128,21 @@ body {
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: orange;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  height: 30px;
 }
 
 * {
@@ -205,10 +206,12 @@ body {
   font-weight: 700;
   position: fixed;
   top: -1px;
-  z-index: 999;
+  z-index: 9999;
   border-bottom: 2px solid #fff;
   background-color: transparent;
   box-shadow: 0 4px 2px -1px rgba(128, 128, 128, 0.1);
+  -webkit-animation: background-down 0.7s none;
+          animation: background-down 0.7s none;
 }
 
 .navbar-brand {
@@ -465,6 +468,23 @@ body {
   z-index: -1;
 }
 
+@-webkit-keyframes background-down {
+  0% {
+    background-color: transparent;
+  }
+  510% {
+    background-color: white;
+  }
+}
+
+@keyframes background-down {
+  0% {
+    background-color: transparent;
+  }
+  510% {
+    background-color: white;
+  }
+}
 /** Section 1 - intro
 --------------------------------------**/
 #intro {
@@ -1166,6 +1186,130 @@ a:hover {
     color: #fff;
   }
 }
+.my-container {
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  position: fixed;
+}
+.my-container .project {
+  width: 95%;
+  height: 100%;
+  margin-top: -100px;
+}
+.my-container .project--nav {
+  position: relative;
+}
+.my-container .project--nav.fixed {
+  height: auto;
+  position: fixed;
+  top: 101px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9;
+  width: 100%;
+  opacity: 1;
+  -webkit-animation: mymove 0.7s none;
+          animation: mymove 0.7s none;
+}
+.my-container .project--nav > a {
+  width: auto;
+  margin-bottom: 5px;
+  min-width: 120px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: orange;
+}
+.my-container .project--nav > a.active {
+  background-color: green;
+}
+.my-container .project--nav > a:hover {
+  background-color: green;
+}
+.my-container .project--list {
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+.my-container .project--item {
+  margin: 40px 0;
+}
+.my-container .project--item .row {
+  height: 360px !important;
+  overflow-x: hidden;
+}
+.my-container .project--item .row > * {
+  padding: 0;
+}
+.my-container .project--item__title .details--date {
+  width: 50px;
+  color: #fff;
+  margin-bottom: 10px;
+  background-color: orange;
+}
+.my-container .project--item__sub:hover .details--date {
+  background-color: green;
+}
+.my-container .project--item__image {
+  height: 400px;
+}
+.my-container .project--item__image .image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center;
+}
+.my-container .project--item__desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  padding: 0;
+  overflow-y: hidden;
+}
+.my-container .btn {
+  background-color: orange;
+  position: relative;
+  color: #fff;
+  transition: 0.4s all ease-in-out 0s;
+  border: none;
+  z-index: 1;
+}
+.my-container .btn:hover {
+  color: #fff;
+}
+.my-container .btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: green;
+  border-radius: 3px;
+  transition: 0.4s all ease-in-out 0s;
+}
+.my-container .btn--hover::after {
+  left: unset;
+  right: 0;
+  width: 0;
+}
+.my-container .btn--hover:hover::after {
+  right: unset;
+  left: 0;
+  width: 100%;
+}
+.my-container .media-img {
+  width: 100%;
+}
+.my-container .media-img img {
+  margin: 0 auto;
+}
+
 .project {
   width: 95%;
   height: 100%;
@@ -1180,7 +1324,7 @@ a:hover {
   top: 101px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 99;
+  z-index: 9;
   width: 100%;
   opacity: 1;
   -webkit-animation: mymove 0.7s none;

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--Scrollbar-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/7.4.1/smooth-scrollbar.css"
+    />
+  </head>
+  <body style="box-sizing: border-box; margin: 0;padding: 0;">
+    <div id="my-scrollbar" style="height: 100vh; width: 100%; overflow: auto">
+      <section style="height: 100vh">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga
+          officia neque alias natus quidem, nesciunt quia repudiandae impedit
+          voluptate aliquid sed facilis numquam architecto dicta amet deserunt
+          iure quas.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga
+          officia neque alias natus quidem, nesciunt quia repudiandae impedit
+          voluptate aliquid sed facilis numquam architecto dicta amet deserunt
+          iure quas.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga
+          officia neque alias natus quidem, nesciunt quia repudiandae impedit
+          voluptate aliquid sed facilis numquam architecto dicta amet deserunt
+          iure quas.
+        </p>
+      </section>
+      <section style="background-color: blue; height: 100vh">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga
+          officia neque alias natus quidem, nesciunt quia repudiandae impedit
+          voluptate aliquid sed facilis numquam architecto dicta amet deserunt
+          iure quas.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga
+          officia neque alias natus quidem, nesciunt quia repudiandae impedit
+          voluptate aliquid sed facilis numquam architecto dicta amet deserunt
+          iure quas.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga
+          officia neque alias natus quidem, nesciunt quia repudiandae impedit
+          voluptate aliquid sed facilis numquam architecto dicta amet deserunt
+          iure quas.
+        </p>
+      </section>
+      <div style="height: 100vh">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga
+          officia neque alias natus quidem, nesciunt quia repudiandae impedit
+          voluptate aliquid sed facilis numquam architecto dicta amet deserunt
+          iure quas.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga
+          officia neque alias natus quidem, nesciunt quia repudiandae impedit
+          voluptate aliquid sed facilis numquam architecto dicta amet deserunt
+          iure quas.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum fuga
+          officia neque alias natus quidem, nesciunt quia repudiandae impedit
+          voluptate aliquid sed facilis numquam architecto dicta amet deserunt
+          iure quas.
+        </p>
+      </div>
+    </div>
+    <!--SCroll-->
+    <script src="https://unpkg.com/smooth-scrollbar@8.7.4/dist/smooth-scrollbar.js"></script>
+    <script>
+      window.addEventListener("load", (event) => {
+        let Scrollbar = window.Scrollbar;
+        options = {
+          damping: 0.1,
+        };
+        Scrollbar.init(document.querySelector("#my-scrollbar"), options);
+      });
+    </script>
+  </body>
+</html>

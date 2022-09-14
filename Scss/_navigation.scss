@@ -9,11 +9,13 @@
   font-weight: 700;
   position: fixed;
   top: -1px;
-  z-index: 999;
+  z-index: 9999;
   border-bottom: 2px solid #fff;
   background-color: transparent;
   box-shadow: 0 4px 2px -1px rgba(128, 128, 128, 0.1);
+  animation: background-down 0.7s none;
 }
+
 .navbar {
   &-brand {
     margin-left: 70px;
@@ -243,5 +245,13 @@
         }
       }
     }
+  }
+}
+@keyframes background-down {
+  0% {
+    background-color: transparent;
+  }
+  510% {
+    background-color: white;
   }
 }

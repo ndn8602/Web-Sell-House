@@ -65,3 +65,12 @@ new fullpage("#myContainer", {
   resetSlidersKey: "INSERT YOUR EXTENSION KEY HERE", //see https://goo.gl/xkUmHS
   esponsiveSlidesKey: "INSERT YOUR EXTENSION KEY HERE", //see https://goo.gl/xkUmHS
 });
+const myScrollbar = Scrollbar.init(document.querySelector("#my-container"));
+
+[].forEach.call(document.querySelectorAll("[data-aos]"), (el) => {
+  myScrollbar.addListener(() => {
+    if (myScrollbar.isVisible(el)) {
+      el.classList.add("aos-animate");
+    }
+  });
+});
