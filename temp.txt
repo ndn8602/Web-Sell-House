@@ -1,22 +1,556 @@
-<div class="value-box">
-          <h5>SỨ MỆNH</h5>
-          <p>
-            - Góp phần xây dựng và phát triển thị trường bất động sản minh bạch,
-            bền vững
-          </p>
-          <p>- Góp phần tích cực vào lĩnh vực phát triển đô thị tại Việt Nam</p>
-          <p>- Kiến tạo những giá trị tốt đẹp cho cộng đồng và xã hội</p>
-          <p>
-            - Góp phần mang đến cơ hội an cư và đầu tư hấp dẫn cho khách hàng,
-            đối tác
-          </p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overviews</title>
+    <!--Animation-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!--BootTrap-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <!--Owl carousel-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+    />
+    <!--Boxicon-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./Scss/style.css" />
+  </head>
+  <body>
+    <!--Page Load-->
+    <div class="page-loader">
+      <div class="spinner"></div>
+      <div class="txt">
+        ACBD <br />
+        Company
+      </div>
+    </div>
+    <!--navigation-->
+    <header class="header container-fluid">
+      <nav class="navbar navbar-expand-xl p-0">
+        <a class="navbar-brand" href="#">
+          <img src="Images/logo.png" alt="" />
+        </a>
+        <button class="navbar-toggler" type="button">
+          <i class="bx bx-menu" onclick="openMenu()"></i>
+        </button>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item nav-item--hover dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                GIỚI THIỆU
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">HĐQT & Ban Điều Hành</a>
+                <a class="dropdown-item" href="#">Lĩnh Vực Hoạt Động</a>
+              </div>
+            </li>
+            <li class="nav-item nav-item--hover">
+              <a class="nav-link" href="#">KHU NGHỈ DƯỠNG</a>
+            </li>
+            <li class="nav-item nav-item--hover dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                KỲ NGHỈ TRAO ĐỔI
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Bộ Sưu Tập</a>
+                <a class="dropdown-item" href="#">Các Điểm Khác</a>
+              </div>
+            </li>
+            <li class="nav-item nav-item--hover">
+              <a class="nav-link" href="#">TRẢI NGHIỆM CỦA BẠN</a>
+            </li>
+            <li class="navbar-nav-tool">
+              <a class="nav-link nav-rounded py-3" href="#">VN</a>
+              <a class="nav-link nav-rounded py-3" href="#">X</a>
+              <a class="nav-link nav-rounded py-3" href="#"
+                ><i class="bx bx-search"></i
+              ></a>
+            </li>
+          </ul>
         </div>
-        <div class="value-box">
-          <h5>TRIẾT LÝ KINH DOANH</h5>
-          <p>- Luôn phục vụ khách hàng “TẬN TÂM”, “CHUYÊN NGHIỆP”, “UY TÍN”</p>
-          <p>
-            - Chú trọng xây dựng mối quan hệ tốt đẹp với các khách hàng và đối
-            tác
-          </p>
-          <p>- Góp phần xây dựng xã hội nhân văn</p>
+      </nav>
+    </header>
+    <div class="menu" id="myMenu">
+      <div class="menu--header">
+        <a class="nav-link rounded" href="#">VN</a>
+        <a class="nav-link rounded" href="#">X</a>
+        <a class="nav-link rounded" href="#"><i class="bx bx-search"></i></a>
+        <a
+          onclick="closeMenu()"
+          class="nav-link rounded"
+          style="cursor: pointer"
+          ><i class="bx bx-x"></i
+        ></a>
+      </div>
+      <div class="menu--body">
+        <ul class="navbar-nav ml-auto">
+          <li
+            class="nav-item dropdown nav-item--hover"
+            data-toggle="collapse"
+            href="#GioiThieu"
+          >
+            <a class="nav-link" href="#GioiThieu" role="button">GIỚI THIỆU</a>
+
+            <span><i class="bx bxs-down-arrow text-dark"></i></span>
+          </li>
+          <div class="collapse multi-collapse sub-link" id="GioiThieu">
+            <a href="" class="d-block sub-item lead">
+              <span><i class="bx bxs-square"></i></span>HĐQT & Ban Điều Hành
+            </a>
+            <a href="" class="d-block sub-item lead">
+              <span><i class="bx bxs-square"></i></span>Lĩnh Vực Hoạt Động
+            </a>
+          </div>
+          <li class="nav-item nav-item--hover">
+            <a class="nav-link" href="#">KHU NGHỈ DƯỠNG</a>
+          </li>
+          <li
+            class="nav-item nav-item--hover dropdown"
+            data-toggle="collapse"
+            href="#TraoDoi"
+          >
+            <a
+              class="nav-link"
+              data-toggle="collapse"
+              href="#TraoDoi"
+              role="button"
+              >KỲ NGHỈ TRAO ĐỔI</a
+            >
+            <span><i class="bx bxs-down-arrow text-dark"></i></span>
+          </li>
+          <div class="collapse multi-collapse sub-link" id="TraoDoi">
+            <a class="d-block sub-item lead">
+              <span><i class="bx bxs-square"></i></span>Bộ Sưu Tập</a
+            >
+            <a class="d-block sub-item lead">
+              <span><i class="bx bxs-square"></i></span>Các Điểm Khác
+            </a>
+          </div>
+          <li class="nav-item nav-item--hover">
+            <a class="nav-link" href="#">TRẢI NGHIỆM CỦA BẠN</a>
+          </li>
+        </ul>
+      </div>
+      <div class="menu--bottom">
+        <a href="" class="btn btn-register">Đăng Ký</a>
+        <a href="" class="btn btn-start">Bắt Đầu</a>
+      </div>
+    </div>
+
+    <!--start-->
+    <!--Background-->
+    <div class="overviews-background owl-carousel">
+      <div class="item">
+        <img src="Images/pexels-terry-magallanes-2635038.jpg" alt="" />
+      </div>
+      <div class="item">
+        <img src="Images/img1.jpg" alt="" />
+      </div>
+      <div class="item">
+        <img src="Images/img2.jpg" alt="" />
+      </div>
+      <div class="item">
+        <img src="Images/img3.jpg" alt="" />
+      </div>
+    </div>
+    <div class="overviews container-fluid">
+      <!-- Content -->
+      <section class="overviews-content">
+        <h2>TỔNG QUAN</h2>
+        <div class="row flex-md-row-reverse">
+          <div class="col-md-5 col-sm-12" data-aos="fade-up">
+            <div class="overviews-logo">
+              <img src="Images/logo.png" alt="" />
+            </div>
+          </div>
+          <div class="col-md-7 col-sm-12">
+            <div class="overviews-content_box">
+              <h5 data-aos="fade-up">Kính thưa Quý khách hàng, Quý đối tác</h5>
+              <p data-aos="fade-up">
+                Thành lập vào tháng 3 - 2018 với trụ sở chính tại Bình Dương,
+                Công ty cổ phần Uniland là nhà phát triển và phân phối bất động
+                sản quy tụ đội ngũ lãnh đạo, nhân viên trẻ trung giàu nhiệt
+                huyết và được đào tạo kiến thức bài bản. Chỉ sau hơn hai năm đi
+                vào hoạt động, Công ty cổ phần Uniland đã phát triển thành hệ
+                thống với 4 đơn vị thành viên Uniland TAC, Uniland TDC, Uniland
+                TDM, Uniland TPM hoạt động tại Bình Dương, Bình Phước và TPHCM.
+                Với phương châm “Đồng hành cùng phát triển”, hiện nay thương
+                hiệu Uniland đã được đông đảo khách hàng trên cả nước tin yêu,
+                ủng hộ và là một trong những nhà phát triển – phân phối bất động
+                sản hoạt động năng nổ nhất khu vực phía Nam.
+              </p>
+              <p data-aos="fade-up">
+                Hầu hết các dự án do Uniland phát triển và phân phối thời gian
+                vừa qua khi đưa ra thị trường đều tạo tiếng vang lớn, hàng ngàn
+                sản phẩm đất nền, nhà phố, biệt thự giàu tiềm năng đã được công
+                ty trao đến tay khách hàng thành công chỉ trong thời gian ngắn.
+                Các dự án nổi bật có thể kể đến như Uni Mall Center, Hana Garden
+                Mall, The Eden City, phố thương mại Lộc Phát, Bình Dương Avenue
+                City, Victory City, Cát Tường Phú Hưng, New Town 8... Điểm chung
+                của các dự án này là đều tọa lạc ở những vị trí đắc địa, quy
+                hoạch hiện đại, chính sách giá bán cạnh tranh và tiềm năng gia
+                tăng giá trị vượt trội. Hơn nữa, Uniland còn luôn giữ chứ “TÍN”
+                trong mọi cam kết với khách hàng, từ việc triển khai dự án cho
+                đến việc bàn giao sản phẩm và hoàn thiện pháp lý theo đúng tiến
+                độ đề ra.
+              </p>
+              <p data-aos="fade-up">
+                Bên cạnh hàng ngàn khách hàng thân thiết gắn bó, đến nay Uniland
+                còn xây dựng được quan hệ mật thiết với hàng chục chủ đầu tư
+                giàu tiềm lực cũng như các đối tác xây dựng, tài chính – ngân
+                hàng. Nhờ sự hợp tác chặt chẽ này mà các khách hàng của Uniland
+                được hưởng lợi rất nhiều từ các giải pháp hỗ trợ tài chính ưu
+                việt để dễ dàng sở hữu được các bất động sản giàu tiềm năng mang
+                lại lợi nhuận.
+              </p>
+              <p data-aos="fade-up">
+                Tiếp nối những thành công đã đạt được, Công ty cổ phần Uniland
+                đang tiếp tục đặt ra những mục tiêu phát triển mạnh mẽ hơn. Cụ
+                thể, trong vòng 5 năm tới, Công ty cổ phần Uniland sẽ phấn đấu
+                trở thành một trong những nhà đầu tư, phát triển và phân phối
+                bất động sản hàng đầu, triển khai những dự án quy mô khu đô thị
+                với đa dạng phân khúc sản phẩm hơn nữa. Hoạt động của công ty
+                cũng không còn gói gọn ở khu vực phía Nam mà tại tất cả các
+                tỉnh, thành có tiềm năng lớn về bất động sản, mang đến cơ hội an
+                cư cũng như đầu tư tốt nhất cho các nhóm khách hàng khác nhau.
+              </p>
+              <p data-aos="fade-up">
+                Để hiện thực hóa mục tiêu đề ra, Ban lãnh đạo và tập thể hơn 400
+                cán bộ nhân viên của Uniland đang từng ngày từng giờ không ngừng
+                nỗ lực, trau dồi kỹ năng, kiến thức và áp dụng các ứng dụng công
+                nghệ tiên tiến để bắt kịp xu hướng của thị trường nhằm nâng cao
+                chất lượng phục vụ khách hàng. Đặc biệt, từ nay đến năm 2025,
+                bên cạnh việc tìm kiếm quỹ đất sạch để phát triển dự án mới,
+                Công ty cổ phần Uniland sẽ tăng cường hợp tác với các đối tác
+                hàng đầu trong lĩnh vực bất động sản trên tinh thần "đôi bên
+                cùng có lợi" và “lấy khách hàng làm trung tâm phục vụ”.
+              </p>
+              <p data-aos="fade-up">
+                Chặng đường phía trước còn rất nhiều khó khăn, thử thách, nhưng
+                với tinh thần đoàn kết, quyết tâm của đội ngũ nhân sự tinh nhuệ
+                và sự tin tưởng của Quý khách hàng, Quý đối tác, Công ty cổ phần
+                Uniland tin rằng sẽ tiếp tục lập nên những kỳ tích mới, phụng sự
+                khách hàng, phụng sự xã hội bằng tất cả nhiệt huyết.
+              </p>
+              <p data-aos="fade-up">
+                Ban lãnh đạo và toàn thể cán bộ nhân viên của Uniland cam kết
+                luôn giữ vững uy tín theo đúng phương châm "Đồng hành cùng phát
+                triển", "Đồng hành cùng khách hàng", "Đồng hành cùng đối tác”,
+                qua đó đem lại ngày càng nhiều giá trị bền vững cho thị trường
+                bất động sản.
+              </p>
+              <h5 data-aos="fade-up">Trân trọng</h5>
+            </div>
+          </div>
         </div>
+      </section>
+    </div>
+    <!-- History -->
+    <section class="overviews-history" data-aos="fade-up">
+      <div class="overviews-history_title" data-aos="fade-right">
+        CỘT MỐC PHÁT TRIỂN
+      </div>
+      <div class="overviews-history_box owl-carousel">
+        <div class="item" data-aos="fade-up" data-aos-duration="500">
+          <div class="overviews-process_box box">
+            <h5 class="box-year">2020.</h5>
+            <div class="box-txt">
+              <p>- Nhân sự tăng lên 400 người</p>
+              <p>
+                - Thiết lập quan hệ đối tác chiến lược với nhiều chủ đầu tư,
+                ngân hàng như U&I Real, Vietcombank, Sacombank, ACB, VPBank...
+              </p>
+              <p>- Doanh thu tăng trường 40%</p>
+            </div>
+          </div>
+        </div>
+        <div class="item" data-aos="fade-up" data-aos-duration="800">
+          <div class="overviews-process_box box">
+            <h5 class="box-year">2019.</h5>
+            <div class="box-txt">
+              <p>
+                - Phát triển hệ thống gồm 4 chi nhánh (Uniland TDC, Uniland TAC,
+                Uniland TPM, Uniland TDM)
+              </p>
+              <p>
+                - Mở rộng hoạt động kinh doanh tại TPHCM, nhân sự tăng lên 300
+                người
+              </p>
+              <p>
+                - Phân phối, phát triển thành công 1.028 sản phẩm, tăng 60% so
+                với năm 2018
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="item" data-aos="fade-up" data-aos-duration="1100">
+          <div class="overviews-process_box box">
+            <h5 class="box-year">2018.</h5>
+            <div class="box-txt">
+              <p>
+                - Tháng 7 năm 2018 thành lập công ty và khai trương trụ sở tại
+                Thành phố Thủ Dầu Một
+              </p>
+              <p>
+                - Phân phối thành công gần 700 sản phẩm đất nền, nhà phố tại
+                Bình Dương, Bình Phước
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Value -->
+    <section class="overviews-value value">
+      <div class="value-title">
+        <h2 data-aos="fade-right">GIÁ TRỊ CỐT LÕI</h2>
+        <h5 data-aos="fade-left">Đồng hành cùng phát triển</h5>
+      </div>
+      <div class="value-list">
+        <div class="row m-0 value-box">
+          <div class="col-md-6 col-sm-12" data-aos="fade-up">
+            <h5>TẦM NHÌN</h5>
+            <p>
+              - Thương hiệu Uniland phát triển vững mạnh, nằm trong nhóm những
+              nhà phát triển bất động sản hàng đầu tại Việt Nam
+            </p>
+            <p>
+              - Hợp tác với các đối tác quốc tế và niêm yết cổ phiếu trên thị
+              trường chứng khoán
+            </p>
+            <p>
+              - Xây dựng hệ thống kinh doanh tại các tỉnh, thành có thị trường
+              bất động sản phát triển trên cả nước
+            </p>
+            <p>- Đầu tư các dự án quy mô khu đô thị với đầy đủ tiện ích</p>
+            <p>
+              - Phát triển và phân phối tất cả các phân khúc sản phẩm bất động
+              sản
+            </p>
+          </div>
+          <div class="col-md-6 col-sm-12 value-box_img mb-5" data-aos="fade-up">
+            <img src="Images/resort-info-2.jpg" alt="" />
+          </div>
+        </div>
+        <div class="row m-0 flex-row-reverse value-box">
+          <div class="col-md-6 col-sm-12" data-aos="fade-up">
+            <h5>SỨ MỆNH</h5>
+            <p>
+              - Góp phần xây dựng và phát triển thị trường bất động sản minh
+              bạch, bền vững
+            </p>
+            <p>
+              - Góp phần tích cực vào lĩnh vực phát triển đô thị tại Việt Nam
+            </p>
+            <p>- Kiến tạo những giá trị tốt đẹp cho cộng đồng và xã hội</p>
+            <p>
+              - Góp phần mang đến cơ hội an cư và đầu tư hấp dẫn cho khách hàng,
+              đối tác
+            </p>
+          </div>
+          <div class="col-md-6 col-sm-12 value-box_img mb-4" data-aos="fade-up">
+            <img src="Images/resort-info-2.jpg" alt="" />
+          </div>
+        </div>
+        <div class="row m-0 value-box">
+          <div class="col-md-6 col-sm-12" data-aos="fade-up">
+            <h5>TRIẾT LÝ KINH DOANH</h5>
+            <p>
+              - Luôn phục vụ khách hàng “TẬN TÂM”, “CHUYÊN NGHIỆP”, “UY TÍN”
+            </p>
+            <p>
+              - Chú trọng xây dựng mối quan hệ tốt đẹp với các khách hàng và đối
+              tác
+            </p>
+            <p>- Góp phần xây dựng xã hội nhân văn</p>
+          </div>
+          <div class="col-md-6 col-sm-12 value-box_img mb-4" data-aos="fade-up">
+            <img src="Images/resort-info-1.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Content-->
+
+    <!--Footer-->
+    <footer
+      class="footer d-flex flex-column justify-content-center"
+      data-aos="fade-up"
+    >
+      <div class="footer--head">
+        <img
+          src="Images/pexels-pixabay-147411.jpg"
+          alt=""
+          class="footer--img__top img-fluid"
+        />
+        <div class="footer--head__box">
+          <h2
+            class="footer--head__title shadow bg-white rounded-sm"
+            data-aos="fade-up"
+          >
+            Add captions to your slides easily with the
+          </h2>
+          <div class="btn--footer" data-aos="fade-up">
+            <a href="" class="btn btn--hover">contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer--body bg-transparent d-flex justify-content-center">
+        <div class="row p-3">
+          <div
+            class="col-xl-6 col-md-6 col-sm-12 d-flex justify-content-start flex-column align-items-start"
+          >
+            <div class="media-img" data-aos="fade-up">
+              <img
+                src="Images/logo.png"
+                alt=""
+                class="footer--body__img mb-3"
+              />
+            </div>
+            <h5 class="text-white" data-aos="fade-up">CÔNG TY CỔ PHẦN ABC</h5>
+            <div class="footer--info text-left">
+              <p data-aos="fade-up">
+                <span>Trụ sở: </span> 158 Ngô Gia Tự, Khu 11, P. Chánh Nghĩa,
+                TP. Thủ Dầu Một, Bình Dương.
+              </p>
+              <p data-aos="fade-up">
+                <span>Chi nhánh: </span> Số 12C, Đại Lộ Bình Dương, Kp. Đông
+                Nhì, P. Lái Thiêu, TP. Thuận An, Bình Dương.
+              </p>
+              <p data-aos="fade-up">
+                <span>Chi nhánh: </span> Số 1338 Phạm Văn Đồng, P. Linh Tây, TP.
+                Thủ Đức, TP.HCM.
+              </p>
+              <p data-aos="fade-up"><span>Hotline:</span> 0938 61 61 61</p>
+            </div>
+          </div>
+          <div class="col-xl-6 col-md-6 col-sm-12">
+            <h3 class="text-success font-weight-bold" data-aos="fade-up">
+              FORM LIÊN HỆ
+            </h3>
+            <form action="">
+              <div class="form-group" data-aos="fade-up">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Họ Tên (*)"
+                />
+              </div>
+              <div class="form-group" data-aos="fade-up">
+                <input
+                  type="text"
+                  maxlength="10"
+                  class="form-control"
+                  placeholder="Số Điện Thoại(*)"
+                />
+              </div>
+              <div class="form-group" data-aos="fade-up">
+                <input type="email" class="form-control" placeholder="Email" />
+              </div>
+              <div class="form-group" data-aos="fade-up">
+                <textarea
+                  class="form-control"
+                  placeholder="Nội Dung (*)"
+                  rows="3"
+                ></textarea>
+              </div>
+              <button
+                data-aos="fade-up"
+                type="submit"
+                class="btn btn--hover px-4 shadow-lg"
+              >
+                Gửi
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--JQUERY-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--OWL CAROUSEL-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+    ></script>
+    <!--Animation-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        delay: 50,
+      });
+    </script>
+
+<script>
+  $(window).scroll(function () {
+    let scroll = $(window).scrollTop();
+    let width = window.innerWidth;
+    if (width > 1200) {
+      if (scroll <= 196) {
+        $("header").css("backgroundColor", "transparent");
+        $(".navbar-nav-tool a").css("color", "white");
+        $(".nav-item a").css("color", "white");
+        $(".dropdown-item").css("color", "black");
+      } else {
+        $("header").css("backgroundColor", "white");
+        $(".navbar-nav-tool a").css("color", "orange");
+        $(".nav-item a").css("color", "orange");
+        $(".dropdown-item").css("color", "orange  ");
+      }
+    } else {
+      $(window).ready(() => {
+        $("header").css("backgroundColor", "white");
+        $(".nav-menu").css("color", "black");
+      });
+    }
+  });
+</script>
+<script src="Js/pageload.js"></script>
+<script src="Js/app.js"></script>
+<script src="Js/project.js"></script>
+  </body>
+</html>

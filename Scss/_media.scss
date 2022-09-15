@@ -23,6 +23,7 @@
   position: relative;
   &-body {
     padding: 10px;
+    position: relative;
   }
   &-title {
     display: -webkit-box;
@@ -43,7 +44,7 @@
     font-size: 14px;
   }
   &-btn {
-    position: absolute;
+    position: absolute !important;
     bottom: 10px;
   }
   .news--content__date {

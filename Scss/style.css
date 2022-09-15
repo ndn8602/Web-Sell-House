@@ -1442,13 +1442,6 @@ a:hover {
   width: 100%;
 }
 
-.media-img {
-  width: 100%;
-}
-.media-img img {
-  margin: 0 auto;
-}
-
 @media screen and (max-width: 1024px) {
   .project {
     margin-top: -10px;
@@ -1487,6 +1480,9 @@ a:hover {
 @media screen and (max-width: 600px) {
   .scrollbar-track-y {
     visibility: hidden;
+  }
+  .footer--hide {
+    display: none !important;
   }
   .project {
     margin-top: -10px;
@@ -1556,6 +1552,7 @@ a:hover {
 }
 .card-body {
   padding: 10px;
+  position: relative;
 }
 .card-title {
   display: -webkit-box;
@@ -1576,7 +1573,7 @@ a:hover {
   font-size: 14px;
 }
 .card-btn {
-  position: absolute;
+  position: absolute !important;
   bottom: 10px;
 }
 .card .news--content__date {

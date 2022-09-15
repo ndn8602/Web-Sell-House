@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Overviews</title>
+    <title>Overviews Website</title>
     <!--Animation-->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!--BootTrap-->
@@ -27,6 +27,8 @@
       integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
       crossorigin="anonymous"
     />
+    <!--Animation-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!--Boxicon-->
     <link
       href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
@@ -35,6 +37,10 @@
 
     <!--CSS-->
     <link rel="stylesheet" href="./Scss/style.css" />
+    <link
+      rel="stylesheet"
+      href="	https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/7.4.1/smooth-scrollbar.css"
+    />
   </head>
   <body>
     <!--Page Load-->
@@ -46,7 +52,7 @@
       </div>
     </div>
     <!--navigation-->
-    <header class="header container-fluid">
+    <header class="header container-fluid p-0">
       <nav class="navbar navbar-expand-xl p-0">
         <a class="navbar-brand" href="#">
           <img src="Images/logo.png" alt="" />
@@ -102,6 +108,34 @@
           </ul>
         </div>
       </nav>
+      <div class="header-show d-flex justify-content-center p-0">
+        <div class="project--header justify-content-start flex-column">
+          
+          <div
+            class="project--nav d-flex justify-content-start flex-wrap align-items-center px-md-5"
+          >
+            <a
+              href="#!"
+              class="project--nav__btn btn--hover btn btn-xl 1 text-white border rounded-0 shadow-sm active"
+              >TẤT CẢ</a
+            >
+            <a
+              href="#!"
+              class="project--nav__btn btn--hover btn btn-xl mr-1 text-white font-weight-bold border rounded-0 shadow-sm"
+              >TIN THỊ TRƯỜNG</a
+            >
+            <a
+              href="#!"
+              class="project--nav__btn btn btn--hover btn-xl mr-1 text-white font-weight-bold border rounded-0 shadow-sm"
+              >TIN DỰ ÁN</a
+            >
+            <a
+              href="#!"
+              class="project--nav__btn btn btn--hover btn-xl mr-1 text-white font-weight-bold border rounded-0 shadow-sm"
+              >TIN CÔNG TY</a
+            >
+          </div>
+        </div>
     </header>
     <div class="menu" id="myMenu">
       <div class="menu--header">
@@ -124,7 +158,7 @@
           >
             <a class="nav-link" href="#GioiThieu" role="button">GIỚI THIỆU</a>
 
-            <span><i class="bx bxs-down-arrow text-dark"></i></span>
+            <span><i class="bx bxs-down-arrow"></i></span>
           </li>
           <div class="collapse multi-collapse sub-link" id="GioiThieu">
             <a href="" class="d-block sub-item lead">
@@ -149,7 +183,7 @@
               role="button"
               >KỲ NGHỈ TRAO ĐỔI</a
             >
-            <span><i class="bx bxs-down-arrow text-dark"></i></span>
+            <span><i class="bx bxs-down-arrow"></i></span>
           </li>
           <div class="collapse multi-collapse sub-link" id="TraoDoi">
             <a class="d-block sub-item lead">
@@ -169,8 +203,9 @@
         <a href="" class="btn btn-start">Bắt Đầu</a>
       </div>
     </div>
-
-    <!--start-->
+    
+    <div id="my-scrollbar" class="my-container" data-scrollbar>
+     <!--start-->
     <!--Background-->
     <div class="overviews-background owl-carousel">
       <div class="item">
@@ -499,6 +534,8 @@
         </div>
       </div>
     </footer>
+    </div>
+
     <!--JQUERY-->
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -511,46 +548,28 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--SCROLL-->
+    <script src="https://unpkg.com/smooth-scrollbar@8.7.4/dist/smooth-scrollbar.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    <script></script> -->
+    <!--Animation-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        delay: 500,
+      });
+    </script>
     <!--OWL CAROUSEL-->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
       integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
       crossorigin="anonymous"
     ></script>
-    <!--Animation-->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        delay: 50,
-      });
-    </script>
 
-<script>
-  $(window).scroll(function () {
-    let scroll = $(window).scrollTop();
-    let width = window.innerWidth;
-    if (width > 1200) {
-      if (scroll <= 196) {
-        $("header").css("backgroundColor", "transparent");
-        $(".navbar-nav-tool a").css("color", "white");
-        $(".nav-item a").css("color", "white");
-        $(".dropdown-item").css("color", "black");
-      } else {
-        $("header").css("backgroundColor", "white");
-        $(".navbar-nav-tool a").css("color", "orange");
-        $(".nav-item a").css("color", "orange");
-        $(".dropdown-item").css("color", "orange  ");
-      }
-    } else {
-      $(window).ready(() => {
-        $("header").css("backgroundColor", "white");
-        $(".nav-menu").css("color", "black");
-      });
-    }
-  });
-</script>
-<script src="Js/pageload.js"></script>
-<script src="Js/app.js"></script>
-<script src="Js/project.js"></script>
+    <script src="Js/pageload.js"></script>
+    <script src="Js/app.js"></script>
+    <script src="Js/project.js"></script>
+    <script src="Js/scroll-animation.js"></script>
   </body>
 </html>

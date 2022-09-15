@@ -11,6 +11,7 @@ scrollbar.setPosition(0, 0);
 scrollbar.track.xAxis.element.remove();
 function listener(status) {
   let scroll = scrollbar.offset.y;
+  console.log(scroll);
   let width = window.innerWidth;
   if (width > 1200) {
     if (scroll <= 200) {
@@ -18,14 +19,21 @@ function listener(status) {
       $(".navbar-nav-tool a").css("color", "white");
       $(".nav-item a").css("color", "white");
       $(".dropdown-item").css("color", "black");
-      $(".header-show").removeClass("hide");
     } else {
       $("header").css("backgroundColor", "white");
       $(".navbar-nav-tool a").css("color", "orange");
       $(".nav-item a").css("color", "orange");
       $(".dropdown-item").css("color", "orange  ");
-      $(".header-show").addClass("hide");
     }
+    if (scroll <= 650) {
+      $(".project--nav__off").css("visibility", "visible");
+      $(".header-show").removeClass("hide");
+    } else {
+      $(".header-show").addClass("hide");
+      $(".project--nav__off").css("visibility", "hidden");
+    }
+  } else {
+    $("header").css("backgroundColor", "white");
   }
 }
 scrollbar.addListener(listener);

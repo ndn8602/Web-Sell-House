@@ -235,12 +235,7 @@
     width: 100%;
   }
 }
-.media-img {
-  width: 100%;
-  img {
-    margin: 0 auto;
-  }
-}
+
 @media screen and (max-width: 1024px) {
   .project {
     margin-top: -10px;
@@ -281,6 +276,9 @@
 @media screen and (max-width: 600px) {
   .scrollbar-track-y {
     visibility: hidden;
+  }
+  .footer--hide {
+    display: none !important;
   }
   .project {
     margin-top: -10px;
