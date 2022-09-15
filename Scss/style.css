@@ -342,6 +342,9 @@ body {
 }
 
 @media screen and (max-width: 997px) {
+  .header {
+    width: 100%;
+  }
   .navbar {
     display: flex;
     align-items: center;
@@ -1209,9 +1212,6 @@ a:hover {
   overflow: auto;
   position: fixed;
 }
-.my-container ::-webkit-scrollbar {
-  width: 9px;
-}
 .my-container .project {
   width: 95%;
   height: 100%;
@@ -1223,7 +1223,6 @@ a:hover {
 .my-container .project--nav.fixed {
   height: auto;
   position: fixed;
-  top: 101px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 9;
@@ -1486,6 +1485,9 @@ a:hover {
   }
 }
 @media screen and (max-width: 600px) {
+  .scrollbar-track-y {
+    visibility: hidden;
+  }
   .project {
     margin-top: -10px;
   }
@@ -1496,6 +1498,18 @@ a:hover {
     width: calc(50% - 10px);
   }
   .project--item {
+    margin: 10px 0;
+  }
+  .my-container .project {
+    margin-top: -10px;
+  }
+  .my-container .project--heder__title {
+    margin-top: 15%;
+  }
+  .my-container .project--nav > a {
+    width: calc(50% - 10px);
+  }
+  .my-container .project--item {
     margin: 10px 0;
   }
 }
