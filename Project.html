@@ -27,6 +27,8 @@
       integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
       crossorigin="anonymous"
     />
+    <!--Animation-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!--Boxicon-->
     <link
       href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
@@ -50,7 +52,7 @@
       </div>
     </div>
     <!--navigation-->
-    <header class="header container-fluid">
+    <header class="header container-fluid p-0">
       <nav class="navbar navbar-expand-xl p-0">
         <a class="navbar-brand" href="#">
           <img src="Images/logo.png" alt="" />
@@ -106,6 +108,28 @@
           </ul>
         </div>
       </nav>
+      <div class="header-show d-flex justify-content-center p-0">
+        <a
+          href=""
+          class="project--nav__btn btn--hover btn btn-sm mr-2 text-white border rounded-0 shadow-sm active"
+          >TẤT CẢ</a
+        >
+        <a
+          href=""
+          class="project--nav__btn btn--hover btn btn-sm mr-2 text-white border rounded-0 shadow-sm active"
+          >TIN THỊ TRƯỜNG</a
+        >
+        <a
+          href=""
+          class="project--nav__btn btn--hover btn btn-sm mr-2 text-white border rounded-0 shadow-sm active"
+          >TIN DỰ ÁN</a
+        >
+        <a
+          href=""
+          class="project--nav__btn btn--hover btn btn-sm mr-2 text-white border rounded-0 shadow-sm active"
+          >TIN CÔNG TY</a
+        >
+      </div>
     </header>
     <div class="menu" id="myMenu">
       <div class="menu--header">
@@ -174,9 +198,7 @@
       </div>
     </div>
     <div class="project--header d-none justify-content-start flex-column">
-      <h2
-        class="project--header__title mt-2 display-4 text-warning px-md-5"
-      >
+      <h2 class="project--header__title mt-2 display-4 text-warning px-md-5">
         DỰ ÁN
       </h2>
       <div
@@ -255,7 +277,7 @@
         </div>
         <div class="project--list">
           <div
-            class="row project--item flex-md-row-reverse justify-content-start align-items-start shadow-sm"
+            class="row project--item flex-md-row-reverse justify-content-start align-items-start shadow-sm"  data-aos="fade-right"
           >
             <div class="col-xl-6 col-md-6 col-sm-12 project--item__img p-0">
               <div class="project--item__image">
@@ -288,7 +310,7 @@
           </div>
 
           <div
-            class="row project--item justify-content-start align-items-start shadow-sm"
+            class="row project--item justify-content-start align-items-start shadow-sm" data-aos="fade-left"
           >
             <div class="col-xl-6 col-md-6 col-sm-12 project--item__img p-0">
               <div class="project--item__image">
@@ -320,7 +342,7 @@
             </div>
           </div>
           <div
-            class="row project--item flex-md-row-reverse justify-content-start align-items-start shadow-sm"
+            class="row project--item flex-md-row-reverse justify-content-start align-items-start shadow-sm" data-aos="fade-right"
           >
             <div class="col-xl-6 col-md-6 col-sm-12 project--item__img p-0">
               <div class="project--item__image">
@@ -353,7 +375,7 @@
           </div>
 
           <div
-            class="row project--item justify-content-start align-items-start shadow-sm"
+            class="row project--item justify-content-start align-items-start shadow-sm" data-aos="fade-left"
           >
             <div class="col-xl-6 col-md-6 col-sm-12 project--item__img p-0">
               <div class="project--item__image">
@@ -385,7 +407,7 @@
             </div>
           </div>
           <div
-            class="row project--item flex-md-row-reverse justify-content-start align-items-start shadow-sm"
+            class="row project--item flex-md-row-reverse justify-content-start align-items-start shadow-sm" data-aos="fade-right"
           >
             <div class="col-xl-6 col-md-6 col-sm-12 project--item__img p-0">
               <div class="project--item__image">
@@ -418,7 +440,7 @@
           </div>
 
           <div
-            class="row project--item justify-content-start align-items-start shadow-sm"
+            class="row project--item justify-content-start align-items-start shadow-sm" data-aos="fade-left"
           >
             <div class="col-xl-6 col-md-6 col-sm-12 project--item__img p-0">
               <div class="project--item__image">
@@ -450,7 +472,7 @@
             </div>
           </div>
           <div
-            class="row project--item flex-md-row-reverse justify-content-start align-items-start shadow-sm"
+            class="row project--item flex-md-row-reverse justify-content-start align-items-start shadow-sm" data-aos="fade-right"
           >
             <div class="col-xl-6 col-md-6 col-sm-12 project--item__img p-0">
               <div class="project--item__image">
@@ -483,7 +505,7 @@
           </div>
 
           <div
-            class="row project--item justify-content-start align-items-start shadow-sm"
+            class="row project--item justify-content-start align-items-start shadow-sm" data-aos="fade-left"
           >
             <div class="col-xl-6 col-md-6 col-sm-12 project--item__img p-0">
               <div class="project--item__image">
@@ -609,78 +631,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--SCROLL-->
     <script src="https://unpkg.com/smooth-scrollbar@8.7.4/dist/smooth-scrollbar.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js?v=32"></script>
-
-    <script></script>
-
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    <script></script> -->
+    <!--Animation-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        delay: 500,
+      });
+    </script>
     <!--OWL CAROUSEL-->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
       integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
       crossorigin="anonymous"
     ></script>
-    <script>
-      $(window).scroll(function () {
-        let scroll = $(window).scrollTop();
-        let width = window.innerWidth;
-        if (width > 1200) {
-          if (scroll <= 196) {
-            $("header").css("backgroundColor", "transparent");
-            $(".navbar-nav-tool a").css("color", "white");
-            $(".nav-item a").css("color", "white");
-            $(".dropdown-item").css("color", "black");
-          } else {
-            $("header").css("backgroundColor", "white");
-            $(".navbar-nav-tool a").css("color", "orange");
-            $(".nav-item a").css("color", "orange");
-            $(".dropdown-item").css("color", "orange  ");
-          }
-        } else {
-          $(window).ready(() => {
-            $("header").css("backgroundColor", "white");
-            $(".nav-menu").css("color", "black");
-          });
-        }
-      });
-    </script>
+
     <script src="Js/pageload.js"></script>
     <script src="Js/app.js"></script>
     <script src="Js/project.js"></script>
-    <script>
-      var Scrollbar = window.Scrollbar;
-      options ={
-        damping : 0.05,
-      }
-      let scrollbar = Scrollbar.init(document.querySelector("#my-scrollbar"),options);
-      function listener(status) {
-        let scroll = scrollbar.offset.y;
-        let width = window.innerWidth;
-        if (width > 1200) {
-          if (scroll <= 196) {
-            $("header").css("backgroundColor", "transparent");
-            $(".navbar-nav-tool a").css("color", "white");
-            $(".nav-item a").css("color", "white");
-            $(".dropdown-item").css("color", "black");
-          } else {
-            $("header").css("backgroundColor", "white");
-            $(".navbar-nav-tool a").css("color", "orange");
-            $(".nav-item a").css("color", "orange");
-            $(".dropdown-item").css("color", "orange  ");
-          }
-        } 
-        if (scroll >= 196 && width >= 1024) {
-          $(".project--nav").addClass("fixed");
-          $(".project--nav").addClass("d-none");
-          $(".project--nav").addClass("justify-content-center");
-        } else {
-          $(".project--nav").removeClass("fixed");
-          $(".project--nav").removeClass("d-flex");
-          $(".project--nav").removeClass("justify-content-center");
-        }
-      }
-
-      scrollbar.addListener(listener);
-    </script>
+    <script src="Js/scroll-animation.js"></script>
   </body>
 </html>

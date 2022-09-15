@@ -202,14 +202,31 @@ body {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  width: 99.5%;
+  padding: 0 20px;
   font-size: 12px;
   font-weight: 700;
   position: fixed;
   top: -1px;
-  z-index: 9999;
+  z-index: 9;
   border-bottom: 2px solid #fff;
   background-color: transparent;
   box-shadow: 0 4px 2px -1px rgba(128, 128, 128, 0.1);
+}
+.header .header-show {
+  position: absolute;
+  top: 102px;
+  width: 100%;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+}
+.header .header-show a {
+  height: 30px;
+}
+.header .header-show.hide {
+  height: auto;
+  opacity: 1;
   -webkit-animation: background-down 0.7s none;
           animation: background-down 0.7s none;
 }
@@ -470,19 +487,19 @@ body {
 
 @-webkit-keyframes background-down {
   0% {
-    background-color: transparent;
+    transform: translateY(-10px);
   }
-  510% {
-    background-color: white;
+  100% {
+    transform: translateY(0px);
   }
 }
 
 @keyframes background-down {
   0% {
-    background-color: transparent;
+    transform: translateY(-10px);
   }
-  510% {
-    background-color: white;
+  100% {
+    transform: translateY(0px);
   }
 }
 /** Section 1 - intro
@@ -1191,6 +1208,9 @@ a:hover {
   height: 100vh;
   overflow: auto;
   position: fixed;
+}
+.my-container ::-webkit-scrollbar {
+  width: 9px;
 }
 .my-container .project {
   width: 95%;

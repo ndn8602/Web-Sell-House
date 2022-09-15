@@ -1,0 +1,41 @@
+var Scrollbar = window.Scrollbar;
+options = {
+  damping: 0.05,
+  alwaysShowTracks: true,
+};
+let scrollbar = Scrollbar.init(
+  document.querySelector("#my-scrollbar"),
+  options
+);
+scrollbar.setPosition(0, 0);
+scrollbar.track.xAxis.element.remove();
+function listener(status) {
+  let scroll = scrollbar.offset.y;
+  let width = window.innerWidth;
+  if (width > 1200) {
+    if (scroll <= 200) {
+      $("header").css("backgroundColor", "transparent");
+      $(".navbar-nav-tool a").css("color", "white");
+      $(".nav-item a").css("color", "white");
+      $(".dropdown-item").css("color", "black");
+      $(".header-show").removeClass("hide");
+    } else {
+      $("header").css("backgroundColor", "white");
+      $(".navbar-nav-tool a").css("color", "orange");
+      $(".nav-item a").css("color", "orange");
+      $(".dropdown-item").css("color", "orange  ");
+      $(".header-show").addClass("hide");
+    }
+  }
+}
+scrollbar.addListener(listener);
+
+//Handle offset Scroll
+
+[].forEach.call(document.querySelectorAll("[data-aos]"), (el) => {
+  scrollbar.addListener(() => {
+    if (scrollbar.isVisible(el)) {
+      el.classList.add("aos-animate");
+    }
+  });
+});
