@@ -1,5 +1,7 @@
 const header = document.querySelector(".header");
 const nav_links = header.querySelectorAll(".nav-link");
+let width = screen.width;
+console.log(width);
 const changeColorHeader = (e) => {
   if (e.includes("introPage")) {
     header.style.backgroundColor = "transparent";
@@ -22,14 +24,15 @@ new fullpage("#myContainer", {
     const section = destination.item;
     console.log(section);
     changeColorHeader(section.className.split(" "));
-    if (destination.index === 3 ) {
+    if (destination.index === 3) {
       header.style.backgroundColor = "transparent";
       nav_links.forEach((nav_link) => {
         nav_link.style.color = "white";
       });
       header.style.transition = "all 0.5";
-    }else if(destination.index === 4){
-      
+    } else if (destination.index === 4 && width <= 600) {
+      console.log("ok");
+      $(".fp-tableCell").remove();
     }
 
     jQuery(".section [data-aos]").removeClass("aos-animate");
