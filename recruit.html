@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recruit Website</title>
+    <!--Animation-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!--Fullpage-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/fullpage.js@3.1.2/dist/fullpage.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://alvarotrigo.com/fullPage/examples/examples.css"
+    />
+    <!--BootTrap-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+
+    <!--Owl carousel-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+    />
+    <!--Boxicon-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!--Boxicon-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./Scss/style.css" />
+    <link
+      rel="stylesheet"
+      href="	https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/7.4.1/smooth-scrollbar.css"
+    />
+  </head>
+  <body>
+    <!--Page Load-->
+    <div class="page-loader">
+      <div class="spinner"></div>
+      <div class="txt">
+        ACBD <br />
+        Company
+      </div>
+    </div>
+    <!--navigation-->
+    <header class="header container-fluid p-0">
+      <nav class="navbar navbar-expand-xl p-0">
+        <a class="navbar-brand" href="#">
+          <img src="Images/logo.png" alt="" />
+        </a>
+        <button class="navbar-toggler" type="button">
+          <i class="bx bx-menu" onclick="openMenu()"></i>
+        </button>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item nav-item--hover dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                GIỚI THIỆU
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">HĐQT & Ban Điều Hành</a>
+                <a class="dropdown-item" href="#">Lĩnh Vực Hoạt Động</a>
+              </div>
+            </li>
+            <li class="nav-item nav-item--hover">
+              <a class="nav-link" href="#">KHU NGHỈ DƯỠNG</a>
+            </li>
+            <li class="nav-item nav-item--hover dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                KỲ NGHỈ TRAO ĐỔI
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Bộ Sưu Tập</a>
+                <a class="dropdown-item" href="#">Các Điểm Khác</a>
+              </div>
+            </li>
+            <li class="nav-item nav-item--hover">
+              <a class="nav-link" href="#">TRẢI NGHIỆM CỦA BẠN</a>
+            </li>
+            <li class="navbar-nav-tool">
+              <a class="nav-link nav-rounded py-3" href="#">VN</a>
+              <a class="nav-link nav-rounded py-3" href="#">X</a>
+              <a class="nav-link nav-rounded py-3" href="#"
+                ><i class="bx bx-search"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="header-show d-flex justify-content-center p-0">
+        <div class="project--header justify-content-start flex-column">
+          <div
+            class="project--nav d-flex justify-content-start flex-wrap align-items-center px-md-5"
+          >
+            <a
+              href="#!"
+              class="project--nav__btn btn--hover btn btn-xl mr-2 text-white border rounded-0 shadow-sm active"
+              >TẤT CẢ</a
+            >
+            <a
+              href="#!"
+              class="project--nav__btn btn--hover btn btn-xl mr-2 text-white font-weight-bold border rounded-0 shadow-sm"
+              >TIN THỊ TRƯỜNG</a
+            >
+            <a
+              href="#!"
+              class="project--nav__btn btn btn--hover btn-xl mr-2 text-white font-weight-bold border rounded-0 shadow-sm"
+              >TIN DỰ ÁN</a
+            >
+            <a
+              href="#!"
+              class="project--nav__btn btn btn--hover btn-xl mr-2 text-white font-weight-bold border rounded-0 shadow-sm"
+              >TIN CÔNG TY</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="menu" id="myMenu">
+      <div class="menu--header">
+        <a class="nav-link rounded" href="#">VN</a>
+        <a class="nav-link rounded" href="#">X</a>
+        <a class="nav-link rounded" href="#"><i class="bx bx-search"></i></a>
+        <a
+          onclick="closeMenu()"
+          class="nav-link rounded"
+          style="cursor: pointer"
+          ><i class="bx bx-x"></i
+        ></a>
+      </div>
+      <div class="menu--body">
+        <ul class="navbar-nav ml-auto">
+          <li
+            class="nav-item dropdown nav-item--hover"
+            data-toggle="collapse"
+            href="#GioiThieu"
+          >
+            <a class="nav-link" href="#GioiThieu" role="button">GIỚI THIỆU</a>
+
+            <span><i class="bx bxs-down-arrow"></i></span>
+          </li>
+          <div class="collapse multi-collapse sub-link" id="GioiThieu">
+            <a href="" class="d-block sub-item lead">
+              <span><i class="bx bxs-square"></i></span>HĐQT & Ban Điều Hành
+            </a>
+            <a href="" class="d-block sub-item lead">
+              <span><i class="bx bxs-square"></i></span>Lĩnh Vực Hoạt Động
+            </a>
+          </div>
+          <li class="nav-item nav-item--hover">
+            <a class="nav-link" href="#">KHU NGHỈ DƯỠNG</a>
+          </li>
+          <li
+            class="nav-item nav-item--hover dropdown"
+            data-toggle="collapse"
+            href="#TraoDoi"
+          >
+            <a
+              class="nav-link"
+              data-toggle="collapse"
+              href="#TraoDoi"
+              role="button"
+              >KỲ NGHỈ TRAO ĐỔI</a
+            >
+            <span><i class="bx bxs-down-arrow"></i></span>
+          </li>
+          <div class="collapse multi-collapse sub-link" id="TraoDoi">
+            <a class="d-block sub-item lead">
+              <span><i class="bx bxs-square"></i></span>Bộ Sưu Tập</a
+            >
+            <a class="d-block sub-item lead">
+              <span><i class="bx bxs-square"></i></span>Các Điểm Khác
+            </a>
+          </div>
+          <li class="nav-item nav-item--hover">
+            <a class="nav-link" href="#">TRẢI NGHIỆM CỦA BẠN</a>
+          </li>
+        </ul>
+      </div>
+      <div class="menu--bottom">
+        <a href="" class="btn btn-register">Đăng Ký</a>
+        <a href="" class="btn btn-start">Bắt Đầu</a>
+      </div>
+    </div>
+
+    <div id="my-scrollbar" class="my-container" data-scrollbar>
+      <!--Background-->
+      <div class="overviews-background owl-carousel">
+        <div class="item">
+          <img src="Images/pexels-terry-magallanes-2635038.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="Images/img1.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="Images/img1.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="Images/img1.jpg" alt="" />
+        </div>
+      </div>
+      <!--start-->
+      <div class="container project">
+        <div class="recruit">
+          <div class="recruit--why">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="recruit--why__box">
+                  <h3>VÌ SAO LỰA CHỌN DANH KHÔI</h3>
+                  <p>
+                    Đạt được thành quả như ngày hôm nay phần lớn là nhờ tinh
+                    thần đoàn kết, đồng lòng của hàng trăm cán bộ nhân viên.
+                    Hiểu được điều đó Danh Khôi luôn chú trọng tạo một môi
+                    trường làm việc nhân văn với sự đam mê của mỗi cá nhân hướng
+                    đến những giá trị EPICS.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <!--Background-->
+                <div class="overviews-background owl-carousel">
+                  <div class="item">
+                    <img
+                      src="Images/pexels-terry-magallanes-2635038.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="item">
+                    <img src="Images/img1.jpg" alt="" />
+                  </div>
+                  <div class="item">
+                    <img src="Images/img1.jpg" alt="" />
+                  </div>
+                  <div class="item">
+                    <img src="Images/img1.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="recruit--environment">
+            <div class="row flex-row-reverse">
+              <div class="col-md-6">
+                <div class="recruit--why__box">
+                  <h3>MÔI TRƯỜNG LÀM VIỆC</h3>
+                  <p>
+                    Đề cao sức mạnh tập thể, Danh Khôi luôn khuyến khích mỗi cá
+                    nhân tạo kết nối, phát huy tiềm năng toàn diện, học hỏi điều
+                    mới và khám phá những cơ hội, thách thức đi kèm với sự phát
+                    triển. Mục đích hoạt động của Danh Khôi dựa trên sự đồng
+                    hành, chân thành và tôn trọng lẫn nhau để gia tăng giá trị
+                    của các nhân và tổ chức. Mỗi cá nhân là một phần quan trọng
+                    đối với Danh Khôi.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <!--Background-->
+                <div class="overviews-background owl-carousel">
+                  <div class="item">
+                    <img
+                      src="Images/pexels-terry-magallanes-2635038.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="item">
+                    <img src="Images/img1.jpg" alt="" />
+                  </div>
+                  <div class="item">
+                    <img src="Images/img1.jpg" alt="" />
+                  </div>
+                  <div class="item">
+                    <img src="Images/img1.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="recruit--welfare p-5">
+            <div class="recruit--welfare__header">CHẾ ĐỘ PHÚC LỢI</div>
+            <div
+              class="recruit--welfare__options options d-flex justify-content-between"
+            >
+              <div class="options--box">
+                <h3 class="options--box__title">LƯƠNG VÀ THƯỞNG</h3>
+                <p class="options--box--desc">
+                  Chính sách lương thưởng cạnh tranh, phù hợp cho từng vị trí
+                  công việc, kỹ năng và trình độ chuyên môn. Trong những năm gần
+                  đây, Danh Khôi là một trong top 3 công ty có mức thưởng hoa
+                  hồng cao nhất trên thị trường bất động sản.
+                </p>
+              </div>
+              <div class="options--box">
+                <h3 class="options--box__title">BẢO HIỂM SỨC KHOẺ</h3>
+                <p class="options--box--desc">
+                  Ngoài nâng hạng mức phúc lợi những bảo hiểm bắt buộc Theo quy
+                  định của nhà nước như BHXH, BHYT, BHTN, công ty còn mua bảo
+                  hiểm tai nạn 24/4, khám sức khoẻ định kỳ hàng năm.
+                </p>
+              </div>
+              <div class="options--box">
+                <h3 class="options--box__title">ĐÀO TẠO</h3>
+                <p class="options--box--desc">
+                  Hoạt động đào tạo liên tục trung bình ít nhất 1 lần 1 tháng
+                  nhằm giúp tất cả CBNV từ các bộ phận khác nhau có cơ hội nâng
+                  cao trình độ. Hàng năm công ty luôn có đầy đủ các hoạt động
+                  thể thao, du lịch nghỉ dưỡng nhằm tạo điều kiện cho tất cả
+                  CBNV cơ hội rèn luyện thể chất, tinh thần.
+                </p>
+              </div>
+              <div class="options--box">
+                <h3 class="options--box__title">NGÀY LỄ VÀ NGÀY PHÉP</h3>
+                <p class="options--box--desc">
+                  Tất cả các ngày lễ tất cả CBNV đều có những mức thưởng khuyến
+                  khích phù hợp. Bên cạnh đó công ty còn liền tục tổ chức các sự
+                  kiện nhằm làm phong phú đời sống tinh thần cho nhân viên
+                </p>
+              </div>
+              <div class="options--box">
+                <h3 class="options--box__title">CHẾ ĐỘ KHÁC</h3>
+                <p class="options--box--desc">
+                  Không chỉ quan tâm đến bản thân nhân viên, Danh Khôi còn có
+                  những chính sách nhân văn khác như trợ cấp vé xe tết, trợ cấp
+                  cho các trường hợp đau ốm, gia đình có tang, sự kiện hiếu hỉ…
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="recruit--apply">
+            <div class="recruit--aplly__header d-flex justify-content-between">
+              <h3>ĐANG TUYỂN DỤNG</h3>
+              <a href="#">fanpage tuyển dụng</a>
+            </div>
+            <div class="recruit--apply__list">
+              <div
+                class="itemJob d-flex justify-content-between border-top border-bottom"
+              >
+                <div class="itemJob--title">
+                  <div class="lable--small">Số lượng: 200</div>
+                  <h3>Chuyên viên tư vấn Bất động sản</h3>
+                </div>
+                <div class="itemJob--address">
+                  <div class="lable--small">Địa điểm</div>
+                  <h3>Tp. Hồ Chí Minh, Hà Nội</h3>
+                </div>
+                <div class="itemJob--deadline">
+                  <div class="lable--small">Hạn nộp hồ sơ</div>
+                  <h3>30.04.2022</h3>
+                </div>
+              </div>
+              <div
+                class="itemJob d-flex justify-content-between border-top border-bottom"
+              >
+                <div class="itemJob--title">
+                  <div class="lable--small">Số lượng: 200</div>
+                  <h3>Chuyên viên tư vấn Bất động sản</h3>
+                </div>
+                <div class="itemJob--address">
+                  <div class="lable--small">Địa điểm</div>
+                  <h3>Tp. Hồ Chí Minh, Hà Nội</h3>
+                </div>
+                <div class="itemJob--deadline">
+                  <div class="lable--small">Hạn nộp hồ sơ</div>
+                  <h3>30.04.2022</h3>
+                </div>
+              </div>
+              <div
+                class="itemJob d-flex justify-content-between border-top border-bottom"
+              >
+                <div class="itemJob--title">
+                  <div class="lable--small">Số lượng: 200</div>
+                  <h3>Chuyên viên tư vấn Bất động sản</h3>
+                </div>
+                <div class="itemJob--address">
+                  <div class="lable--small">Địa điểm</div>
+                  <h3>Tp. Hồ Chí Minh, Hà Nội</h3>
+                </div>
+                <div class="itemJob--deadline">
+                  <div class="lable--small">Hạn nộp hồ sơ</div>
+                  <h3>30.04.2022</h3>
+                </div>
+              </div>
+              <div
+                class="itemJob d-flex justify-content-between border-top border-bottom"
+              >
+                <div class="itemJob--title">
+                  <div class="lable--small">Số lượng: 200</div>
+                  <h3>Chuyên viên tư vấn Bất động sản</h3>
+                </div>
+                <div class="itemJob--address">
+                  <div class="lable--small">Địa điểm</div>
+                  <h3>Tp. Hồ Chí Minh, Hà Nội</h3>
+                </div>
+                <div class="itemJob--deadline">
+                  <div class="lable--small">Hạn nộp hồ sơ</div>
+                  <h3>30.04.2022</h3>
+                </div>
+              </div>
+              <div
+                class="itemJob d-flex justify-content-between border-top border-bottom"
+              >
+                <div class="itemJob--title">
+                  <div class="lable--small">Số lượng: 200</div>
+                  <h3>Chuyên viên tư vấn Bất động sản</h3>
+                </div>
+                <div class="itemJob--address">
+                  <div class="lable--small">Địa điểm</div>
+                  <h3>Tp. Hồ Chí Minh, Hà Nội</h3>
+                </div>
+                <div class="itemJob--deadline">
+                  <div class="lable--small">Hạn nộp hồ sơ</div>
+                  <h3>30.04.2022</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="recruit--form">
+          <h3 class="recruit--form__title">
+            HÃY TRỞ THÀNH NGƯỜI ĐỒNG HÀNH CÙNG DANH KHÔI
+          </h3>
+          <form>
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="formGroupExampleInput">Example label</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="formGroupExampleInput"
+                    placeholder="Example input"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput">Example label</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="formGroupExampleInput"
+                    placeholder="Example input"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput">Example label</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="formGroupExampleInput"
+                    placeholder="Example input"
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Another label</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="formGroupExampleInput2"
+                    placeholder="Another input"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Another label</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="formGroupExampleInput2"
+                    placeholder="Another input"
+                  />
+                </div>
+                <div class="button d-flex align-items-end">
+                  <button type="submit" class="btn btn-primary">Sign in</button>
+                  <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!--Footer-->
+      <footer class="footer" data-aos="fade-up">
+        <div class="footer--body bg-transparent d-flex justify-content-center">
+          <div class="row py-3">
+            <div
+              class="col-xl-6 col-md-6 col-sm-12 d-flex justify-content-start flex-column align-items-start"
+            >
+              <div class="media-img" data-aos="fade-up">
+                <img
+                  src="Images/logo.png"
+                  alt=""
+                  class="footer--body__img mb-3"
+                />
+              </div>
+              <h5 class="text-white" data-aos="fade-up">CÔNG TY CỔ PHẦN ABC</h5>
+              <div
+                class="footer--info d-flex flex-column justify-content-start align-items-start"
+                data-aos="fade-up"
+              >
+                <p>
+                  <span>Trụ sở: </span> 158 Ngô Gia Tự, Khu 11, P. Chánh Nghĩa,
+                  TP. Thủ Dầu Một, Bình Dương.
+                </p>
+                <p>
+                  <span>Chi nhánh: </span> Số 12C, Đại Lộ Bình Dương, Kp. Đông
+                  Nhì, P. Lái Thiêu, TP. Thuận An, Bình Dương.
+                </p>
+                <p>
+                  <span>Chi nhánh: </span> Số 1338 Phạm Văn Đồng, P. Linh Tây,
+                  TP. Thủ Đức, TP.HCM.
+                </p>
+                <p><span>Hotline:</span> 0938 61 61 61</p>
+              </div>
+            </div>
+
+            <div class="col-xl-6 col-md-6 col-sm-12" data-aos="fade-up">
+              <h3 class="text-white">THÔNG TIN LIÊN HỆ</h3>
+              <form action="">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Họ Tên (*)"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    maxlength="10"
+                    class="form-control"
+                    placeholder="Số Điện Thoại(*)"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="form-group">
+                  <textarea
+                    class="form-control"
+                    placeholder="Nội Dung (*)"
+                    rows="3"
+                  ></textarea>
+                </div>
+                <div
+                  class="form-btn d-flex justify-content-center align-items-center"
+                >
+                  <button type="submit" class="btn btn--hover px-4 shadow-lg">
+                    Gửi
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!--FullPage-->
+    <script src="Js/fullpage.dropEffect.min.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/fullpage.js@3.1.2/dist/fullpage.extensions.min.js"
+    ></script>
+    <!--JQUERY-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--OWL CAROUSEL-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+    ></script>
+    <!--SCROLL-->
+    <script src="https://unpkg.com/smooth-scrollbar@8.7.4/dist/smooth-scrollbar.js"></script>
+    <!--Animation-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        delay: 500,
+      });
+    </script>
+
+    <script src="Js/pageload.js"></script>
+    <script src="Js/animation.js"></script>
+    <script src="Js/app.js"></script>
+    <script src="Js/project.js"></script>
+    <script src="Js/scroll-animation.js"></script>
+  </body>
+</html>
