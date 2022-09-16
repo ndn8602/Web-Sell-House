@@ -54,6 +54,28 @@ $(".overviews-background").owlCarousel({
     },
   },
 });
+$(".recruit--image").owlCarousel({
+  nav: true,
+  dotsEach: 1,
+  nav: true,
+  loop: true,
+  margin: 20,
+  autoplayTimeout: 2000,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    400: {
+      items: 1,
+    },
+    600: {
+      items: 1,
+    },
+    1000: {
+      items: 1,
+    },
+  },
+});
 
 $(".details--news").owlCarousel({
   dotsEach: 6,
@@ -97,5 +119,3 @@ $(".service").owlCarousel({
     },
   },
 });
-
- 

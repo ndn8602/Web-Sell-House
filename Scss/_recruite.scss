@@ -1,2 +1,279 @@
-.recruite{
+.recruit {
+  // giới thiệu
+  &--why {
+    margin-top: 45px;
+  }
+  &--environment {
+    margin-top: 75px;
+  }
+  &--image {
+    position: relative;
+    .owl-stage-outer {
+      height: 400px;
+      position: relative;
+      .owl-stage {
+        height: 100%;
+        .owl-item {
+          height: 100%;
+          .item {
+            width: 100%;
+            height: 100%;
+            img {
+              width: 100%;
+              height: 100%;
+              background-attachment: fixed;
+              object-fit: cover;
+              background-size: cover;
+              background-position: center;
+            }
+          }
+        }
+      }
+    }
+    .owl-nav {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      font-size: 24px;
+      gap: 20px;
+    }
+  }
+  // phúc lợi
+  &--welfare {
+    margin-top: 75px;
+    background-color: rgba(255, 166, 0, 0.493);
+    padding: 10px;
+    .container {
+      padding-top: 0;
+    }
+    &__header {
+      font-size: 40px;
+      margin: 20px 0;
+      color: #fff;
+      font-weight: 700;
+    }
+    &__options {
+      .options--box {
+        width: calc(20% - 20px);
+        &__title {
+          font-size: 16px;
+          font-weight: 700;
+          border-top: 1px #fff solid;
+          border-bottom: 1px #fff solid;
+          padding: 20px 0;
+          height: 60px;
+          display: flex;
+          justify-content: start;
+          align-items: center;
+          text-align: start;
+        }
+        &__desc {
+          text-align: start;
+          font-size: 10px;
+          color: #666666;
+        }
+      }
+    }
+  }
+  // danh sách công việc
+  &--apply {
+    margin-top: 10px;
+    margin-bottom: 75px;
+    .container {
+      padding-top: 0;
+    }
+    &__header {
+      margin: 60px 0;
+
+      h3 {
+        color: orange;
+        font-size: 40px;
+        font-weight: 700;
+      }
+      a {
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+          font-size: 40px;
+        }
+      }
+    }
+    &__list {
+      .itemJob {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+        align-content: stretch;
+        padding: 10px 0;
+        color: #666666;
+        border-top: 1px #333 solid;
+        transition: 0.3s ease;
+        &--title,
+        &--deadline,
+        &--address {
+          a,
+          h3 {
+            font-size: 17px;
+            color: #333;
+            font-weight: 300;
+            font-style: normal;
+            line-height: 1.5;
+          }
+        }
+        &--title {
+          min-width: 500px;
+          max-width: 100%;
+        }
+        &--deadline {
+          width: 15%;
+        }
+        &--address {
+          width: 20%;
+        }
+        &:hover {
+          .itemJob {
+            &--title,
+            &--deadline,
+            &--address {
+              a,
+              h3 {
+                color: orange;
+              }
+            }
+          }
+        }
+      }
+      & > :last-child {
+        border-bottom: 1px #333 solid;
+      }
+    }
+  }
+  &--form {
+    .container {
+      padding-top: 0;
+    }
+    margin-bottom: 75px;
+    &__title {
+      color: orange;
+      font-size: 40px;
+      font-weight: 700;
+      width: 40%;
+      margin-bottom: 30px;
+    }
+    .button {
+      .btn {
+        margin-top: 20px;
+        margin-right: 50px;
+        background-color: #fff;
+        border: 1px solid orange;
+        color: #333333;
+      }
+    }
+  }
+}
+.lable--small {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.form-group .form-control {
+  border: 0;
+  border-bottom: 1px solid #333;
+  outline: none;
+  border-radius: 0;
+}
+.form-group .form-control:focus {
+  border: none;
+}
+@media screen and (max-width: 968px) {
+  .recruit {
+    &--welfare {
+      &__options {
+        .options--box {
+          width: 100%;
+        }
+      }
+    }
+    &--apply {
+      margin-top: 10px;
+      margin-bottom: 75px;
+      .container {
+        padding-top: 0;
+      }
+      &__header {
+        margin: 60px 0;
+        h3 {
+          color: orange;
+          font-size: 30px;
+          font-weight: 700;
+        }
+        a {
+          display: none;
+        }
+      }
+      &__list {
+        .itemJob {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: stretch;
+          align-content: stretch;
+          padding: 10px 0;
+          color: #666666;
+          border-top: 1px #333 solid;
+          transition: 0.3s ease;
+          &--title,
+          &--deadline,
+          &--address {
+            a,
+            h3 {
+              font-size: 17px;
+              color: #333;
+              font-weight: 300;
+              font-style: normal;
+              line-height: 1.5;
+            }
+          }
+          &--title {
+            min-width: 500px;
+            max-width: 50%;
+          }
+          &--deadline {
+            width: 100%;
+          }
+          &--address {
+            width: 100%;
+          }
+        }
+      }
+    }
+    &--form {
+      .container {
+        padding-top: 0;
+      }
+      margin-bottom: 75px;
+      &__title {
+        color: orange;
+        font-size: 30px;
+        font-weight: 700;
+        width: 100%;
+        margin-bottom: 30px;
+      }
+      .button {
+        .btn {
+          margin-top: 20px;
+          margin-right: 50px;
+          background-color: #fff;
+          border: 1px solid orange;
+          color: #333333;
+        }
+      }
+    }
+  }
 }
