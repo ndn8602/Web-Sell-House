@@ -19,7 +19,7 @@ const changeColorHeader = (e) => {
 new fullpage("#myContainer", {
   navigation: true,
   autoScrolling: true,
-  // handler
+  anchors: ["firstPage", "secondPage", "3rdPage", "4thpage", "5thpage"], // handler
   onLeave: (origin, destination, direction) => {
     const section = destination.item;
     console.log(section);
@@ -30,9 +30,8 @@ new fullpage("#myContainer", {
         nav_link.style.color = "white";
       });
       header.style.transition = "all 0.5";
-    } else if (destination.index === 4 && width <= 600) {
-      console.log("ok");
-      $(".fp-tableCell").remove();
+    } else if (destination.index === 5 && width <= 600) {
+      destination.index.remove();
     }
 
     jQuery(".section [data-aos]").removeClass("aos-animate");
@@ -70,13 +69,4 @@ new fullpage("#myContainer", {
   resetSliders: true,
   resetSlidersKey: "INSERT YOUR EXTENSION KEY HERE", //see https://goo.gl/xkUmHS
   esponsiveSlidesKey: "INSERT YOUR EXTENSION KEY HERE", //see https://goo.gl/xkUmHS
-});
-const myScrollbar = Scrollbar.init(document.querySelector("#my-container"));
-
-[].forEach.call(document.querySelectorAll("[data-aos]"), (el) => {
-  myScrollbar.addListener(() => {
-    if (myScrollbar.isVisible(el)) {
-      el.classList.add("aos-animate");
-    }
-  });
 });

@@ -1,3 +1,7 @@
+p{
+  font-size: 16px !important;
+}
+
 .w-100 {
   -webkit-animation: w-100 5s ease-out both;
   animation: w-100 5s ease-out both;
@@ -1480,9 +1484,6 @@ a:hover {
 @media screen and (max-width: 600px) {
   .scrollbar-track-y {
     visibility: hidden;
-  }
-  .footer--hide {
-    display: none !important;
   }
   .project {
     margin-top: -10px;

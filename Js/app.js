@@ -98,35 +98,4 @@ $(".service").owlCarousel({
   },
 });
 
-//hover section2
-const cards = document.querySelectorAll(".resort_item");
-let check = false;
-const defaultbox = () => {
-  if (!check) {
-    //false
-    cards[1].classList.add("move");
-  } else {
-    cards[1].classList.remove("move");
-  }
-};
-defaultbox();
-for (let i = 0; i < cards.length; i++) {
-  const element = cards[i];
-  element.addEventListener("mouseover", () => {
-    if (element.className.split(" ").includes("move")) {
-      return;
-    } else {
-      element.classList.add("move");
-      check = true;
-      defaultbox();
-    }
-  });
-}
-for (let i = 0; i < cards.length; i++) {
-  const element = cards[i];
-  element.addEventListener("mouseout", () => {
-    element.classList.remove("move");
-    check = false;
-    defaultbox();
-  });
-}
+ 
