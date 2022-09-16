@@ -1478,11 +1478,11 @@ a:hover {
   }
 }
 @media screen and (max-width: 600px) {
-  .footer--hide {
-    visibility: hidden;
-  }
   .scrollbar-track-y {
     visibility: hidden;
+  }
+  .section.hidden {
+    display: none;
   }
   .project {
     margin-top: -10px;
