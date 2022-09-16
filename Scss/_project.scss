@@ -274,10 +274,13 @@
 }
 
 @media screen and (max-width: 600px) {
+  .footer--hide {
+    visibility: hidden;
+  }
   .scrollbar-track-y {
     visibility: hidden;
   }
-  
+
   .project {
     margin-top: -10px;
 

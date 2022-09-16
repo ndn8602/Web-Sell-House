@@ -22,7 +22,6 @@ new fullpage("#myContainer", {
   anchors: ["firstPage", "secondPage", "3rdPage", "4thpage", "5thpage"], // handler
   onLeave: (origin, destination, direction) => {
     const section = destination.item;
-    console.log(section);
     changeColorHeader(section.className.split(" "));
     if (destination.index === 3) {
       header.style.backgroundColor = "transparent";
@@ -30,8 +29,9 @@ new fullpage("#myContainer", {
         nav_link.style.color = "white";
       });
       header.style.transition = "all 0.5";
-    } else if (destination.index === 5 && width <= 600) {
-      destination.index.remove();
+    }
+    if (destination.index === 4 && width <= 600) {
+      destination.item.remove();
     }
 
     jQuery(".section [data-aos]").removeClass("aos-animate");
