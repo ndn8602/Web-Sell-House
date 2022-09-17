@@ -21,9 +21,7 @@ $(window).scroll(function () {
 // }
 
 var selectHeader = document.getElementById("my-header");
-console.log(selectHeader)
 var btns = selectHeader.getElementsByClassName("project--nav__btn");
-console.log(btns)
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function () {
     var current = document.getElementsByClassName("active");

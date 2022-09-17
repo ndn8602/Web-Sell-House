@@ -19,58 +19,22 @@ const changeColorHeader = (e) => {
 new fullpage("#myContainer", {
   navigation: true,
   autoScrolling: true,
-  anchors: [
-    "firstPage",
-    "secondPage",
-    "3rdPage",
-    "4thpage",
-    "5thpage",
-  ], // handler
   onLeave: (origin, destination, direction) => {
     const section = destination.item;
     changeColorHeader(section.className.split(" "));
-    if (destination.index === 2) {
-      //hover section2
-      const cards = document.querySelectorAll(".resort_item");
-      let check = false;
-      const defaultbox = () => {
-        if (!check) {
-          //false
-          cards[1].classList.add("move");
-        } else {
-          cards[1].classList.remove("move");
-        }
-      };
-      defaultbox();
-      for (let i = 0; i < cards.length; i++) {
-        const element = cards[i];
-        element.addEventListener("mouseover", () => {
-          if (element.className.split(" ").includes("move")) {
-            return;
-          } else {
-            element.classList.add("move");
-            check = true;
-            defaultbox();
-          }
-        });
-      }
-      for (let i = 0; i < cards.length; i++) {
-        const element = cards[i];
-        element.addEventListener("mouseout", () => {
-          element.classList.remove("move");
-          check = false;
-          defaultbox();
-        });
-      }
-    }
-    if (destination.index === 3 || destination.index === 4) {
+    if (destination.index === 1) console.log("1");
+    else if (destination.index === 2) console.log("2");
+    else if (destination.index === 3) console.log("3");
+    else if (destination.index === 4) console.log("4");
+    else if (destination.index === 5) console.log("5");
+    if (destination.index === 3) {
       header.style.backgroundColor = "transparent";
       nav_links.forEach((nav_link) => {
         nav_link.style.color = "white";
       });
       header.style.transition = "all 0.5";
     }
-    if (width <= 968) {
+    if (destination.index === 3 && width <= 968) {
       let nextSlideIndex = origin.index + 1; // convert from index to slide nr.
       let nextSibling = destination.item;
       let skipped = false; // avoid if($(destination.item).is(':hidden'))
@@ -121,7 +85,7 @@ new fullpage("#myContainer", {
   //need to acquire a fullPage.js license from https://goo.gl/5x9a22
   licenseKey: "8E7D7A7A-25144A1B-AF10A926-C239A4DE",
 
-  responsiveWidth: 1204,
+  responsiveWidth: 1024,
   responsiveSlides: true,
   responsiveSlidesKey: "INSERT YOUR EXTENSION KEY HERE", //see https://goo.gl/xkUmHS
   dropEffect: true,

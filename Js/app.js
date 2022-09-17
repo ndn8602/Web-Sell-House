@@ -13,9 +13,7 @@ function closeMenu() {
   document.getElementById("myMenu").style.width = "0";
   document.body.style.backgroundColor = "white";
 }
-AOS.init({
-  delay: 500,
-});
+
 $(".perspective-img").owlCarousel({
   loop: true,
   dotsEach: 3,
