@@ -202,6 +202,7 @@
     }
   }
 }
+
 .btn {
   background-color: orange;
   position: relative;
@@ -234,6 +235,12 @@
     left: 0;
     width: 100%;
   }
+}
+
+.active,
+.btn:hover {
+  background-color: #666;
+  color: white;
 }
 
 @media screen and (max-width: 1024px) {

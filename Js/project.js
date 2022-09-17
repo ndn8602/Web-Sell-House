@@ -12,13 +12,22 @@ $(window).scroll(function () {
   }
 });
 
-// const Scrollbar = require("smooth-scrollbar");
+// const btnHovers = document.querySelectorAll(".project--nav__btn");
+// for (let i = 0; i < btnHovers.length; i++) {
+//   btnHovers[i].addEventListener("click", () => {
+//     btnHovers[0].className = btnHovers[0].className.replace(" active", "");
+//     btnHovers[i].className += " active";
+//   });
+// }
 
-const btnHovers = document.querySelectorAll(".project--nav__btn");
-for (let i = 0; i < btnHovers.length; i++) {
-  btnHovers[i].addEventListener("click", () => {
-    btnHovers[0].className = btnHovers[0].className.replace(" active", "");
-    btnHovers[i].className += " active";
+var selectHeader = document.getElementById("my-header");
+console.log(selectHeader)
+var btns = selectHeader.getElementsByClassName("project--nav__btn");
+console.log(btns)
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function () {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
   });
 }
-//zoom img on scroll{}
