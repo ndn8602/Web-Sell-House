@@ -212,7 +212,7 @@ body {
   font-weight: 700;
   position: fixed;
   top: -1px;
-  z-index: 9;
+  z-index: 999;
   border-bottom: 2px solid #fff;
   background-color: transparent;
   box-shadow: 0 4px 2px -1px rgba(128, 128, 128, 0.1);
@@ -339,7 +339,7 @@ body {
   width: 170px;
   display: block;
   padding: 0;
-  margin-top: 0px;
+  margin-top: -1px;
   border-radius: 10px;
 }
 .dropdown-item {
@@ -1485,12 +1485,6 @@ a:hover {
   width: 100%;
 }
 
-.active,
-.btn:hover {
-  background-color: #666;
-  color: white;
-}
-
 @media screen and (max-width: 1024px) {
   .project {
     margin-top: -10px;
@@ -2384,4 +2378,24 @@ a:hover {
     border: 1px solid orange;
     color: #333333;
   }
+}
+.manager--screen {
+  width: 90%;
+}
+.manager-background .carousel-inner {
+  height: 500px;
+}
+.manager-background .carousel-item {
+  height: 100%;
+}
+.manager-background .carousel-caption {
+  position: absolute;
+  width: 100%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+}
+.manager--intro.container {
+  padding-top: 0;
 }/*# sourceMappingURL=style.css.map */

@@ -1,65 +1,10 @@
- <script>
-      function listener(status) {
-        let scroll = scrollbar.offset.y;
-        let width = window.innerWidth;
-        if (width > 1200) {
-          if (scroll <= 200) {
-            $("header").css("backgroundColor", "transparent");
-            $(".navbar-nav-tool a").css("color", "white");
-            $(".nav-item a").css("color", "white");
-            $(".dropdown-item").css("color", "black");
-          } else {
-            $("header").css("backgroundColor", "white");
-            $(".navbar-nav-tool a").css("color", "orange");
-            $(".nav-item a").css("color", "orange");
-            $(".dropdown-item").css("color", "orange  ");
-          }
-          if (scroll <= 850) {
-            $(".project--nav__off").css("visibility", "visible");
-            $(".header-show").removeClass("hide");
-          } else {
-            $(".header-show").addClass("hide");
-            $(".project--nav__off").css("visibility", "hidden");
-          }
-        } else {
-          $("header").css("backgroundColor", "white");
-        }
-      }
-      scrollbar.addListener(listener);
-    </script>
-
-
-    <script>
-      //hover section2
-      const cards = document.querySelectorAll(".resort_item");
-      let check = false;
-      const defaultbox = () => {
-        if (!check) {
-          //false
-          cards[1].classList.add("move");
-        } else {
-          cards[1].classList.remove("move");
-        }
-      };
-      defaultbox();
-      for (let i = 0; i < cards.length; i++) {
-        const element = cards[i];
-        element.addEventListener("mouseover", () => {
-          if (element.className.split(" ").includes("move")) {
-            return;
-          } else {
-            element.classList.add("move");
-            check = true;
-            defaultbox();
-          }
-        });
-      }
-      for (let i = 0; i < cards.length; i++) {
-        const element = cards[i];
-        element.addEventListener("mouseout", () => {
-          element.classList.remove("move");
-          check = false;
-          defaultbox();
-        });
-      }
-    </script>
+ <div class="carousel manager-background" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <img src="Images/img2.jpg" class="d-block" alt="..." />
+            <div class="carousel-caption">
+              <h1>Hội đồng quản trị & ban điều hành</h1>
+            </div>
+          </div>
+        </div>
+      </div>

@@ -1,0 +1,28 @@
+.manager {
+  &--screen {
+    width: 90%;
+  }
+  &-background {
+    .carousel {
+      &-inner {
+        height: 500px;
+      }
+      &-item {
+        height: 100%;
+      }
+      &-caption {
+        position: absolute;
+        width: 100%;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 60px;
+      }
+    }
+  }
+  &--intro {
+    &.container {
+      padding-top: 0;
+    }
+  }
+}
