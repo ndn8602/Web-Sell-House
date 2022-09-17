@@ -19,11 +19,18 @@ const changeColorHeader = (e) => {
 new fullpage("#myContainer", {
   navigation: true,
   autoScrolling: true,
-  anchors: ["firstPage", "secondPage", "3rdPage", "4thpage", "5thpage"], // handler
+  anchors: [
+    "firstPage",
+    "secondPage",
+    "3rdPage",
+    "4thpage",
+    "5thpage",
+    "6thpage",
+  ], // handler
   onLeave: (origin, destination, direction) => {
     const section = destination.item;
     changeColorHeader(section.className.split(" "));
-    if (destination.index === 3) {
+    if (destination.index === 3 || destination.index === 4) {
       header.style.backgroundColor = "transparent";
       nav_links.forEach((nav_link) => {
         nav_link.style.color = "white";
@@ -73,7 +80,7 @@ new fullpage("#myContainer", {
     jQuery(".section.active [data-aos]").addClass("aos-animate");
     //jQuery('.fp-table.active .aos-init').addClass('aos-animate');
   },
-  sectionsColor: ["fff", "#fff", "#fff", "#fff", "#fff"],
+  sectionsColor: ["#fff", "#fff", "#fff", "#fff", "#fff", "#fff"],
   menu: "#menu",
   slidesNavigation: true,
   dropEffect: true,
