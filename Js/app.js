@@ -13,7 +13,30 @@ function closeMenu() {
   document.getElementById("myMenu").style.width = "0";
   document.body.style.backgroundColor = "white";
 }
-
+AOS.init({
+  delay: 500,
+});
+$(".perspective-img").owlCarousel({
+  loop: true,
+  dotsEach: 3,
+  nav: true,
+  center: true,
+  margin: 10,
+  dots: true,
+  autoplayTimeout: 8500,
+  smartSpeed: 450,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    768: {
+      items: 2,
+    },
+    1170: {
+      items: 3,
+    },
+  },
+});
 $(".overviews-history_box").owlCarousel({
   nav: true,
   margin: 20,

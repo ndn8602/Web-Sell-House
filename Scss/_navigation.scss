@@ -15,7 +15,7 @@
   border-bottom: 2px solid #fff;
   background-color: transparent;
   box-shadow: 0 4px 2px -1px rgba(128, 128, 128, 0.1);
-  animation: header-down 0.7s none;
+  transition: 0.3s all ease-in-out;
 }
 .header-show {
   position: fixed;
@@ -279,9 +279,11 @@
 @keyframes header-down {
   0% {
     background-color: transparent;
+    transform: translateY(-10px);
   }
   100% {
     background-color: #fff;
+    transform: translateY(0);
   }
 }
 @keyframes header-up {

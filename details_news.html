@@ -63,12 +63,12 @@
     <div class="page-loader">
       <div class="spinner"></div>
       <div class="txt">
-        ACBD <br />
+        Hoàng Gia Land <br />
         Company
       </div>
     </div>
     <!--navigation-->
-    <header class="header container-fluid p-0">
+    <header class="header container-fluid">
       <nav class="navbar navbar-expand-xl p-0">
         <a class="navbar-brand" href="#">
           <img src="Images/logo.png" alt="" />
@@ -564,68 +564,10 @@
     <script src="https://unpkg.com/smooth-scrollbar@8.7.4/dist/smooth-scrollbar.js"></script>
     <!--Animation-->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        delay: 500,
-      });
-    </script>
-    <script>
-      $(".perspective-img").owlCarousel({
-        loop: true,
-        dotsEach: 3,
-        nav: true,
-        center: true,
-        margin: 10,
-        dots: true,
-        autoplayTimeout: 8500,
-        smartSpeed: 450,
-        responsive: {
-          0: {
-            items: 1,
-          },
-          768: {
-            items: 2,
-          },
-          1170: {
-            items: 3,
-          },
-        },
-      });
-    </script>
-
     <script src="Js/pageload.js"></script>
     <script src="Js/animation.js"></script>
     <script src="Js/app.js"></script>
     <script src="Js/project.js"></script>
     <script src="Js/scroll-animation.js"></script>
-    <script>
-      function listener(status) {
-        let scroll = scrollbar.offset.y;
-        let width = window.innerWidth;
-        if (width > 1200) {
-          if (scroll <= 200) {
-            $("header").css("backgroundColor", "transparent");
-            $(".navbar-nav-tool a").css("color", "white");
-            $(".nav-item a").css("color", "white");
-            $(".dropdown-item").css("color", "black");
-          } else {
-            $("header").css("backgroundColor", "white");
-            $(".navbar-nav-tool a").css("color", "orange");
-            $(".nav-item a").css("color", "orange");
-            $(".dropdown-item").css("color", "orange  ");
-          }
-          if (scroll <= 850) {
-            $(".project--nav__off").css("visibility", "visible");
-            $(".header-show").removeClass("hide");
-          } else {
-            $(".header-show").addClass("hide");
-            $(".project--nav__off").css("visibility", "hidden");
-          }
-        } else {
-          $("header").css("backgroundColor", "white");
-        }
-      }
-      scrollbar.addListener(listener);
-    </script>
   </body>
 </html>
