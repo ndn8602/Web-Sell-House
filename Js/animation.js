@@ -25,7 +25,6 @@ new fullpage("#myContainer", {
     "3rdPage",
     "4thpage",
     "5thpage",
-    "6thpage",
   ], // handler
   onLeave: (origin, destination, direction) => {
     const section = destination.item;
@@ -114,7 +113,7 @@ new fullpage("#myContainer", {
     jQuery(".section.active [data-aos]").addClass("aos-animate");
     //jQuery('.fp-table.active .aos-init').addClass('aos-animate');
   },
-  sectionsColor: ["#fff", "#fff", "#fff", "#fff", "#fff", "#fff"],
+  sectionsColor: ["#fff", "#fff", "#fff", "#fff", "#fff"],
   menu: "#menu",
   slidesNavigation: true,
   dropEffect: true,
