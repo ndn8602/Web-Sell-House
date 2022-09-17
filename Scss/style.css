@@ -216,6 +216,8 @@ body {
   border-bottom: 2px solid #fff;
   background-color: transparent;
   box-shadow: 0 4px 2px -1px rgba(128, 128, 128, 0.1);
+  -webkit-animation: header-down 0.7s none;
+          animation: header-down 0.7s none;
 }
 
 .header-show {
@@ -508,6 +510,38 @@ body {
   }
   100% {
     transform: translateY(0px);
+  }
+}
+@-webkit-keyframes header-down {
+  0% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
+@keyframes header-down {
+  0% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
+@-webkit-keyframes header-up {
+  0% {
+    background-color: #fff;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+@keyframes header-up {
+  0% {
+    background-color: #fff;
+  }
+  100% {
+    background-color: transparent;
   }
 }
 /** Section 1 - intro

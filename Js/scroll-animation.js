@@ -11,16 +11,17 @@ scrollbar.setPosition(0, 0);
 scrollbar.track.xAxis.element.remove();
 function listener(status) {
   let scroll = scrollbar.offset.y;
-  console.log(scroll);
   let width = window.innerWidth;
   if (width > 1200) {
     if (scroll <= 200) {
       $("header").css("backgroundColor", "transparent");
+      $("header").css("width", "99.5%");
       $(".navbar-nav-tool a").css("color", "white");
       $(".nav-item a").css("color", "white");
       $(".dropdown-item").css("color", "black");
     } else {
       $("header").css("backgroundColor", "white");
+      $("header").css("width", "100%");
       $(".navbar-nav-tool a").css("color", "orange");
       $(".nav-item a").css("color", "orange");
       $(".dropdown-item").css("color", "orange  ");
