@@ -1520,7 +1520,7 @@ a:hover {
     overflow-y: hidden;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 968px) {
   .scrollbar-track-y {
     visibility: hidden;
   }
