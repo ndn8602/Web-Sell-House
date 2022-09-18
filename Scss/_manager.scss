@@ -39,4 +39,29 @@
       }
     }
   }
+  .person {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    &-list {
+      width: 400px;
+      .row {
+        width: 400px;
+      }
+    }
+    &-first {
+      &-block {
+        width: 400px;
+        height: 400px;
+      }
+    }
+    &-wrap {
+      height: 400px;
+    }
+  }
+}
+.person-first-block {
+  height: 400px !important;
+  width: 100%;
 }

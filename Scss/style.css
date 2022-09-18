@@ -2417,4 +2417,28 @@ a:hover {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+.manager .person {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.manager .person-list {
+  width: 400px;
+}
+.manager .person-list .row {
+  width: 400px;
+}
+.manager .person-first-block {
+  width: 400px;
+  height: 400px;
+}
+.manager .person-wrap {
+  height: 400px;
+}
+
+.person-first-block {
+  height: 400px !important;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

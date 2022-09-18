@@ -7,12 +7,6 @@ let scrollbar = Scrollbar.init(
   document.querySelector("#my-scrollbar"),
   options
 );
-$(document).ready(function () {
-  // console.log($('#detailsNews').attr('id'));
-  if ($("#detailsNews").attr("id")) {
-  }
-});
-
 function toOverview(params) {
   scrollbar.scrollTo(
     0,
@@ -53,7 +47,6 @@ const header_setTop = $(".header-setTop").offset().top - 100; // distance top
 
 function listener(status) {
   let scroll = scrollbar.offset.y;
-  console.log(scroll);
   let width = window.innerWidth;
   if (width > 1200) {
     if (scroll <= 200) {
@@ -80,7 +73,6 @@ function listener(status) {
     $("header").css("backgroundColor", "white");
   }
   $(document).ready(function () {
-    // console.log($('#detailsNews').attr('id'));
     if ($("#detailsNews").attr("id")) {
       const overview = document.getElementById("overview").offsetTop - 200;
       const locations = document.getElementById("location").offsetTop - 200;
@@ -88,11 +80,7 @@ function listener(status) {
       const perspective =
         document.getElementById("perspective").offsetTop - 200;
       const contact = document.getElementById("contact").offsetTop - 200;
-      console.log(`overview : ${overview}`);
-      console.log(`locations : ${locations}`);
-      console.log(`utilities : ${utilities}`);
-      console.log(`perspective : ${perspective}`);
-      console.log(`contact: ${contact}`);
+    
 
       if (scroll >= overview && scroll < locations) {
         $(".btn_overview").addClass("active");

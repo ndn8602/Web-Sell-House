@@ -1,7 +1,6 @@
 const header = document.querySelector(".header");
 const nav_links = header.querySelectorAll(".nav-link");
 let width = screen.width;
-console.log(width);
 const changeColorHeader = (e) => {
   if (e.includes("introPage")) {
     header.style.backgroundColor = "transparent";
