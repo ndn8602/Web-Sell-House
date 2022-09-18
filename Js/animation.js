@@ -22,12 +22,8 @@ new fullpage("#myContainer", {
   onLeave: (origin, destination, direction) => {
     const section = destination.item;
     changeColorHeader(section.className.split(" "));
-    if (destination.index === 1) console.log("1");
-    else if (destination.index === 2) console.log("2");
-    else if (destination.index === 3) console.log("3");
-    else if (destination.index === 4) console.log("4");
-    else if (destination.index === 5) console.log("5");
-    if (destination.index === 3) {
+
+    if (destination.index === 3 || destination.index === 4) {
       header.style.backgroundColor = "transparent";
       nav_links.forEach((nav_link) => {
         nav_link.style.color = "white";

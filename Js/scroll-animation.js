@@ -7,10 +7,53 @@ let scrollbar = Scrollbar.init(
   document.querySelector("#my-scrollbar"),
   options
 );
+$(document).ready(function () {
+  // console.log($('#detailsNews').attr('id'));
+  if ($("#detailsNews").attr("id")) {
+  }
+});
+
+function toOverview(params) {
+  scrollbar.scrollTo(
+    0,
+    document.getElementById("overview").offsetTop - 150,
+    1000
+  );
+}
+function toLocation(params) {
+  scrollbar.scrollTo(
+    0,
+    document.getElementById("location").offsetTop - 130,
+    1000
+  );
+}
+function toUtilities(params) {
+  scrollbar.scrollTo(
+    0,
+    document.getElementById("utilities").offsetTop - 130,
+    1000
+  );
+}
+
+function toPerspective(params) {
+  scrollbar.scrollTo(
+    0,
+    document.getElementById("perspective").offsetTop - 130,
+    1000
+  );
+}
+
+function toContact(params) {
+  scrollbar.scrollTo(0, document.getElementById("contact").offsetTop, 1000);
+}
+
 scrollbar.setPosition(0, 0);
 scrollbar.track.xAxis.element.remove();
+const header_setTop = $(".header-setTop").offset().top - 100; // distance top
+
 function listener(status) {
   let scroll = scrollbar.offset.y;
+  console.log(scroll);
   let width = window.innerWidth;
   if (width > 1200) {
     if (scroll <= 200) {
@@ -26,7 +69,7 @@ function listener(status) {
       $(".nav-item a").css("color", "orange");
       $(".dropdown-item").css("color", "orange  ");
     }
-    if (scroll <= 650) {
+    if (scroll <= header_setTop) {
       $(".project--nav__off").css("visibility", "visible");
       $(".header-show").removeClass("hide");
     } else {
@@ -36,8 +79,49 @@ function listener(status) {
   } else {
     $("header").css("backgroundColor", "white");
   }
-}
+  $(document).ready(function () {
+    // console.log($('#detailsNews').attr('id'));
+    if ($("#detailsNews").attr("id")) {
+      const overview = document.getElementById("overview").offsetTop - 200;
+      const locations = document.getElementById("location").offsetTop - 200;
+      const utilities = document.getElementById("utilities").offsetTop - 200;
+      const perspective =
+        document.getElementById("perspective").offsetTop - 200;
+      const contact = document.getElementById("contact").offsetTop - 200;
+      console.log(`overview : ${overview}`);
+      console.log(`locations : ${locations}`);
+      console.log(`utilities : ${utilities}`);
+      console.log(`perspective : ${perspective}`);
+      console.log(`contact: ${contact}`);
 
+      if (scroll >= overview && scroll < locations) {
+        $(".btn_overview").addClass("active");
+      } else {
+        $(".btn_overview").removeClass("active");
+      }
+      if (scroll >= locations && scroll < utilities) {
+        $(".btn_location").addClass("active");
+      } else {
+        $(".btn_location").removeClass("active");
+      }
+      if (scroll >= utilities && scroll < perspective) {
+        $(".btn_utilities").addClass("active");
+      } else {
+        $(".btn_utilities").removeClass("active");
+      }
+      if (scroll >= perspective && scroll < contact) {
+        $(".btn_perspective").addClass("active");
+      } else {
+        $(".btn_perspective").removeClass("active");
+      }
+      if (scroll > contact) {
+        $(".btn_contact").addClass("active");
+      } else {
+        $(".btn_contact").removeClass("active");
+      }
+    }
+  });
+}
 scrollbar.addListener(listener);
 
 //Handle offset Scroll

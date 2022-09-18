@@ -1,8 +1,9 @@
 .my-container {
   width: 100%;
   height: 100vh;
-  overflow: auto;
-  position: fixed;
+  overflow: none;
+  position: relative;
+  scroll-behavior: smooth;
   .project {
     width: 95%;
     height: 100%;

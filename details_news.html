@@ -58,7 +58,7 @@
       href="	https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/7.4.1/smooth-scrollbar.css"
     />
   </head>
-  <body>
+  <body id="detailsNews">
     <!--Page Load-->
     <div class="page-loader">
       <div class="spinner"></div>
@@ -128,27 +128,39 @@
     <div class="header-show d-flex justify-content-center p-0">
       <div class="project--header justify-content-start flex-column">
         <div
-          class="project--nav d-flex justify-content-start flex-wrap align-items-center px-md-5" id="my-header"
+          class="project--nav d-flex justify-content-start flex-wrap align-items-center px-md-5"
+          id="my-header"
         >
           <a
-            href="#!"
-            class="project--nav__btn btn--hover btn btn-xl mr-1 text-white border rounded-0 shadow-sm active"
-            >TẤT CẢ</a
+            href="#overview"
+            onclick="toOverview()"
+            class="project--nav__btn btn_overview btn--hover btn btn-xl mx-1 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm2 active"
+            >TỔNG QUAN</a
           >
           <a
-            href="#!"
-            class="project--nav__btn btn--hover btn btn-xl mr-1 text-white font-weight-bold border rounded-0 shadow-sm"
-            >TIN THỊ TRƯỜNG</a
+            href="#location "
+            onclick="toLocation()"
+            class="project--nav__btn btn_location btn btn--hover btn-xl mx-1 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
+            >VỊ TRÍ</a
           >
           <a
-            href="#!"
-            class="project--nav__btn btn btn--hover btn-xl mr-1 text-white font-weight-bold border rounded-0 shadow-sm"
-            >TIN DỰ ÁN</a
+            href="#utilities"
+            onclick="toUtilities()"
+            class="project--nav__btn btn_utilities btn btn--hover btn-xl mx-1 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
+            >TIỆN ÍCH</a
           >
           <a
-            href="#!"
-            class="project--nav__btn btn btn--hover btn-xl mr-1 text-white font-weight-bold border rounded-0 shadow-sm"
-            >TIN CÔNG TY</a
+            href="#perspective"
+            onclick="toPerspective()"
+            class="project--nav__btn btn_perspective btn btn--hover btn-xl mx-1 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
+            >PHỐI CẢNH</a
+          >
+          <a
+            href="#contact"
+            id="toContact "
+            onclick="toContact()"
+            class="project--nav__btn btn btn_contact btn--hover btn-xl mx-1 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
+            >LIÊN HỆ</a
           >
         </div>
       </div>
@@ -220,7 +232,7 @@
       </div>
     </div>
 
-    <div id="my-scrollbar" class="my-container" data-scrollbar>
+    <div id="my-scrollbar" class="my-container">
       <!--Content-->
       <div
         id="carouselExampleCaptions"
@@ -242,30 +254,46 @@
           </div>
         </div>
       </div>
-      <div class="">
-        <div class="project--header d-flex justify-content-center flex-column">
+      <div class="d-flex justify-content-center p-0">
+        <div class="project--header justify-content-start flex-column">
           <div
-            class="project--nav project--nav__off d-flex justify-content-center flex-wrap align-items-center" id="my-header"
+            class="project--nav header-setTop d-flex justify-content-start flex-wrap align-items-center px-md-5"
+            id="my-header"
           >
             <a
-              href=""
-              class="project--nav__all btn--hover btn btn-xl px-4 text-white border rounded-0 py-2 shadow-sm active"
-              >TẤT CẢ</a
+              href="#overview"
+              onclick="toOverview()"
+              id="toOverview"
+              class="project--nav__btn btn--hover btn btn-xl mx-1 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm2 active"
+              >TỔNG QUAN</a
             >
             <a
-              href=""
-              class="project--nav__all btn--hover btn btn-xl px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
-              >TIN THỊ TRƯỜNG</a
+              href="#location "
+              onclick="toLocation()"
+              id="toLocation "
+              class="project--nav__btn btn btn--hover btn-xl mx-1 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
+              >VỊ TRÍ</a
             >
             <a
-              href=""
-              class="project--nav__ground btn btn--hover btn-xl px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
-              >TIN DỰ ÁN</a
+              href="#utilities"
+              onclick="toUtilities()"
+              id="toUtilities "
+              class="project--nav__btn btn btn--hover btn-xl mx-1 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
+              >TIỆN ÍCH</a
             >
             <a
-              href=""
-              class="project--nav__homeCity btn btn--hover btn-xl px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
-              >TIN CÔNG TY</a
+              href="#perspective"
+              onclick="toPerspective()"
+              id="toPerspective "
+              class="project--nav__btn btn btn--hover btn-xl mx-1 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
+              >PHỐI CẢNH</a
+            >
+            <a
+              href="#contact" 
+              onclick="toContact()"
+              id="toContact "
+              class="project--nav__btn btn btn--hover btn-xl mx-1 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
+              >LIÊN HỆ</a
             >
           </div>
         </div>
@@ -296,7 +324,11 @@
           </div>
         </div>
       </div>
-      <div class="location bg-warning overflow-hidden" data-aos="fade-up">
+      <div
+        class="location bg-warning overflow-hidden"
+        id="location"
+        data-aos="fade-up"
+      >
         <div class="row m-0">
           <div class="col-sm-12 col-md-6">
             <div class="location-box">
@@ -330,7 +362,7 @@
           </div>
         </div>
       </div>
-      <div class="utilities" data-aos="fade-down">
+      <div class="utilities" id="utilities" data-aos="fade-down">
         <div class="utilities-title">TIỆN ÍCH</div>
         <div class="utilities-box mt-3" data-aos="fade-down">
           <h5>Trăm tiện, ngàn lợi</h5>
@@ -410,7 +442,7 @@
           />
         </div>
       </div>
-      <div class="perspective" data-aos="fade-up">
+      <div class="perspective" id="perspective" data-aos="fade-up">
         <div class="perspective-title">PHỐI CẢNH</div>
         <div class="perspective-box">
           <div class="perspective-img owl-carousel">
@@ -439,7 +471,10 @@
       </div>
 
       <!--Footer-->
-      <footer class="footer d-flex flex-column justify-content-center">
+      <footer
+        class="footer contact d-flex flex-column justify-content-center"
+        id="contact"
+      >
         <div class="footer--head">
           <img
             src="Images/pexels-pixabay-147411.jpg"

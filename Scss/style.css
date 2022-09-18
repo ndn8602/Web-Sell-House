@@ -1049,7 +1049,7 @@ a:hover {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 .news--content__img {
   width: 100%;
@@ -1251,8 +1251,9 @@ a:hover {
 .my-container {
   width: 100%;
   height: 100vh;
-  overflow: auto;
-  position: fixed;
+  overflow: none;
+  position: relative;
+  scroll-behavior: smooth;
 }
 .my-container .project {
   width: 95%;
@@ -2386,7 +2387,11 @@ a:hover {
   }
 }
 .manager--screen {
-  width: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .manager-background .carousel-inner {
   height: 500px;
@@ -2404,4 +2409,12 @@ a:hover {
 }
 .manager--intro.container {
   padding-top: 0;
+}
+.manager-person {
+  width: 100%;
+}
+.manager-person .person-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }/*# sourceMappingURL=style.css.map */

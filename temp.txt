@@ -1,10 +1,25 @@
- <div class="carousel manager-background" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item">
-            <img src="Images/img2.jpg" class="d-block" alt="..." />
-            <div class="carousel-caption">
-              <h1>Hội đồng quản trị & ban điều hành</h1>
-            </div>
-          </div>
-        </div>
-      </div>
+ <a
+            href="#location "
+            id="toLocation "
+            class="project--nav__btn btn btn--hover btn-xl mx-1 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
+            >VỊ TRÍ</a
+          >
+          <a
+            href="#utilities"
+            id="toUtilities "
+            class="project--nav__btn btn btn--hover btn-xl mx-1 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
+            >TIỆN ÍCH</a
+          >
+          <a
+            href="#perspective"
+            id="toPerspective "
+            onclick="toPerspective()"
+            class="project--nav__btn btn btn--hover btn-xl mx-1 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
+            >PHỐI CẢNH</a
+          >
+          <a
+            href="#contact"
+            id="toContact "
+            class="project--nav__btn btn btn--hover btn-xl mx-1 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
+            >LIÊN HỆ</a
+          >

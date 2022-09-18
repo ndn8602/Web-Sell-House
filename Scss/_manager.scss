@@ -1,6 +1,10 @@
 .manager {
   &--screen {
-    width: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   &-background {
     .carousel {
@@ -23,6 +27,16 @@
   &--intro {
     &.container {
       padding-top: 0;
+    }
+  }
+  &-person {
+    width: 100%;
+    .person {
+      &-content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
     }
   }
 }
