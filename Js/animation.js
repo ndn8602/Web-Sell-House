@@ -21,7 +21,40 @@ new fullpage("#myContainer", {
   onLeave: (origin, destination, direction) => {
     const section = destination.item;
     changeColorHeader(section.className.split(" "));
-
+    if (destination.index === 2) {
+      //hover section2
+      const cards = document.querySelectorAll(".resort_item");
+      let check = false;
+      const defaultbox = () => {
+        if (!check) {
+          //false
+          cards[1].classList.add("move");
+        } else {
+          cards[1].classList.remove("move");
+        }
+      };
+      defaultbox();
+      for (let i = 0; i < cards.length; i++) {
+        const element = cards[i];
+        element.addEventListener("mouseover", () => {
+          if (element.className.split(" ").includes("move")) {
+            return;
+          } else {
+            element.classList.add("move");
+            check = true;
+            defaultbox();
+          }
+        });
+      }
+      for (let i = 0; i < cards.length; i++) {
+        const element = cards[i];
+        element.addEventListener("mouseout", () => {
+          element.classList.remove("move");
+          check = false;
+          defaultbox();
+        });
+      }
+    }
     if (destination.index === 3 || destination.index === 4) {
       header.style.backgroundColor = "transparent";
       nav_links.forEach((nav_link) => {
