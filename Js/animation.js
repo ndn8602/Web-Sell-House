@@ -112,12 +112,11 @@ new fullpage("#myContainer", {
   //In addition to the extension license you'll
   //need to acquire a fullPage.js license from https://goo.gl/5x9a22
   licenseKey: "8E7D7A7A-25144A1B-AF10A926-C239A4DE",
-
   responsiveWidth: 1024,
   responsiveSlides: true,
   responsiveSlidesKey: "INSERT YOUR EXTENSION KEY HERE", //see https://goo.gl/xkUmHS
   dropEffect: true,
-  dropEffectKey: "INSERT YOUR EXTENSION KEY HERE", //see https://goo.gl/xkUmHS
+  dropEffectKey: "aG9hbmdnaWFncm91cC5ncm91cF9TR25aSEp2Y0VWbVptVmpkQT09eDR0", //see https://goo.gl/xkUmHS
   dropEffectOptions: {
     speed: 2000,
     color: "#ffc507",
