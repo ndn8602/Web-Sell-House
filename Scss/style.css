@@ -2405,40 +2405,165 @@ a:hover {
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 0;
   font-size: 60px;
+}
+.manager--intro {
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 .manager--intro.container {
   padding-top: 0;
 }
+.manager--title {
+  font-size: 24px;
+  color: orange;
+  font-weight: 600;
+}
+.manager--desc {
+  font-size: 16px;
+  font-weight: 500;
+}
+.manager-listmember {
+  width: 100%;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(254, 192, 76);
+}
+.manager-listmember_title {
+  margin: 50px 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #000000;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+.manager-listmember_title::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  text-align: center;
+  border-radius: 3px;
+  border-bottom: 5px solid #fff;
+  z-index: 100;
+}
+.manager-card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 500px;
+  width: 350px;
+  margin: 20px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+}
+.manager-first {
+  width: 500px;
+  height: 600px;
+}
+.manager-first_img {
+  height: 500px;
+  padding: 10px;
+}
+.manager-first_img img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .manager-person {
-  width: 100%;
-}
-.manager-person .person-content {
+  width: 98%;
+  margin-bottom: 40px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  flex-direction: column;
+  align-content: center;
+  align-items: center;
 }
-.manager .person {
+.manager-person_img {
+  height: 300px;
+  width: 300px;
+}
+.manager-person_img img {
+  transition: 0.5s ease;
+  height: 100%;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  border-radius: 50%;
+  padding: 10px 20px;
+  background-size: cover;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.manager .person-list {
-  width: 400px;
+.manager-info {
+  padding: 10px 5px;
 }
-.manager .person-list .row {
-  width: 400px;
-}
-.manager .person-first-block {
-  width: 400px;
-  height: 400px;
-}
-.manager .person-wrap {
-  height: 400px;
+.manager-info_name p {
+  font-weight: 700;
 }
 
-.person-first-block {
-  height: 400px !important;
-  width: 100%;
+@media screen and (max-width: 993px) {
+  .manager-background .carousel-indicators {
+    bottom: 0;
+  }
+  .manager-background .carousel-caption {
+    position: absolute;
+    width: 100%;
+    padding: 0 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 501px) {
+  .manager-background .carousel-indicators {
+    bottom: 20%;
+  }
+  .manager-background .carousel-caption {
+    position: absolute;
+    width: 100%;
+    padding: 0 20px;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    font-size: 60px;
+  }
+  .manager-background .carousel-caption h1 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .manager-first {
+    width: 300px;
+    height: 400px;
+  }
+  .manager-first_img {
+    height: 300px;
+    padding: 10px;
+    transition: 0.5s ease;
+  }
+  .manager-first_img img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -20,48 +20,180 @@
         top: 60%;
         left: 50%;
         transform: translate(-50%, -50%);
+        z-index: 0;
         font-size: 60px;
       }
     }
   }
   &--intro {
+    margin-top: 100px;
+    margin-bottom: 100px;
     &.container {
       padding-top: 0;
     }
   }
-  &-person {
+  &--title {
+    font-size: 24px;
+    color: orange;
+    font-weight: 600;
+  }
+  &--desc {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  &-listmember {
     width: 100%;
-    .person {
-      &-content {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(254, 192, 76);
+    &_title {
+      margin: 50px 0;
+      font-size: 32px;
+      font-weight: 700;
+      color: #000000;
+      position: relative;
+      text-align: center;
+      z-index: 1;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        text-align: center;
+        border-radius: 3px;
+        border-bottom: 5px solid #fff;
+        z-index: 100;
       }
     }
   }
-  .person {
-    width: 100%;
+  &-card {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 500px;
+    width: 350px;
+    margin: 20px 40px;
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    &-list {
-      width: 400px;
-      .row {
-        width: 400px;
+    align-items: stretch;
+    align-content: center;
+  }
+  &-first {
+    width: 500px;
+    height: 600px;
+    &_img {
+      height: 500px;
+      padding: 10px;
+      img {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
       }
     }
-    &-first {
-      &-block {
-        width: 400px;
-        height: 400px;
+  }
+  &-person {
+    width: 98%;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    &_img {
+      height: 300px;
+      width: 300px;
+      img {
+        transition: 0.5s ease;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        padding: 10px 20px;
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
       }
     }
-    &-wrap {
-      height: 400px;
+  }
+  &-info {
+    padding: 10px 5px;
+    &_name {
+      p {
+        font-weight: 700;
+      }
     }
   }
 }
-.person-first-block {
-  height: 400px !important;
-  width: 100%;
+@media screen and (max-width: 993px) {
+  .manager {
+    &-background {
+      .carousel {
+        &-indicators {
+          bottom: 0;
+        }
+        &-caption {
+          position: absolute;
+          width: 100%;
+          padding: 0 20px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 0;
+          font-size: 60px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 501px) {
+  .manager {
+    &-background {
+      .carousel {
+        &-indicators {
+          bottom: 20%;
+        }
+        &-caption {
+          position: absolute;
+          width: 100%;
+          padding: 0 20px;
+          top: 58%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 0;
+          font-size: 60px;
+          h1{
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .manager {
+    &-first {
+      width: 300px;
+      height: 400px;
+      &_img {
+        height: 300px;
+        padding: 10px;
+        transition: 0.5s ease;
+        img {
+          height: 100%;
+          width: 100%;
+          border-radius: 50%;
+          background-size: cover;
+          background-position: center;
+          object-fit: cover;
+        }
+      }
+    }
+  }
 }
