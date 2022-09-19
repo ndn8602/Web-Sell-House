@@ -43,11 +43,12 @@ function toContact(params) {
 
 scrollbar.setPosition(0, 0);
 scrollbar.track.xAxis.element.remove();
+const header_setTop = $(".header-setTop").offset().top - 100; // distance top
 
 function listener(status) {
   let scroll = scrollbar.offset.y;
   let width = window.innerWidth;
-  const header_setTop = $(".header-setTop").offset().top - 100; // distance top
+  console.log(header_setTop);
   if (width > 1200) {
     if (scroll <= 200) {
       $("header").css("backgroundColor", "transparent");
