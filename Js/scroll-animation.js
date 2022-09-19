@@ -72,7 +72,6 @@ function listener(status) {
   } else {
     $("header").css("backgroundColor", "white");
   }
-  $(document).ready(function () {
     if ($("#detailsNews").attr("id")) {
       const overview = document.getElementById("overview").offsetTop - 200;
       const locations = document.getElementById("location").offsetTop - 200;
@@ -108,7 +107,6 @@ function listener(status) {
         $(".btn_contact").removeClass("active");
       }
     }
-  });
 }
 scrollbar.addListener(listener);
 
