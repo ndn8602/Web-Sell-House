@@ -1,7 +1,6 @@
 var Scrollbar = window.Scrollbar;
 options = {
-  damping: 0.05,
-  alwaysShowTracks: true,
+  damping: 0.1,
 };
 let scrollbar = Scrollbar.init(
   document.querySelector("#my-scrollbar"),
@@ -48,7 +47,6 @@ const header_setTop = $(".header-setTop").offset().top - 100; // distance top
 function listener(status) {
   let scroll = scrollbar.offset.y;
   let width = window.innerWidth;
-  console.log(header_setTop);
   if (width > 1200) {
     if (scroll <= 200) {
       $("header").css("backgroundColor", "transparent");

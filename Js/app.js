@@ -19,6 +19,11 @@ $(".close").click(() => {
   $(".modal").css("display", "none");
   $(".modal").css("transition", "0.7s ease");
 });
+$(".modal").on("show", function () {
+  $("body").addClass("modal-open");
+}).on("hidden", function () {
+  $("body").removeClass("modal-open")
+});
 // <!-- Start of Tawk.to Script-->
 
 var Tawk_API = Tawk_API || {},
