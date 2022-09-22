@@ -46,13 +46,6 @@ const header_setTop = $(".header-setTop").offset().top - 100; // distance top
 const footerTop = $(".footer").offset().top;
 const sreenClickOpenHistory = () => {
   if ($("div").hasClass("sreenClickOpenHistory")) {
-    $(".footer ").click(() => {
-      console.log("first");
-      $(".footer").addClass("modal-open");
-      $(".modal").css("display", "none");
-      $(".footer").attr("data-toggle", "modal");
-      $(".footer").attr("data-target", "#exampleModalCenter");
-    });
     $(".container ").click(() => {
       console.log("first");
       $(".container").addClass("modal-open");
