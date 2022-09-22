@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ManagerWebsite</title>
+    <title>Manager Website</title>
     <!--Animation-->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!--Fullpage-->
@@ -59,6 +59,51 @@
     />
   </head>
   <body id="manager">
+    <!--modal -->
+    <div class="sreenClickOpenHistory" id="sreenClickOpenHistory">
+      <div
+        class="modal fade "
+        id="exampleModalCenter"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">
+               <img src="Images/logo.png" alt="">
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Content here
+              <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+              repellendus perspiciatis veritatis commodi sit animi ullam
+              temporibus, quis dolores ad quam ut maxime quod dolore quo vitae
+              voluptas eos non. Lorem, ipsum dolor sit amet consectetur
+              adipisicing elit. Earum maiores exercitationem libero reiciendis
+              obcaecati commodi nobis provident, ab minus facilis, sit modi
+              itaque odio ipsam, ratione consectetur dignissimos. Dolore, eaque!
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn--hover" data-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!--Page Load-->
     <div class="page-loader">
       <div class="spinner"></div>
@@ -196,7 +241,6 @@
     <div id="my-scrollbar" class="my-container" data-scrollbar>
       <!--start-->
       <!--Background-->
-
       <div
         id="carouselExampleCaptions"
         class="carousel slide manager-background"
@@ -742,7 +786,6 @@
 
     <!--FullPage-->
     <script src="Js/fullpage.dropEffect.min.js"></script>
-
     <script
       type="text/javascript"
       src="https://unpkg.com/fullpage.js@3.1.2/dist/fullpage.extensions.min.js"
@@ -769,7 +812,6 @@
     <script src="https://unpkg.com/smooth-scrollbar@8.7.4/dist/smooth-scrollbar.js"></script>
     <!--Animation-->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
     <script src="Js/pageload.js"></script>
     <script src="Js/animation.js"></script>
     <script src="Js/app.js"></script>

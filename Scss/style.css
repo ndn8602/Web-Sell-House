@@ -129,6 +129,7 @@ body {
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  overflow: auto;
 }
 
 ::-webkit-scrollbar {
@@ -2409,11 +2410,7 @@ a:hover {
   font-size: 60px;
 }
 .manager--intro {
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-.manager--intro.container {
-  padding-top: 0;
+  padding: 100px 0;
 }
 .manager--title {
   font-size: 24px;
@@ -2579,4 +2576,14 @@ a:hover {
 body.modal-open {
   overflow: hidden;
   position: fixed;
+}
+
+.sreenClickOpenHistory {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.sreenClickOpenHistory .modal {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

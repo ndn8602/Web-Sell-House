@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  overflow: auto;
 }
 
 ::-webkit-scrollbar {
@@ -43,6 +44,6 @@ img {
   display: block;
   max-width: 100%;
 }
-p{
+p {
   font-size: 16px !important;
 }
