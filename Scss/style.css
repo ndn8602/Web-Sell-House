@@ -133,7 +133,7 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -143,7 +143,7 @@ html {
 
 ::-webkit-scrollbar-track {
   background-color: transparent;
-  height: 30px;
+  height: 10px;
 }
 
 * {
@@ -2578,12 +2578,185 @@ body.modal-open {
   position: fixed;
 }
 
-.sreenClickOpenHistory {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 .sreenClickOpenHistory .modal {
   display: none;
+}
+.sreenClickOpenHistory .modal-content {
+  width: 1000px;
+  margin: 0 2rem;
+}
+.sreenClickOpenHistory .modal-header {
+  border-bottom: 0;
+}
+.sreenClickOpenHistory .modal-body {
+  padding: 20px;
+  background-color: rgba(250, 200, 108, 0.514);
+  margin: 1rem 4rem 2rem;
+  border-radius: 10px;
+}
+.sreenClickOpenHistory .modal-box h3 span {
+  color: #fff !important;
+  font-size: 18px;
+  padding: 10px;
+}
+.sreenClickOpenHistory .modal-box p {
+  margin-top: 1rem;
+}
+.sreenClickOpenHistory .modal-boxContent {
+  width: 800px;
+  float: left;
+  position: relative;
+}
+.sreenClickOpenHistory .modal-boxContent .row {
+  width: 800px;
+}
+.sreenClickOpenHistory .modal-boxContent_title {
+  font-size: 40px;
+  font-weight: 700;
+}
+.sreenClickOpenHistory .modal-boxContent_desc {
+  font-weight: 400;
+  font-size: 14px;
+}
+.sreenClickOpenHistory .modal-boxContent_image {
+  position: absolute;
+  top: -60px;
+  right: 0;
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.sreenClickOpenHistory .modal-boxContent_image img {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.sreenClickOpenHistory .modal-boxContent_icon {
+  position: absolute;
+  right: -38px;
+  bottom: -7px;
+}
+.sreenClickOpenHistory .modal-boxContent_icon i {
+  font-size: 25px;
+  margin: 10px 10px;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 1000px !important;
+    margin: 1.75rem auto;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .sreenClickOpenHistory .modal {
+    display: none;
+  }
+  .sreenClickOpenHistory .modal-content {
+    width: 800px;
+  }
+  .sreenClickOpenHistory .modal-body {
+    padding: 1rem;
+    background-color: rgba(250, 200, 108, 0.514);
+    margin: 0;
+    border-radius: 10px;
+    overflow-y: scroll;
+  }
+  .sreenClickOpenHistory .modal-box {
+    height: auto;
+  }
+  .sreenClickOpenHistory .modal-box p {
+    margin-top: 1rem;
+  }
+  .sreenClickOpenHistory .modal-boxContent {
+    width: 100%;
+    float: left;
+    position: relative;
+  }
+  .sreenClickOpenHistory .modal-boxContent .row {
+    width: 100%;
+  }
+  .sreenClickOpenHistory .modal-boxContent_title {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .sreenClickOpenHistory .modal-boxContent_desc {
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .sreenClickOpenHistory .modal-boxContent_image {
+    margin-left: 10px;
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+  .sreenClickOpenHistory .modal-boxContent_image img {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px;
+  }
+  .sreenClickOpenHistory .modal-dialog {
+    max-width: 800px !important;
+    margin: 1.75rem auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sreenClickOpenHistory .modal {
+    overflow: hidden;
+  }
+  .sreenClickOpenHistory .modal-content {
+    height: 600px;
+  }
+  .sreenClickOpenHistory .modal-boxContent .row {
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+  .sreenClickOpenHistory .modal-boxContent_image {
+    height: 380px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .modal-boxContent_title {
+    margin-top: 20px;
+    font-size: 20px !important;
+    font-weight: 700;
+  }
+  .modal-boxContent_desc {
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .modal-boxContent_image {
+    position: relative;
+    top: 0px;
+    right: 0;
+    width: 100%;
+    height: 200px !important;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+  .modal-boxContent_image img {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */
