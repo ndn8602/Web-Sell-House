@@ -2596,6 +2596,7 @@ body.modal-open {
 }
 .sreenClickOpenHistory .modal-content {
   width: 1000px;
+  height: calc(100vh - 250px);
   margin: 0 2rem;
 }
 .sreenClickOpenHistory .modal-header {

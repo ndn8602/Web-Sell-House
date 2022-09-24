@@ -17,6 +17,7 @@ body.modal-open {
     display: none;
     &-content {
       width: 1000px;
+      height: calc(100vh - 250px);
       margin: 0 2rem;
     }
     &-header {
