@@ -44,29 +44,11 @@ scrollbar.setPosition(0, 0);
 scrollbar.track.xAxis.element.remove();
 const header_setTop = $(".header-setTop").offset().top - 100; // distance top
 const footerTop = $(".footer").offset().top;
-    $(".sreenClickOpenHistory").click(() => {
-      $(".sreenClickOpenHistory").addClass("modal-open");
-      $(".modal").css("display", "none");
-      $(".sreenClickOpenHistory").attr("data-toggle", "modal");
-      $(".sreenClickOpenHistory").attr("data-target", "#exampleModalCenter");
-    });
-
-    // $(".container ").click(() => {
-    //   console.log("first");
-    //   $(".container").addClass("modal-open");
-    //   $(".modal").css("display", "none");
-    //   $(".container").attr("data-toggle", "modal");
-    //   $(".container").attr("data-target", "#exampleModalCenter");
-    // });
-    // $(".manager-listmember ").click(() => {
-    //   console.log("first");
-    //   $(".manager-listmember").addClass("modal-open");
-    //   $(".modal").css("display", "none");
-    //   $(".manager-listmember").attr("data-toggle", "modal");
-    //   $(".manager-listmember").attr("data-target", "#exampleModalCenter");
-    // });
-// sreenClickOpenHistory();
-function listener(status) {
+$(".sreenClickOpenHistory").click(() => {
+  $(".sreenClickOpenHistory").addClass("modal-open");
+  $(".modal").css("display", "none");
+});
+  function listener(status) {
   let scroll = scrollbar.offset.y;
   let width = window.innerWidth;
   if (width > 1200) {

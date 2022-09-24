@@ -2463,6 +2463,7 @@ a:hover {
   align-items: stretch;
   align-content: center;
   transition: 0.7s ease;
+  cursor: pointer;
 }
 .manager-card:hover img {
   transform: scale(1.1);
