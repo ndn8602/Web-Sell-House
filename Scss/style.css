@@ -2462,6 +2462,15 @@ a:hover {
   justify-content: center;
   align-items: stretch;
   align-content: center;
+  transition: 0.7s ease;
+}
+.manager-card:hover img {
+  transform: scale(1.1);
+  transition: 0.7s ease;
+}
+.manager-card:hover p {
+  color: rgb(231, 181, 89);
+  transition: 0.7s ease;
 }
 .manager-first {
   width: 500px;
@@ -2578,6 +2587,9 @@ body.modal-open {
   position: fixed;
 }
 
+.sreenClickOpenHistory {
+  cursor: pointer;
+}
 .sreenClickOpenHistory .modal {
   display: none;
 }

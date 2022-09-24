@@ -12,6 +12,7 @@ body.modal-open {
 }
 
 .sreenClickOpenHistory {
+  cursor: pointer;
   .modal {
     display: none;
     &-content {
@@ -108,7 +109,7 @@ body.modal-open {
         margin: 0;
         border-radius: 10px;
         overflow-y: scroll;
-        
+
       }
       &-box {
         height: auto;
