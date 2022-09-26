@@ -2522,6 +2522,10 @@ a:hover {
 }
 
 @media screen and (max-width: 993px) {
+  .manager--intro {
+    margin-top: 0;
+    padding: 40px 12px;
+  }
   .manager-background .carousel-indicators {
     bottom: 0;
   }
@@ -2537,24 +2541,10 @@ a:hover {
   }
 }
 @media screen and (max-width: 501px) {
-  .manager-background .carousel-indicators {
-    bottom: 20%;
+  .manager--intro {
+    margin-top: -100px;
+    padding: 40px 12px;
   }
-  .manager-background .carousel-caption {
-    position: absolute;
-    width: 100%;
-    padding: 0 20px;
-    top: 58%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 0;
-    font-size: 60px;
-  }
-  .manager-background .carousel-caption h1 {
-    font-size: 24px;
-  }
-}
-@media screen and (max-width: 600px) {
   .manager-first {
     width: 300px;
     height: 400px;
@@ -2572,6 +2562,22 @@ a:hover {
     background-position: center;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .manager-background .carousel-indicators {
+    bottom: 20%;
+  }
+  .manager-background .carousel-caption {
+    position: absolute;
+    width: 100%;
+    padding: 0 20px;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    font-size: 60px;
+  }
+  .manager-background .carousel-caption h1 {
+    font-size: 24px;
   }
 }
 .modal {
@@ -2705,7 +2711,6 @@ body.modal-open {
     font-size: 14px;
   }
   .sreenClickOpenHistory .modal-boxContent_image {
-    margin-left: 10px;
     position: relative;
     top: 0;
     right: 0;
