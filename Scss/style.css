@@ -2703,10 +2703,13 @@ body.modal-open {
     width: 100%;
   }
   .sreenClickOpenHistory .modal-boxContent_title {
+    padding-right: 20px;
+    word-wrap: break-word;
     font-size: 40px;
     font-weight: 700;
   }
   .sreenClickOpenHistory .modal-boxContent_desc {
+    padding-right: 20px;
     font-weight: 400;
     font-size: 14px;
   }
