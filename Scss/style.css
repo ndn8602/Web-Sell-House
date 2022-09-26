@@ -2620,6 +2620,7 @@ body.modal-open {
   padding: 10px;
 }
 .sreenClickOpenHistory .modal-box p {
+  font-weight: 700;
   margin-top: 1rem;
 }
 .sreenClickOpenHistory .modal-boxContent {
