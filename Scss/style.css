@@ -618,10 +618,10 @@ body {
   padding: 0;
 }
 .carousel-control-prev {
-  width: 5%;
+  width: 10%;
 }
 .carousel-control-next {
-  width: 5%;
+  width: 10%;
 }
 .carousel-indicators li {
   width: 200px;
@@ -2600,6 +2600,16 @@ body.modal-open {
   position: fixed;
 }
 
+.badge {
+  white-space: normal !important;
+  text-align: start;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem;
+  font-size: 70%;
+}
+
 .sreenClickOpenHistory {
   cursor: pointer;
 }
@@ -2620,12 +2630,16 @@ body.modal-open {
   margin: 1rem 4rem 2rem;
   border-radius: 10px;
 }
-.sreenClickOpenHistory .modal-box h3 span {
+.sreenClickOpenHistory .modal-badges {
+  margin-bottom: 0;
+}
+.sreenClickOpenHistory .modal-box h5 span {
   color: #fff !important;
   font-size: 18px;
   padding: 10px;
 }
 .sreenClickOpenHistory .modal-box p {
+  width: 20%;
   font-weight: 700;
   margin-top: 1rem;
 }
