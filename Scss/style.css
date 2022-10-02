@@ -2588,6 +2588,9 @@ a:hover {
   background-color: rgba(51, 51, 51, 0.655);
   height: 100%;
 }
+.report-index .modal-body {
+  max-width: 700px;
+}
 .report-index .modal-header {
   padding: 0 1rem;
 }
