@@ -2589,13 +2589,21 @@ a:hover {
   height: 100%;
 }
 .report-index .modal-body {
+  padding: 0;
   max-width: 700px;
+  max-height: 500px;
+  position: relative;
+  border: none;
 }
-.report-index .modal-header {
-  padding: 0 1rem;
+.report-index .modal-body > button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  padding: 0.3rem;
 }
-.report-index .modal-header button {
-  margin: -10px -1rem -1rem auto;
+.report-index .modal-body > img {
+  position: absolute;
 }
 
 body.modal-open {
