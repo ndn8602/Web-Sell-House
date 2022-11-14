@@ -59,56 +59,182 @@
     opacity: 1;
   }
 }
-.page-loader {
+.pageload {
   width: 100%;
   height: 100vh;
-  position: fixed;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
   top: 0;
   left: 0;
-  background: #272727;
-  z-index: 10000;
-  overflow: hidden;
+  transform: translateX(-50%, -50%);
+  z-index: 9999;
 }
-.page-loader .txt {
-  color: #666;
+.pageload .open-top, .pageload .open-bottom {
+  position: absolute;
+  height: calc(100% - 50vh);
+  width: 100%;
+  z-index: -1;
+}
+.pageload .open-top {
+  top: 0;
+  -webkit-animation: openUp 1s;
+          animation: openUp 1s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+.pageload .open-bottom {
+  bottom: 0;
+  -webkit-animation: openDown 1s;
+          animation: openDown 1s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+.pageload::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform: translateY(-50%, -50%);
+  background-color: #333333 !important;
+  z-index: -1;
+}
+
+svg {
+  z-index: 1;
+  height: 5rem;
+}
+
+#logo {
+  fill-opacity: 0;
+  stroke-width: 3px;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: test 2.5s ease-in-out forwards;
+          animation: test 2.5s ease-in-out forwards;
+}
+
+.name-company h1 {
+  width: 100%;
+  color: #f7d03a;
   text-align: center;
-  top: 40%;
-  position: relative;
-  text-transform: uppercase;
-  letter-spacing: 0.3rem;
-  font-weight: bold;
-  line-height: 1.5;
+  -webkit-animation: test1 3s ease-in forwards;
+          animation: test1 3s ease-in forwards;
+  opacity: 0;
+  font-size: 1rem;
 }
 
-/* SPINNER ANIMATION */
-.spinner {
-  position: relative;
-  top: 40%;
-  width: 80px;
-  height: 80px;
-  margin: 0 auto;
-  background-color: #fff;
-  border-radius: 100%;
-  -webkit-animation: sk-scaleout 1s infinite ease-in-out;
-  animation: sk-scaleout 1s infinite ease-in-out;
+@-webkit-keyframes test {
+  to {
+    stroke-dashoffset: 0;
+  }
+  to {
+    fill-opacity: 0.5;
+    fill: #f7d03a;
+  }
+  to {
+    fill-opacity: 0.6;
+    fill: #f7d03a;
+  }
+  to {
+    fill-opacity: 0.7;
+    fill: #f7d03a;
+  }
+  to {
+    fill-opacity: 0.8;
+    fill: #f7d03a;
+  }
+  to {
+    fill-opacity: 0.9;
+    fill: #f7d03a;
+  }
+  to {
+    fill-opacity: 1;
+    fill: #f7d03a;
+    stroke-opacity: 0;
+  }
 }
 
-@-webkit-keyframes sk-scaleout {
-  0% {
-    -webkit-transform: scale(0);
+@keyframes test {
+  to {
+    stroke-dashoffset: 0;
   }
-  100% {
-    -webkit-transform: scale(1);
-    opacity: 0;
+  to {
+    fill-opacity: 0.5;
+    fill: #f7d03a;
+  }
+  to {
+    fill-opacity: 0.6;
+    fill: #f7d03a;
+  }
+  to {
+    fill-opacity: 0.7;
+    fill: #f7d03a;
+  }
+  to {
+    fill-opacity: 0.8;
+    fill: #f7d03a;
+  }
+  to {
+    fill-opacity: 0.9;
+    fill: #f7d03a;
+  }
+  to {
+    fill-opacity: 1;
+    fill: #f7d03a;
+    stroke-opacity: 0;
   }
 }
-@keyframes sk-scaleout {
-  0% {
-    transform: scale(0);
+@-webkit-keyframes test1 {
+  to {
+    opacity: 1;
   }
-  100% {
-    transform: scale(1);
-    opacity: 0;
+}
+@keyframes test1 {
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes openUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+    z-index: 10;
+    background-color: #f7f7f7;
+  }
+}
+@keyframes openUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+    z-index: 10;
+    background-color: #f7f7f7;
+  }
+}
+@-webkit-keyframes openDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+    z-index: 10;
+    background-color: #f7f7f7;
+  }
+}
+@keyframes openDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+    z-index: 10;
+    background-color: #f7f7f7;
   }
 }
 body {

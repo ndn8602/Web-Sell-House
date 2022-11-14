@@ -58,570 +58,345 @@
       href="	https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/7.4.1/smooth-scrollbar.css"
     />
   </head>
-  <body id="manager">
-    <!--Page Load-->
-    <div class="page-loader">
-      <div class="spinner"></div>
-      <div class="txt">
-        Hoàng Gia Land <br />
-        Company
-      </div>
-    </div>
-    <!--navigation-->
-    <header class="header container-fluid">
-      <nav class="navbar navbar-expand-xl p-0">
-        <a class="navbar-brand" href="#">
-          <img src="Images/logo.png" alt="" />
-        </a>
-        <button class="navbar-toggler" type="button">
-          <i class="bx bx-menu" onclick="openMenu()"></i>
-        </button>
-        <div class="collapse navbar-collapse">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item nav-item--hover dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-toggle="dropdown"
-                aria-expanded="false"
-              >
-                GIỚI THIỆU
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">HĐQT & Ban Điều Hành</a>
-                <a class="dropdown-item" href="#">Lĩnh Vực Hoạt Động</a>
-              </div>
-            </li>
-            <li class="nav-item nav-item--hover">
-              <a class="nav-link" href="#">KHU NGHỈ DƯỠNG</a>
-            </li>
-            <li class="nav-item nav-item--hover dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-toggle="dropdown"
-                aria-expanded="false"
-              >
-                KỲ NGHỈ TRAO ĐỔI
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Bộ Sưu Tập</a>
-                <a class="dropdown-item" href="#">Các Điểm Khác</a>
-              </div>
-            </li>
-            <li class="nav-item nav-item--hover">
-              <a class="nav-link" href="#">TRẢI NGHIỆM CỦA BẠN</a>
-            </li>
-            <li class="navbar-nav-tool">
-              <a class="nav-link nav-rounded py-3" href="#">VN</a>
-              <a class="nav-link nav-rounded py-3" href="#">X</a>
-              <a class="nav-link nav-rounded py-3" href="#"
-                ><i class="bx bx-search"></i
-              ></a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+  <style>
+    .pageload {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    .open-top,
+    .open-bottom {
+      position: absolute;
+      height: calc(100% - 50vh);
+      width: 100%;
+      z-index: -1;
+    }
+    .open-top {
+      top: 0;
+      animation: openUp 1s;
+      animation-delay: 2.5s;
+    }
+    .open-bottom {
+      bottom: 0;
+      animation: openDown 1s;
+      animation-delay: 2.5s;
+    }
+    svg {
+      z-index: 1;
+      height: 5rem;
+    }
 
-    <div class="menu" id="myMenu">
-      <div class="menu--header">
-        <a class="nav-link rounded" href="#">VN</a>
-        <a class="nav-link rounded" href="#">X</a>
-        <a class="nav-link rounded" href="#"><i class="bx bx-search"></i></a>
-        <a
-          onclick="closeMenu()"
-          class="nav-link rounded"
-          style="cursor: pointer"
-          ><i class="bx bx-x"></i
-        ></a>
-      </div>
-      <div class="menu--body">
-        <ul class="navbar-nav ml-auto">
-          <li
-            class="nav-item dropdown nav-item--hover"
-            data-toggle="collapse"
-            href="#GioiThieu"
-          >
-            <a class="nav-link" href="#GioiThieu" role="button">GIỚI THIỆU</a>
+    .pageload::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      transform: translateY(-50%, -50%);
+      background-color: #333333 !important;
+      z-index: -1;
+    }
+    #logo {
+      fill-opacity: 0;
+      stroke-width: 3px;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: test 2.5s ease-in-out forwards;
+    }
+    .name-company h1 {
+      width: 100%;
+      color: #f7d03a;
+      text-align: center;
+      animation: test1 3s ease-in forwards;
+      opacity: 0;
+      font-size: 1rem;
+    }
 
-            <span><i class="bx bxs-down-arrow"></i></span>
-          </li>
-          <div class="collapse multi-collapse sub-link" id="GioiThieu">
-            <a href="" class="d-block sub-item lead">
-              <span><i class="bx bxs-square"></i></span>HĐQT & Ban Điều Hành
-            </a>
-            <a href="" class="d-block sub-item lead">
-              <span><i class="bx bxs-square"></i></span>Lĩnh Vực Hoạt Động
-            </a>
-          </div>
-          <li class="nav-item nav-item--hover">
-            <a class="nav-link" href="#">KHU NGHỈ DƯỠNG</a>
-          </li>
-          <li
-            class="nav-item nav-item--hover dropdown"
-            data-toggle="collapse"
-            href="#TraoDoi"
-          >
-            <a
-              class="nav-link"
-              data-toggle="collapse"
-              href="#TraoDoi"
-              role="button"
-              >KỲ NGHỈ TRAO ĐỔI</a
-            >
-            <span><i class="bx bxs-down-arrow"></i></span>
-          </li>
-          <div class="collapse multi-collapse sub-link" id="TraoDoi">
-            <a class="d-block sub-item lead">
-              <span><i class="bx bxs-square"></i></span>Bộ Sưu Tập</a
-            >
-            <a class="d-block sub-item lead">
-              <span><i class="bx bxs-square"></i></span>Các Điểm Khác
-            </a>
-          </div>
-          <li class="nav-item nav-item--hover">
-            <a class="nav-link" href="#">TRẢI NGHIỆM CỦA BẠN</a>
-          </li>
-        </ul>
-      </div>
-      <div class="menu--bottom">
-        <a href="" class="btn btn-register">Đăng Ký</a>
-        <a href="" class="btn btn-start">Bắt Đầu</a>
-      </div>
-    </div>
-    <div class="header-setTop"></div>
-    <div id="my-scrollbar" class="my-container" data-scrollbar>
-      <!--start-->
-      <!--Background-->
-      <div class="carousel manager-background" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="https://crystalbay.com/media/images/45384-bg.jpg"
-              class="d-block"
-              alt="..."
-            />
-            <div class="carousel-caption">
-              <h1 class="text-white">Hội đồng quản trị & ban điều hành</h1>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Content -->
-      <section class="container manager--intro manager--screen text-center">
-        <div class="manager--title">GIỚI THIỆU</div>
-        <div class="manager--desc">
-          Crystal Bay Group bền bỉ xây dựng hệ sinh thái du lịch, nghỉ dưỡng,
-          trải nghiệm hoàn chỉnh. Những tổ hợp giải trí - nghỉ dưỡng xu hướng
-          “All – in – one” (Tất cả trong một) được kiến tạo tại các vùng đất mới
-          như: Ninh Thuận, Vân Đồn, Đà Lạt... để thực hiện sản phẩm chiến lược
-          "Một kỳ nghỉ, nhiều vùng di sản", góp phần đưa Việt Nam thành trung
-          tâm du lịch mới của Châu Á. Đó là những mục tiêu tạo nên trăn trở và
-          đam mê của Crystal Bay Group trên hành trình Pha Lê - Hành trình của
-          phụng sự, yêu thương.
-        </div>
-      </section>
-
-      <section class="container manager-person manager--screen">
-        <div class="manager-person_list person">
-          <div class="person-content">
-            <h3 class="section-title text-center">
-              Hội đồng quản trị Tập đoàn Crystal Bay
-            </h3>
-            <div class="person-list">
-              <div class="row d-flex justify-content-center">
-                <div class="col-12 mb-5">
-                  <div
-                    class="person-first-block d-flex justify-content-center flex-column"
-                  >
-                    <img
-                      src="https://crystalbay.com/media/images/10856-nguyen-duc-chi.jpg"
-                      class="image-large-avatar"
-                      alt=""
-                    />
-                    <p class="text-name">ÔNG. NGUYỄN ĐỨC CHI</p>
-                    <div class="text-note">
-                      <p>CHỦ TỊCH HỘI ĐỒNG QUẢN TRỊ</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-xl-3 mb-4">
-                  <div class="person-wrap">
-                    <div class="person-info">
-                      <img
-                        src="https://crystalbay.com/media/images/1.png"
-                        alt=""
-                        class="img-fluid image-avatar"
-                      />
-                      <p class="text-name">MR. MEHMET KIN</p>
-                      <div class="text-note">
-                        <p>PHÓ CHỦ TỊCH HĐQT</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-xl-3 mb-4">
-                  <div class="person-wrap">
-                    <div class="person-info">
-                      <img
-                        src="https://crystalbay.com/media/images/2.png"
-                        alt=""
-                        class="img-fluid image-avatar"
-                      />
-                      <p class="text-name">BÀ NGUYỄN THỊ DUYÊN</p>
-                      <div class="text-note">
-                        <p>PHÓ CHỦ TỊCH HĐQT</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-xl-3 mb-4">
-                  <div class="person-wrap">
-                    <div class="person-info">
-                      <img
-                        src="https://crystalbay.com/media/images/3.png"
-                        alt=""
-                        class="img-fluid image-avatar"
-                      />
-                      <p class="text-name">ÔNG ĐÀO XUÂN DŨNG</p>
-                      <div class="text-note">
-                        <p>THÀNH VIÊN HĐQT ĐỘC LẬP</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-xl-3 mb-4">
-                  <div class="person-wrap">
-                    <div class="person-info">
-                      <img
-                        src="https://crystalbay.com/media/images/4.png"
-                        alt=""
-                        class="img-fluid image-avatar"
-                      />
-                      <p class="text-name">ÔNG NGUYỄN THẾ MẠNH</p>
-                      <div class="text-note">
-                        <p>THÀNH VIÊN HĐQT ĐỘC LẬP</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="person-content">
-            <h3 class="section-title">Ban điều hành Tập đoàn Crystal Bay</h3>
-            <div class="person-list">
-              <div class="row d-flex justify-content-center">
-                <div class="col-lg-6 col-xl-3 mb-4">
-                  <div class="person-wrap person-wrap-first">
-                    <div class="person-info">
-                      <img
-                        src="https://crystalbay.com/media/images/5.png"
-                        alt=""
-                        class="img-fluid image-avatar"
-                      />
-                      <p class="text-name">ÔNG NGUYỄN TIẾN TRUNG</p>
-                      <div class="text-note">
-                        <p>TỔNG GIÁM ĐỐC</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-xl-3 mb-4">
-                  <div class="person-wrap">
-                    <div class="person-info">
-                      <img
-                        src="https://crystalbay.com/media/images/6.png"
-                        alt=""
-                        class="img-fluid image-avatar"
-                      />
-                      <p class="text-name">ÔNG NGÔ HỮU TRƯỜNG</p>
-                      <div class="text-note">
-                        <p>PHÓ TỔNG GIÁM ĐỐC</p>
-                        <p>GIÁM ĐỐC KINH DOANH</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-xl-3 mb-4">
-                  <div class="person-wrap">
-                    <div class="person-info">
-                      <img
-                        src="https://crystalbay.com/media/images/7.png"
-                        alt=""
-                        class="img-fluid image-avatar"
-                      />
-                      <p class="text-name">ÔNG TRẦN TẤN HẢI</p>
-                      <div class="text-note">
-                        <p>PHÓ TỔNG GIÁM ĐỐC</p>
-                        <p>GIÁM ĐỐC ĐẦU TƯ</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-xl-3 mb-4">
-                  <div class="person-wrap">
-                    <div class="person-info">
-                      <img
-                        src="https://crystalbay.com/media/images/55622-1.png"
-                        alt=""
-                        class="img-fluid image-avatar"
-                      />
-                      <p class="text-name">MR. MEHMET KINN</p>
-                      <div class="text-note">
-                        <p>GIÁM ĐỐC KHỐI QUẢN LÝ KHÁCH SẠN</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-xl-3 mb-4">
-                  <div class="person-wrap pt-5">
-                    <div class="person-info">
-                      <img
-                        src="https://crystalbay.com/media/images/33137-2.png"
-                        alt=""
-                        class="img-fluid image-avatar"
-                      />
-                      <p class="text-name">BÀ NGUYỄN THỊ DUYÊN</p>
-                      <div class="text-note">
-                        <p>PHÓ TỔNG GIÁM ĐỐC HÀNH CHÍNH - NHÂN SỰ</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-xl-3 mb-4">
-                  <div class="person-wrap pt-5">
-                    <div class="person-info">
-                      <img
-                        src="https://crystalbay.com/media/images/94827-10.png"
-                        alt=""
-                        class="img-fluid image-avatar"
-                      />
-                      <p class="text-name">BÀ NGUYỄN THU HÀ</p>
-                      <div class="text-note">
-                        <p>KẾ TOÁN TRƯỞNG</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="person-content">
-            <h3 class="section-title">
-              Hội đồng thành viên &amp; Ban giám đốc Crystal Bay Card
-            </h3>
-            <div class="person-list">
-              <div class="row d-flex justify-content-center">
-                <div class="col-lg-6 col-xl-3 mb-4">
-                  <div class="person-wrap person-wrap-first">
-                    <div class="person-info">
-                      <img
-                        src="https://crystalbay.com/media/images/88285-6.png"
-                        alt=""
-                        class="img-fluid image-avatar"
-                      />
-                      <p class="text-name">ÔNG NGÔ HỮU TRƯỜNG</p>
-                      <div class="text-note">
-                        <p>CHỦ TỊCH HĐTV</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-xl-3 mb-4">
-                  <div class="person-wrap">
-                    <div class="person-info">
-                      <img
-                        src="https://crystalbay.com/media/images/20008-5.png"
-                        alt=""
-                        class="img-fluid image-avatar"
-                      />
-                      <p class="text-name">ÔNG NGUYỄN TIẾN TRUNG</p>
-                      <div class="text-note">
-                        <p>THÀNH VIÊN HĐTV</p>
-                        <p>TỔNG GIÁM ĐỐC TẬP ĐOÀN CRYSTAL BAY</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-xl-3 mb-4">
-                  <div class="person-wrap">
-                    <div class="person-info">
-                      <img
-                        src="https://crystalbay.com/media/images/thanh-cong.jpg"
-                        alt=""
-                        class="img-fluid image-avatar"
-                      />
-                      <p class="text-name">ÔNG NGUYỄN ĐỖ THÀNH CÔNG</p>
-                      <div class="text-note">
-                        <p>TỔNG GIÁM ĐỐC</p>
-                        <p>THÀNH VIÊN HĐTV</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="person-content pb-5">
-            <h3 class="section-title">Ban chiến lược Crystal Bay Card</h3>
-            <div class="person-list">
-              <div class="row d-flex justify-content-center">
-                <div class="col-lg-6 col-xl-3 mb-4">
-                  <div class="person-wrap person-wrap-first">
-                    <div class="person-info">
-                      <img
-                        src="https://crystalbay.com/media/images/90345-nguyen-duc-chi.jpg"
-                        alt=""
-                        class="img-fluid image-avatar"
-                      />
-                      <p class="text-name">ÔNG NGUYỄN ĐỨC CHI</p>
-                      <div class="text-note">
-                        <p>TRƯỞNG BAN CHIẾN LƯỢC</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-xl-3 mb-4">
-                  <div class="person-wrap">
-                    <div class="person-info">
-                      <img
-                        src="https://crystalbay.com/media/images/27430-6.png"
-                        alt=""
-                        class="img-fluid image-avatar"
-                      />
-                      <p class="text-name">ÔNG NGÔ HỮU TRƯỜNG</p>
-                      <div class="text-note">
-                        <p>CHỦ TỊCH HĐTV</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-xl-3 mb-4">
-                  <div class="person-wrap">
-                    <div class="person-info">
-                      <img
-                        src="https://crystalbay.com/media/images/65047-5.png"
-                        alt=""
-                        class="img-fluid image-avatar"
-                      />
-                      <p class="text-name">ÔNG NGUYỄN TIẾN TRUNG</p>
-                      <div class="text-note">
-                        <p>THÀNH VIÊN HĐTV THÀNH VIÊN BAN CHIẾN LƯỢC</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--Content-->
-
-      <!--Footer-->
-      <footer
-        class="footer d-flex flex-column justify-content-center"
-        data-aos="fade-up"
+    @keyframes test {
+      to {
+        stroke-dashoffset: 0;
+      }
+      to {
+        fill-opacity: 0.5;
+        fill: #f7d03a;
+      }
+      to {
+        fill-opacity: 0.6;
+        fill: #f7d03a;
+      }
+      to {
+        fill-opacity: 0.7;
+        fill: #f7d03a;
+      }
+      to {
+        fill-opacity: 0.8;
+        fill: #f7d03a;
+      }
+      to {
+        fill-opacity: 0.9;
+        fill: #f7d03a;
+      }
+      to {
+        fill-opacity: 1;
+        fill: #f7d03a;
+        stroke-opacity: 0;
+      }
+    }
+    @keyframes test1 {
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes openUp {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(-100%);
+        z-index: 10;
+        background-color: #f7f7f7;
+      }
+    }
+    @keyframes openDown {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(100%);
+        z-index: 10;
+        background-color: #f7f7f7;
+      }
+    }
+  </style>
+  <body class="">
+    <div class="pageload">
+      <div class="open-top"></div>
+      <div class="open-bottom"></div>
+      <svg
+        id="logo"
+        width="392"
+        height="257"
+        viewBox="0 0 392 257"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <div class="footer--head">
-          <img
-            src="Images/pexels-pixabay-147411.jpg"
-            alt=""
-            class="footer--img__top img-fluid"
-          />
-          <div class="footer--head__box">
-            <h2
-              class="footer--head__title shadow bg-white rounded-sm"
-              data-aos="fade-up"
-            >
-              Add captions to your slides easily with the
-            </h2>
-            <div class="btn--footer" data-aos="fade-up">
-              <a href="" class="btn btn--hover">contact</a>
-            </div>
-          </div>
-        </div>
-        <div class="footer--body bg-transparent d-flex justify-content-center">
-          <div class="row p-3">
-            <div
-              class="col-xl-6 col-md-6 col-sm-12 d-flex justify-content-start flex-column align-items-start"
-            >
-              <div class="media-img" data-aos="fade-up">
-                <img
-                  src="Images/logo.png"
-                  alt=""
-                  class="footer--body__img mb-3"
-                />
-              </div>
-              <h5 class="text-white" data-aos="fade-up">CÔNG TY CỔ PHẦN ABC</h5>
-              <div class="footer--info text-left">
-                <p data-aos="fade-up">
-                  <span>Trụ sở: </span> 158 Ngô Gia Tự, Khu 11, P. Chánh Nghĩa,
-                  TP. Thủ Dầu Một, Bình Dương.
-                </p>
-                <p data-aos="fade-up">
-                  <span>Chi nhánh: </span> Số 12C, Đại Lộ Bình Dương, Kp. Đông
-                  Nhì, P. Lái Thiêu, TP. Thuận An, Bình Dương.
-                </p>
-                <p data-aos="fade-up">
-                  <span>Chi nhánh: </span> Số 1338 Phạm Văn Đồng, P. Linh Tây,
-                  TP. Thủ Đức, TP.HCM.
-                </p>
-                <p data-aos="fade-up"><span>Hotline:</span> 0938 61 61 61</p>
-              </div>
-            </div>
-            <div class="col-xl-6 col-md-6 col-sm-12">
-              <h3 class="text-success font-weight-bold" data-aos="fade-up">
-                FORM LIÊN HỆ
-              </h3>
-              <form action="">
-                <div class="form-group" data-aos="fade-up">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Họ Tên (*)"
-                  />
-                </div>
-                <div class="form-group" data-aos="fade-up">
-                  <input
-                    type="text"
-                    maxlength="10"
-                    class="form-control"
-                    placeholder="Số Điện Thoại(*)"
-                  />
-                </div>
-                <div class="form-group" data-aos="fade-up">
-                  <input
-                    type="email"
-                    class="form-control"
-                    placeholder="Email"
-                  />
-                </div>
-                <div class="form-group" data-aos="fade-up">
-                  <textarea
-                    class="form-control"
-                    placeholder="Nội Dung (*)"
-                    rows="3"
-                  ></textarea>
-                </div>
-                <button
-                  data-aos="fade-up"
-                  type="submit"
-                  class="btn btn--hover px-4 shadow-lg"
-                >
-                  Gửi
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
+        <path
+          d="M132.555 196.5V50.5L105.555 61.5V196.5H132.555Z"
+          fill="url(#paint0_linear_0_1)"
+          stroke="url(#paint1_linear_0_1)"
+        />
+        <path
+          d="M137.555 194.5V55L149.555 64.5V194.5H137.555Z"
+          fill="url(#paint2_linear_0_1)"
+          stroke="url(#paint3_linear_0_1)"
+        />
+        <path
+          d="M157.055 191V17L195.555 1V180L157.055 191Z"
+          fill="url(#paint4_linear_0_1)"
+          stroke="url(#paint5_linear_0_1)"
+        />
+        <path
+          d="M200.555 178.5V8.5L219.055 24V170L200.555 178.5Z"
+          fill="url(#paint6_linear_0_1)"
+          stroke="url(#paint7_linear_0_1)"
+        />
+        <path
+          d="M226.055 166.5V94L245.555 87V154L226.055 166.5Z"
+          fill="url(#paint8_linear_0_1)"
+          stroke="url(#paint9_linear_0_1)"
+        />
+        <path
+          d="M248.555 152V87.5L258.055 98.5V145.5L248.555 152Z"
+          fill="url(#paint10_linear_0_1)"
+          stroke="url(#paint11_linear_0_1)"
+        />
+        <path
+          d="M59.0554 175C60.4342 154.535 75.6694 144.226 105.555 139.5V163.5C93.2575 165.445 87.7171 167.95 86.0554 181C86.4358 189.432 87.7788 193.816 94.5554 198.5C101.788 202.099 111.906 201.385 129.055 200.5C146.434 199.644 156.176 197.872 173.555 193C195.931 187.224 208.051 182.158 229.055 170.5C262.892 149.493 279.491 135.06 302.555 102L307.555 91.5L289.055 97L302.555 74L289.055 52L313.055 60.5L328.055 37V64.5L353.055 74L329.555 83.5V109.5L315.055 91.5C299.663 123.105 288.005 140.332 254.555 169C234.385 184.175 220.912 192.413 188.055 206C176.761 210.191 170.416 212.275 159.055 215C148.781 217.534 142.589 218.722 129.055 219.5C115.371 220.376 107.791 220.49 94.5554 219.5C86.5049 217.284 82.2885 215.705 75.5554 212C62.654 201.3 58.4552 193.54 59.0554 175Z"
+          fill="url(#paint12_linear_0_1)"
+          stroke="url(#paint13_linear_0_1)"
+        />
 
+        <defs>
+          <linearGradient
+            id="paint0_linear_0_1"
+            x1="119.055"
+            y1="50.5"
+            x2="119.055"
+            y2="196.5"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#F9D33B" />
+            <stop offset="0.489583" stop-color="#FDEDB1" />
+            <stop offset="1" stop-color="#F7D03A" />
+          </linearGradient>
+          <linearGradient
+            id="paint1_linear_0_1"
+            x1="119.055"
+            y1="50.5"
+            x2="119.055"
+            y2="196.5"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#F9D33B" />
+            <stop offset="1" stop-color="#F9D33B" />
+          </linearGradient>
+          <linearGradient
+            id="paint2_linear_0_1"
+            x1="143.555"
+            y1="55"
+            x2="143.555"
+            y2="194.5"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#F9D33B" />
+            <stop offset="0.489583" stop-color="#FDEDB1" />
+            <stop offset="1" stop-color="#F7D03A" />
+          </linearGradient>
+          <linearGradient
+            id="paint3_linear_0_1"
+            x1="143.555"
+            y1="55"
+            x2="143.555"
+            y2="194.5"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#F9D33B" />
+            <stop offset="1" stop-color="#F9D33B" />
+          </linearGradient>
+          <linearGradient
+            id="paint4_linear_0_1"
+            x1="176.305"
+            y1="1"
+            x2="176.305"
+            y2="191"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#F9D33B" />
+            <stop offset="0.489583" stop-color="#FDEDB1" />
+            <stop offset="1" stop-color="#F7D03A" />
+          </linearGradient>
+          <linearGradient
+            id="paint5_linear_0_1"
+            x1="176.305"
+            y1="1"
+            x2="176.305"
+            y2="191"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#F9D33B" />
+            <stop offset="1" stop-color="#F9D33B" />
+          </linearGradient>
+          <linearGradient
+            id="paint6_linear_0_1"
+            x1="209.805"
+            y1="8.5"
+            x2="209.805"
+            y2="178.5"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#F9D33B" />
+            <stop offset="0.489583" stop-color="#FDEDB1" />
+            <stop offset="1" stop-color="#F7D03A" />
+          </linearGradient>
+          <linearGradient
+            id="paint7_linear_0_1"
+            x1="209.805"
+            y1="8.5"
+            x2="209.805"
+            y2="178.5"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#F9D33B" />
+            <stop offset="1" stop-color="#F9D33B" />
+          </linearGradient>
+          <linearGradient
+            id="paint8_linear_0_1"
+            x1="235.805"
+            y1="87"
+            x2="235.805"
+            y2="166.5"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#F9D33B" />
+            <stop offset="0.489583" stop-color="#FDEDB1" />
+            <stop offset="1" stop-color="#F7D03A" />
+          </linearGradient>
+          <linearGradient
+            id="paint9_linear_0_1"
+            x1="235.805"
+            y1="87"
+            x2="235.805"
+            y2="166.5"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#F9D33B" />
+            <stop offset="1" stop-color="#F9D33B" />
+          </linearGradient>
+          <linearGradient
+            id="paint10_linear_0_1"
+            x1="253.305"
+            y1="87.5"
+            x2="253.305"
+            y2="152"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#F9D33B" />
+            <stop offset="0.489583" stop-color="#FDEDB1" />
+            <stop offset="1" stop-color="#F7D03A" />
+          </linearGradient>
+          <linearGradient
+            id="paint11_linear_0_1"
+            x1="253.305"
+            y1="87.5"
+            x2="253.305"
+            y2="152"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#F9D33B" />
+            <stop offset="1" stop-color="#F9D33B" />
+          </linearGradient>
+          <linearGradient
+            id="paint12_linear_0_1"
+            x1="206.028"
+            y1="37"
+            x2="206.028"
+            y2="220.2"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#F9D33B" />
+            <stop offset="0.489583" stop-color="#FDEDB1" />
+            <stop offset="1" stop-color="#F7D03A" />
+          </linearGradient>
+          <linearGradient
+            id="paint13_linear_0_1"
+            x1="206.028"
+            y1="37"
+            x2="206.028"
+            y2="220.2"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#F9D33B" />
+            <stop offset="1" stop-color="#F9D33B" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="name-company"><h1>HOANG GIA LAND</h1></div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+      integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      const logo = document.querySelectorAll("path");
+      for (let i = 0; i < logo.length; i++) {
+        console.log(`Letter ${i + 1} is ${logo[i].getTotalLength()}`);
+      }
+    </script>
     <!--FullPage-->
     <script src="Js/fullpage.dropEffect.min.js"></script>
 
@@ -652,10 +427,10 @@
     <!--Animation-->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-    <script src="Js/pageload.js"></script>
+    <!-- <script src="Js/pageload.js"></script>
     <script src="Js/animation.js"></script>
     <script src="Js/app.js"></script>
     <script src="Js/project.js"></script>
-    <script src="Js/scroll-animation.js"></script>
+    <script src="Js/scroll-animation.js"></script> -->
   </body>
 </html>
