@@ -55,12 +55,13 @@ new fullpage("#myContainer", {
         });
       }
     }
-    if (destination.index === 3 || destination.index === 4) {
+    if (destination.index === 3 || destination.index === 5  ) {
       header.style.backgroundColor = "transparent";
       nav_links.forEach((nav_link) => {
         nav_link.style.color = "white";
       });
       header.style.transition = "all 0.5";
+      return;
     }
     if (destination.index === 3 && width <= 968) {
       let nextSlideIndex = origin.index + 1; // convert from index to slide nr.

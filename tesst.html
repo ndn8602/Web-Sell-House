@@ -59,344 +59,145 @@
     />
   </head>
   <style>
-    .pageload {
+    .partner {
+      padding: 5rem 10rem;
+    }
+
+    .partner-box {
+      min-height: 10rem;
       width: 100%;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
+      padding: 0.25rem 0.5rem 0;
+      cursor: pointer;
+      transition: 0.3s all ease-in;
       position: relative;
     }
-    .open-top,
-    .open-bottom {
-      position: absolute;
-      height: calc(100% - 50vh);
-      width: 100%;
-      z-index: -1;
+    .partner-box:hover::after {
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      transition: 0.3s all ease-in;
+      background-color: #E8F9FD;
     }
-    .open-top {
-      top: 0;
-      animation: openUp 1s;
-      animation-delay: 2.5s;
-    }
-    .open-bottom {
-      bottom: 0;
-      animation: openDown 1s;
-      animation-delay: 2.5s;
-    }
-    svg {
-      z-index: 1;
-      height: 5rem;
-    }
-
-    .pageload::before {
-      position: absolute;
+    .partner-box::after {
       content: "";
+      position: absolute;
       width: 100%;
       height: 100%;
-      transform: translateY(-50%, -50%);
-      background-color: #333333 !important;
       z-index: -1;
+      top: 0;
+      opacity: 0.4;
     }
-    #logo {
-      fill-opacity: 0;
-      stroke-width: 3px;
-      stroke-dasharray: 1000;
-      stroke-dashoffset: 1000;
-      animation: test 2.5s ease-in-out forwards;
-    }
-    .name-company h1 {
+    .partner-box img {
+      height: 5rem;
       width: 100%;
-      color: #f7d03a;
-      text-align: center;
-      animation: test1 3s ease-in forwards;
-      opacity: 0;
-      font-size: 1rem;
+      padding: 0.5rem;
+      background-position: center;
+      object-fit: contain;
+      border: 1px solid rgb(151, 150, 150);
+      transition: 0.5s all ease;
+    }
+    .partner-box:hover img {
+      transform: scale(1.075);
+      transition: 0.5s all ease;
+      border: none;
+    }
+    .partner-box:hover .partner-name {
+      color: #777777;
     }
 
-    @keyframes test {
-      to {
-        stroke-dashoffset: 0;
-      }
-      to {
-        fill-opacity: 0.5;
-        fill: #f7d03a;
-      }
-      to {
-        fill-opacity: 0.6;
-        fill: #f7d03a;
-      }
-      to {
-        fill-opacity: 0.7;
-        fill: #f7d03a;
-      }
-      to {
-        fill-opacity: 0.8;
-        fill: #f7d03a;
-      }
-      to {
-        fill-opacity: 0.9;
-        fill: #f7d03a;
-      }
-      to {
-        fill-opacity: 1;
-        fill: #f7d03a;
-        stroke-opacity: 0;
-      }
-    }
-    @keyframes test1 {
-      to {
-        opacity: 1;
-      }
-    }
-    @keyframes openUp {
-      from {
-        transform: translateY(0);
-      }
-      to {
-        transform: translateY(-100%);
-        z-index: 10;
-        background-color: #f7f7f7;
-      }
-    }
-    @keyframes openDown {
-      from {
-        transform: translateY(0);
-      }
-      to {
-        transform: translateY(100%);
-        z-index: 10;
-        background-color: #f7f7f7;
-      }
+    .partner-name {
+      text-transform: uppercase;
+      color: orange;
+      cursor: pointer;
+      margin: 0.5rem 0;
     }
   </style>
-  <body class="">
-    <div class="pageload">
-      <div class="open-top"></div>
-      <div class="open-bottom"></div>
-      <svg
-        id="logo"
-        width="392"
-        height="257"
-        viewBox="0 0 392 257"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M132.555 196.5V50.5L105.555 61.5V196.5H132.555Z"
-          fill="url(#paint0_linear_0_1)"
-          stroke="url(#paint1_linear_0_1)"
-        />
-        <path
-          d="M137.555 194.5V55L149.555 64.5V194.5H137.555Z"
-          fill="url(#paint2_linear_0_1)"
-          stroke="url(#paint3_linear_0_1)"
-        />
-        <path
-          d="M157.055 191V17L195.555 1V180L157.055 191Z"
-          fill="url(#paint4_linear_0_1)"
-          stroke="url(#paint5_linear_0_1)"
-        />
-        <path
-          d="M200.555 178.5V8.5L219.055 24V170L200.555 178.5Z"
-          fill="url(#paint6_linear_0_1)"
-          stroke="url(#paint7_linear_0_1)"
-        />
-        <path
-          d="M226.055 166.5V94L245.555 87V154L226.055 166.5Z"
-          fill="url(#paint8_linear_0_1)"
-          stroke="url(#paint9_linear_0_1)"
-        />
-        <path
-          d="M248.555 152V87.5L258.055 98.5V145.5L248.555 152Z"
-          fill="url(#paint10_linear_0_1)"
-          stroke="url(#paint11_linear_0_1)"
-        />
-        <path
-          d="M59.0554 175C60.4342 154.535 75.6694 144.226 105.555 139.5V163.5C93.2575 165.445 87.7171 167.95 86.0554 181C86.4358 189.432 87.7788 193.816 94.5554 198.5C101.788 202.099 111.906 201.385 129.055 200.5C146.434 199.644 156.176 197.872 173.555 193C195.931 187.224 208.051 182.158 229.055 170.5C262.892 149.493 279.491 135.06 302.555 102L307.555 91.5L289.055 97L302.555 74L289.055 52L313.055 60.5L328.055 37V64.5L353.055 74L329.555 83.5V109.5L315.055 91.5C299.663 123.105 288.005 140.332 254.555 169C234.385 184.175 220.912 192.413 188.055 206C176.761 210.191 170.416 212.275 159.055 215C148.781 217.534 142.589 218.722 129.055 219.5C115.371 220.376 107.791 220.49 94.5554 219.5C86.5049 217.284 82.2885 215.705 75.5554 212C62.654 201.3 58.4552 193.54 59.0554 175Z"
-          fill="url(#paint12_linear_0_1)"
-          stroke="url(#paint13_linear_0_1)"
-        />
-
-        <defs>
-          <linearGradient
-            id="paint0_linear_0_1"
-            x1="119.055"
-            y1="50.5"
-            x2="119.055"
-            y2="196.5"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#F9D33B" />
-            <stop offset="0.489583" stop-color="#FDEDB1" />
-            <stop offset="1" stop-color="#F7D03A" />
-          </linearGradient>
-          <linearGradient
-            id="paint1_linear_0_1"
-            x1="119.055"
-            y1="50.5"
-            x2="119.055"
-            y2="196.5"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#F9D33B" />
-            <stop offset="1" stop-color="#F9D33B" />
-          </linearGradient>
-          <linearGradient
-            id="paint2_linear_0_1"
-            x1="143.555"
-            y1="55"
-            x2="143.555"
-            y2="194.5"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#F9D33B" />
-            <stop offset="0.489583" stop-color="#FDEDB1" />
-            <stop offset="1" stop-color="#F7D03A" />
-          </linearGradient>
-          <linearGradient
-            id="paint3_linear_0_1"
-            x1="143.555"
-            y1="55"
-            x2="143.555"
-            y2="194.5"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#F9D33B" />
-            <stop offset="1" stop-color="#F9D33B" />
-          </linearGradient>
-          <linearGradient
-            id="paint4_linear_0_1"
-            x1="176.305"
-            y1="1"
-            x2="176.305"
-            y2="191"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#F9D33B" />
-            <stop offset="0.489583" stop-color="#FDEDB1" />
-            <stop offset="1" stop-color="#F7D03A" />
-          </linearGradient>
-          <linearGradient
-            id="paint5_linear_0_1"
-            x1="176.305"
-            y1="1"
-            x2="176.305"
-            y2="191"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#F9D33B" />
-            <stop offset="1" stop-color="#F9D33B" />
-          </linearGradient>
-          <linearGradient
-            id="paint6_linear_0_1"
-            x1="209.805"
-            y1="8.5"
-            x2="209.805"
-            y2="178.5"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#F9D33B" />
-            <stop offset="0.489583" stop-color="#FDEDB1" />
-            <stop offset="1" stop-color="#F7D03A" />
-          </linearGradient>
-          <linearGradient
-            id="paint7_linear_0_1"
-            x1="209.805"
-            y1="8.5"
-            x2="209.805"
-            y2="178.5"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#F9D33B" />
-            <stop offset="1" stop-color="#F9D33B" />
-          </linearGradient>
-          <linearGradient
-            id="paint8_linear_0_1"
-            x1="235.805"
-            y1="87"
-            x2="235.805"
-            y2="166.5"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#F9D33B" />
-            <stop offset="0.489583" stop-color="#FDEDB1" />
-            <stop offset="1" stop-color="#F7D03A" />
-          </linearGradient>
-          <linearGradient
-            id="paint9_linear_0_1"
-            x1="235.805"
-            y1="87"
-            x2="235.805"
-            y2="166.5"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#F9D33B" />
-            <stop offset="1" stop-color="#F9D33B" />
-          </linearGradient>
-          <linearGradient
-            id="paint10_linear_0_1"
-            x1="253.305"
-            y1="87.5"
-            x2="253.305"
-            y2="152"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#F9D33B" />
-            <stop offset="0.489583" stop-color="#FDEDB1" />
-            <stop offset="1" stop-color="#F7D03A" />
-          </linearGradient>
-          <linearGradient
-            id="paint11_linear_0_1"
-            x1="253.305"
-            y1="87.5"
-            x2="253.305"
-            y2="152"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#F9D33B" />
-            <stop offset="1" stop-color="#F9D33B" />
-          </linearGradient>
-          <linearGradient
-            id="paint12_linear_0_1"
-            x1="206.028"
-            y1="37"
-            x2="206.028"
-            y2="220.2"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#F9D33B" />
-            <stop offset="0.489583" stop-color="#FDEDB1" />
-            <stop offset="1" stop-color="#F7D03A" />
-          </linearGradient>
-          <linearGradient
-            id="paint13_linear_0_1"
-            x1="206.028"
-            y1="37"
-            x2="206.028"
-            y2="220.2"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#F9D33B" />
-            <stop offset="1" stop-color="#F9D33B" />
-          </linearGradient>
-        </defs>
-      </svg>
-      <div class="name-company"><h1>HOANG GIA LAND</h1></div>
+  <body>
+    <div class="partner">
+      <div class="partner-title">Đối Tác</div>
+      <div class="row mx-0 my-4 ">
+        <div class="col p-0">
+          <div class="partner-box">
+            <img
+              src="https://koterasu-partners.com/_bm9skaaz3kq3/wp-content/uploads/2020/12/Koterasu_logo_A_Fin_Full.png"
+              alt=""
+              class="img-fluid"
+            />
+            <p class="partner-name">Koterasu</p>
+          </div>
+        </div>
+        <div class="col p-0">
+          <div class="partner-box">
+            <img
+              src="https://download.logo.wine/logo/CBRE_Group/CBRE_Group-Logo.wine.png"
+              alt=""
+              class="img-fluid"
+            />
+            <p class="partner-name">CBRE Viet Nam</p>
+          </div>
+        </div>
+        <div class="col p-0">
+          <div class="partner-box">
+            <img
+              src="https://cdn.haitrieu.com/wp-content/uploads/2022/01/Logo-Agribank-V.png"
+              alt=""
+              class="img-fluid"
+            />
+            <p class="partner-name">Nham Dep Trai</p>
+          </div>
+        </div>
+        <div class="col p-0">
+          <div class="partner-box">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Logo_ricons_slogan.jpg"
+              alt=""
+              class="img-fluid"
+            />
+            <p class="partner-name">Công ty cổ phần bất động sản VINA Homes</p>
+          </div>
+        </div>
+      </div>
+      <div class="row mx-0 my-4">
+        <div class="col p-0">
+          <div class="partner-box">
+            <img
+              src="https://koterasu-partners.com/_bm9skaaz3kq3/wp-content/uploads/2020/12/Koterasu_logo_A_Fin_Full.png"
+              alt=""
+              class="img-fluid"
+            />
+            <p class="partner-name">Công ty cổ phần bất động sản VINA Homes</p>
+          </div>
+        </div>
+        <div class="col p-0">
+          <div class="partner-box">
+            <img
+              src="https://download.logo.wine/logo/CBRE_Group/CBRE_Group-Logo.wine.png"
+              alt=""
+              class="img-fluid"
+            />
+            <p class="partner-name">CBRE Viet Nam</p>
+          </div>
+        </div>
+        <div class="col p-0">
+          <div class="partner-box">
+            <img
+              src="https://cdn.haitrieu.com/wp-content/uploads/2022/01/Logo-Agribank-V.png"
+              alt=""
+              class="img-fluid"
+            />
+            <p class="partner-name">Nham Dep Trai</p>
+          </div>
+        </div>
+        <div class="col p-0">
+          <div class="partner-box">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Logo_ricons_slogan.jpg"
+              alt=""
+              class="img-fluid"
+            />
+            <p class="partner-name">Nham Dep Trai</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
-      integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script>
-      const logo = document.querySelectorAll("path");
-      for (let i = 0; i < logo.length; i++) {
-        console.log(`Letter ${i + 1} is ${logo[i].getTotalLength()}`);
-      }
-    </script>
     <!--FullPage-->
     <script src="Js/fullpage.dropEffect.min.js"></script>
 

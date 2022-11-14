@@ -41,7 +41,7 @@
 }
 svg {
   z-index: 1;
-  height: 5rem;
+  height: 10rem;
 }
 #logo {
   fill-opacity: 0;
@@ -56,7 +56,7 @@ svg {
   text-align: center;
   animation: test1 3s ease-in forwards;
   opacity: 0;
-  font-size: 1rem;
+  font-size: 2rem;
 }
 
 @keyframes test {

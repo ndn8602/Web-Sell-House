@@ -6,7 +6,9 @@
     transition: 0.7s ease;
     background-color: rgba(51, 51, 51, 0.655);
     height: 100%;
-
+    &-content {
+      border: none !important;
+    }
     &-body {
       padding: 0;
       max-width: 700px;

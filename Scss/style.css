@@ -104,7 +104,7 @@
 
 svg {
   z-index: 1;
-  height: 5rem;
+  height: 10rem;
 }
 
 #logo {
@@ -123,7 +123,7 @@ svg {
   -webkit-animation: test1 3s ease-in forwards;
           animation: test1 3s ease-in forwards;
   opacity: 0;
-  font-size: 1rem;
+  font-size: 2rem;
 }
 
 @-webkit-keyframes test {
@@ -757,6 +757,62 @@ body {
   background-color: orange;
 }
 
+.partner {
+  padding: 5rem 10rem;
+}
+.partner-box {
+  min-height: 10rem;
+  width: 100%;
+  padding: 0.25rem 0.5rem 0;
+  cursor: pointer;
+  transition: 0.3s all ease-in;
+  position: relative;
+}
+.partner-box:hover::after {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: 0.3s all ease-in;
+  background-color: #bae5ef;
+  opacity: 0.4;
+}
+.partner-box::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+.partner-box img {
+  height: 5rem;
+  width: 100%;
+  padding: 0.5rem;
+  background-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border: 1px solid rgb(151, 150, 150);
+  transition: 0.5s all ease;
+}
+.partner-box:hover img {
+  transform: scale(1.075);
+  transition: 0.5s all ease;
+  border: none;
+}
+.partner-box:hover .partner-name {
+  color: #777777;
+}
+.partner-name {
+  text-transform: uppercase;
+  color: orange !important;
+  cursor: pointer;
+  margin: 0.5rem 0;
+}
+.partner-title {
+  text-align: start;
+  font-size: 3rem;
+  color: orange;
+}
+
 @media screen and (max-width: 1200px) {
   .carousel-item-desc {
     width: 400px;
@@ -774,6 +830,9 @@ body {
   }
 }
 @media screen and (max-width: 1200px) and (max-width: 992px) {
+  .partner-box {
+    min-height: 1rem;
+  }
   .carousel-item {
     max-height: 800px;
     min-height: 800px;
@@ -808,6 +867,7 @@ body {
   .header {
     position: fixed;
     z-index: 10;
+    background-color: #fff !important;
   }
   .carousel-item {
     max-height: 600px;
@@ -2713,6 +2773,9 @@ a:hover {
   transition: 0.7s ease;
   background-color: rgba(51, 51, 51, 0.655);
   height: 100%;
+}
+.report-index .modal-content {
+  border: none !important;
 }
 .report-index .modal-body {
   padding: 0;
