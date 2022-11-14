@@ -9,6 +9,17 @@
     &-content {
       border: none !important;
     }
+    &-bannerHome {
+      max-width: 700px;
+      max-height: 500px;
+      img {
+        max-width: 100%;
+        max-height: 500px;
+        object-fit: cover;
+        background-position: center;
+        background-size: cover;
+      }
+    }
     &-body {
       padding: 0;
       max-width: 700px;

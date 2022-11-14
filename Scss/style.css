@@ -2777,6 +2777,18 @@ a:hover {
 .report-index .modal-content {
   border: none !important;
 }
+.report-index .modal-bannerHome {
+  max-width: 700px;
+  max-height: 500px;
+}
+.report-index .modal-bannerHome img {
+  max-width: 100%;
+  max-height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center;
+  background-size: cover;
+}
 .report-index .modal-body {
   padding: 0;
   max-width: 700px;
