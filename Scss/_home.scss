@@ -128,6 +128,7 @@
     color: orange !important;
     cursor: pointer;
     margin: 0.5rem 0;
+    text-align: start;
   }
   &-title {
     text-align: start;
@@ -193,8 +194,7 @@
     }
   }
 
-  @media screen and (max-width: 500px) {
-
+  @media screen and (max-width: 564px) {
     .header {
       position: fixed;
       z-index: 10;
@@ -230,6 +230,16 @@
       &-indicators {
         bottom: 40%;
       }
+    }
+  }
+  .partner {
+    &-title {
+      text-align: center;
+    }
+    &-name {
+      text-align: justify;
+      text-justify: inter-word;
+      font-size: 0.9rem !important;
     }
   }
 }

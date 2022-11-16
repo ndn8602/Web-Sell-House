@@ -806,6 +806,7 @@ body {
   color: orange !important;
   cursor: pointer;
   margin: 0.5rem 0;
+  text-align: start;
 }
 .partner-title {
   text-align: start;
@@ -863,7 +864,7 @@ body {
     bottom: 35%;
   }
 }
-@media screen and (max-width: 1200px) and (max-width: 500px) {
+@media screen and (max-width: 1200px) and (max-width: 564px) {
   .header {
     position: fixed;
     z-index: 10;
@@ -897,6 +898,16 @@ body {
   }
   .carousel-indicators {
     bottom: 40%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .partner-title {
+    text-align: center;
+  }
+  .partner-name {
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 0.9rem !important;
   }
 }
 /** Section 2 - service
