@@ -120,6 +120,7 @@
   }
   &-btnContact {
     margin-bottom: 10rem;
+    padding: 1rem;
   }
   &-contact {
     display: flex;
@@ -128,7 +129,7 @@
     position: fixed;
     bottom: 0;
     left: 1rem;
-    height: 3.5rem;
+    height: 4rem;
     width: 5rem;
     background-color: rgb(255, 248, 248);
     z-index: 9;
@@ -136,7 +137,7 @@
     border-radius: 15px 15px 5px 5px;
     &:hover {
       // transition: 1.4s ease-in-out;
-      height: 160px;
+      height: calc(25% - 25px);
       -moz-transition: height 0.5s;
       -ms-transition: height 0.5s;
       -o-transition: height 0.5s;
@@ -145,18 +146,18 @@
 
       .box-btnContact {
         display: none;
+        padding: 1rem;
       }
     }
   }
   &-contactIcon {
     width: 100%;
-    height: inherit;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    font-size: 50px;
     cursor: pointer;
+    padding: 1rem;
   }
 }
 .value {
