@@ -118,6 +118,36 @@
       letter-spacing: 0.7px;
     }
   }
+  &-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 3.5rem;
+    width: 5rem;
+    background-color: rgb(255, 248, 248);
+    z-index: 9;
+    transition: all 0.3s ease;
+    border-radius: 15px 5px 30px 5px;
+    &:hover {
+      height: auto;
+      transition: all 0.3s ease;
+      .box-contactIcon:first-child {
+        display: none;
+      }
+    }
+  }
+  &-contactIcon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+  }
 }
 .value {
   &-title {
