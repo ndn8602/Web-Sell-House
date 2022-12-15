@@ -2228,7 +2228,7 @@ a:hover {
   border-radius: 15px 15px 5px 5px;
 }
 .box-contact:hover {
-  height: calc(28% - 25px);
+  height: 28%;
   transition: max-height all 0.7s ease;
 }
 .box-contact:hover .box-btnContact {
