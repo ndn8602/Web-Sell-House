@@ -56,8 +56,15 @@
       font-weight: 700;
     }
     &__options {
+      display: flex;
+      overflow-x: auto;
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+
       .options--box {
-        width: calc(20% - 20px);
+        min-width: 250px;
+        margin-right: 20px;
         &__title {
           font-size: 16px;
           font-weight: 700;
@@ -199,7 +206,7 @@
   .recruit {
     width: 100%;
     &--welfare {
-      &__header{
+      &__header {
         font-size: 30px;
       }
       &__options {

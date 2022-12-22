@@ -2222,7 +2222,7 @@ a:hover {
   left: 1rem;
   height: 4rem;
   width: 5rem;
-  background-color: rgb(255, 248, 248);
+  background-color: #ffa500;
   z-index: 9;
   transition: all 0.7s ease;
   border-radius: 15px 15px 5px 5px;
@@ -2242,7 +2242,15 @@ a:hover {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  padding: 1rem;
+}
+.box-contactIcon img {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+  margin: 1rem;
+  cursor: pointer;
 }
 
 .value-title {
@@ -2418,8 +2426,16 @@ a:hover {
   color: #fff;
   font-weight: 700;
 }
+.recruit--welfare__options {
+  display: flex;
+  overflow-x: auto;
+}
+.recruit--welfare__options::-webkit-scrollbar {
+  width: 0;
+}
 .recruit--welfare__options .options--box {
-  width: calc(20% - 20px);
+  min-width: 250px;
+  margin-right: 20px;
 }
 .recruit--welfare__options .options--box__title {
   font-size: 16px;
