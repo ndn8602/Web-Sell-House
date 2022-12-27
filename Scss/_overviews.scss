@@ -127,28 +127,15 @@
     flex-direction: column;
     align-items: center;
     position: fixed;
-    bottom: 0;
+    bottom: 2.2%;
     left: 1rem;
     height: 4rem;
     width: 5rem;
     background-color: #ffa500;
     z-index: 9;
-    transition: all 0.7s ease;
+    transition: all 0.5s ease;
     border-radius: 15px 15px 5px 5px;
-    &:hover {
-      // transition: 1.4s ease-in-out;
-      height: 28%;
-      -moz-transition: height 0.5s;
-      -ms-transition: height 0.5s;
-      -o-transition: height 0.5s;
-      -webkit-transition: height 0.5s;
-      transition: max-height all 0.7s ease;
-
-      .box-btnContact {
-        display: none;
-        padding: 1rem;
-      }
-    }
+    cursor: pointer;
   }
   &-contactIcon {
     width: 100%;

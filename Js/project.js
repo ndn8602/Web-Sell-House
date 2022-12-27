@@ -12,14 +12,6 @@ $(window).scroll(function () {
   }
 });
 
-// const btnHovers = document.querySelectorAll(".project--nav__btn");
-// for (let i = 0; i < btnHovers.length; i++) {
-//   btnHovers[i].addEventListener("click", () => {
-//     btnHovers[0].className = btnHovers[0].className.replace(" active", "");
-//     btnHovers[i].className += " active";
-//   });
-// }
-
 $(document).ready(function () {
   if ($("#my-header").attr("id")) {
     var selectHeader = document.getElementById("my-header");
@@ -31,5 +23,28 @@ $(document).ready(function () {
         this.className += " active";
       });
     }
+  }
+});
+let count = 0;
+$(".box-contact").click(() => {
+  count++;
+  if (count === 1) {
+    $(".box-btnContact").css({
+      display: "none",
+      padding: "1rem",
+    });
+    $(".box-contact").css({
+      height: "28%",
+    });
+  }
+  if (count === 2) {
+    $(".box-btnContact").css({
+      display: "flex",
+      padding: "1rem",
+    });
+    $(".box-contact").css({
+      height: "4rem",
+    });
+    count = 0;
   }
 });
