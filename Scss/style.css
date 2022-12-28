@@ -2214,9 +2214,6 @@ a:hover {
   padding: 1rem;
 }
 .box-contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: fixed;
   bottom: 2.2%;
   left: 1rem;
@@ -2227,6 +2224,13 @@ a:hover {
   transition: all 0.5s ease;
   border-radius: 15px 15px 5px 5px;
   cursor: pointer;
+}
+.box-contact.active {
+  height: 28%;
+}
+.box-contact.active .box-btnContact {
+  display: none;
+  padding: 1rem;
 }
 .box-contactIcon {
   width: 100%;

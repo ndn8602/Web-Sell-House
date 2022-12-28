@@ -26,25 +26,16 @@ $(document).ready(function () {
   }
 });
 let count = 0;
+
 $(".box-contact").click(() => {
-  count++;
-  if (count === 1) {
-    $(".box-btnContact").css({
-      display: "none",
-      padding: "1rem",
-    });
-    $(".box-contact").css({
-      height: "28%",
-    });
+  if (!$(".box-contact").hasClass("active")) {
+    $(".box-contact").addClass("active");
   }
+});
+$(document.body).click(() => {
+  count++;
   if (count === 2) {
-    $(".box-btnContact").css({
-      display: "flex",
-      padding: "1rem",
-    });
-    $(".box-contact").css({
-      height: "4rem",
-    });
+    $(".box-contact").removeClass("active");
     count = 0;
   }
 });

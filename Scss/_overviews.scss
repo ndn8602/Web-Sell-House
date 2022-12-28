@@ -123,9 +123,6 @@
     padding: 1rem;
   }
   &-contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     position: fixed;
     bottom: 2.2%;
     left: 1rem;
@@ -136,6 +133,14 @@
     transition: all 0.5s ease;
     border-radius: 15px 15px 5px 5px;
     cursor: pointer;
+    &.active {
+      height: 28%;
+
+      .box-btnContact {
+        display: none;
+        padding: 1rem;
+      }
+    }
   }
   &-contactIcon {
     width: 100%;
