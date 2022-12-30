@@ -25,7 +25,7 @@ $(document).ready(function () {
     }
   }
 });
-let count = 0;
+let count = 1;
 
 $(".box-contact").click(() => {
   if (!$(".box-contact").hasClass("active")) {
@@ -34,6 +34,7 @@ $(".box-contact").click(() => {
 });
 $(document.body).click(() => {
   count++;
+  console.log(`count : ${count}`);
   if (count === 2) {
     $(".box-contact").removeClass("active");
     count = 0;
