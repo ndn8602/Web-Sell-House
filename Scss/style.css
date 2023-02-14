@@ -1,22 +1,10 @@
 .w-100 {
-  -webkit-animation: w-100 5s ease-out both;
   animation: w-100 5s ease-out both;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
 
 /** The Keyframes
   --------------------------------------**/
-@-webkit-keyframes w-100 {
-  0% {
-    transform: scale(1) translateY(0);
-    transform-origin: 50% 16%;
-  }
-  100% {
-    transform: scale(1.25) translateY(-15px);
-    transform-origin: top;
-  }
-}
 @keyframes w-100 {
   0% {
     transform: scale(1) translateY(0);
@@ -25,22 +13,6 @@
   100% {
     transform: scale(1.25) translateY(-15px);
     transform-origin: top;
-  }
-}
-@-webkit-keyframes slideInRight {
-  0% {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.2;
-  }
-  80% {
-    opacity: 0.6;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
   }
 }
 @keyframes slideInRight {
@@ -80,17 +52,13 @@
 }
 .pageload .open-top {
   top: 0;
-  -webkit-animation: openUp 1s;
-          animation: openUp 1s;
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
+  animation: openUp 1s;
+  animation-delay: 2.5s;
 }
 .pageload .open-bottom {
   bottom: 0;
-  -webkit-animation: openDown 1s;
-          animation: openDown 1s;
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
+  animation: openDown 1s;
+  animation-delay: 2.5s;
 }
 .pageload::before {
   position: absolute;
@@ -112,49 +80,16 @@ svg {
   stroke-width: 3px;
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  -webkit-animation: test 2.5s ease-in-out forwards;
-          animation: test 2.5s ease-in-out forwards;
+  animation: test 2.5s ease-in-out forwards;
 }
 
 .name-company h1 {
   width: 100%;
   color: #f7d03a;
   text-align: center;
-  -webkit-animation: test1 3s ease-in forwards;
-          animation: test1 3s ease-in forwards;
+  animation: test1 3s ease-in forwards;
   opacity: 0;
   font-size: 2rem;
-}
-
-@-webkit-keyframes test {
-  to {
-    stroke-dashoffset: 0;
-  }
-  to {
-    fill-opacity: 0.5;
-    fill: #f7d03a;
-  }
-  to {
-    fill-opacity: 0.6;
-    fill: #f7d03a;
-  }
-  to {
-    fill-opacity: 0.7;
-    fill: #f7d03a;
-  }
-  to {
-    fill-opacity: 0.8;
-    fill: #f7d03a;
-  }
-  to {
-    fill-opacity: 0.9;
-    fill: #f7d03a;
-  }
-  to {
-    fill-opacity: 1;
-    fill: #f7d03a;
-    stroke-opacity: 0;
-  }
 }
 
 @keyframes test {
@@ -187,24 +122,9 @@ svg {
     stroke-opacity: 0;
   }
 }
-@-webkit-keyframes test1 {
-  to {
-    opacity: 1;
-  }
-}
 @keyframes test1 {
   to {
     opacity: 1;
-  }
-}
-@-webkit-keyframes openUp {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-100%);
-    z-index: 10;
-    background-color: #f7f7f7;
   }
 }
 @keyframes openUp {
@@ -213,16 +133,6 @@ svg {
   }
   to {
     transform: translateY(-100%);
-    z-index: 10;
-    background-color: #f7f7f7;
-  }
-}
-@-webkit-keyframes openDown {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(100%);
     z-index: 10;
     background-color: #f7f7f7;
   }
@@ -330,7 +240,6 @@ body {
 }
 
 .header {
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   width: 99.5%;
@@ -360,8 +269,7 @@ body {
 .header-show.hide {
   height: auto;
   opacity: 1;
-  -webkit-animation: background-down 0.7s none;
-          animation: background-down 0.7s none;
+  animation: background-down 0.7s none;
 }
 
 .navbar-brand {
@@ -460,7 +368,6 @@ body {
 }
 .dropdown:hover .dropdown-menu {
   text-align: start;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   width: 170px;
@@ -621,31 +528,12 @@ body {
   z-index: -1;
 }
 
-@-webkit-keyframes background-down {
-  0% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
 @keyframes background-down {
   0% {
     transform: translateY(-10px);
   }
   100% {
     transform: translateY(0px);
-  }
-}
-@-webkit-keyframes header-down {
-  0% {
-    background-color: transparent;
-    transform: translateY(-10px);
-  }
-  100% {
-    background-color: #fff;
-    transform: translateY(0);
   }
 }
 @keyframes header-down {
@@ -656,14 +544,6 @@ body {
   100% {
     background-color: #fff;
     transform: translateY(0);
-  }
-}
-@-webkit-keyframes header-up {
-  0% {
-    background-color: #fff;
-  }
-  100% {
-    background-color: transparent;
   }
 }
 @keyframes header-up {
@@ -707,8 +587,7 @@ body {
   background-color: #fff;
   font-family: "Times New Roman", Times, serif;
   padding: 10px 15px;
-  -webkit-animation: slideInRight 2s;
-          animation: slideInRight 2s;
+  animation: slideInRight 2s;
 }
 .carousel-item-desc-more {
   position: absolute;
@@ -979,7 +858,6 @@ body {
   border-radius: 15px;
 }
 .service .item__overlay-title {
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   width: 90%;
@@ -1401,6 +1279,10 @@ a:hover {
 .footer--body__img {
   width: 100px;
 }
+.footer--body__img2 {
+  width: 50px;
+  margin-right: 10px;
+}
 .footer--body p {
   font-size: 16px;
   color: #fff;
@@ -1424,6 +1306,10 @@ a:hover {
   margin: 0 auto;
 }
 
+.rowLinkBottom {
+  display: flex;
+}
+
 @media screen and (max-width: 968px) {
   .footer--head {
     position: relative;
@@ -1444,6 +1330,9 @@ a:hover {
   }
   .footer--head__box .btn {
     color: #fff;
+  }
+  .footer--body__img2 {
+    width: 30px;
   }
 }
 .my-container {
@@ -1469,14 +1358,12 @@ a:hover {
   z-index: 9;
   width: 100%;
   opacity: 1;
-  -webkit-animation: mymove 0.7s none;
-          animation: mymove 0.7s none;
+  animation: mymove 0.7s none;
 }
 .my-container .project--nav > a {
   width: auto;
   margin-bottom: 5px;
   min-width: 120px;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   font-size: 12px;
@@ -1588,14 +1475,12 @@ a:hover {
   z-index: 9;
   width: 100%;
   opacity: 1;
-  -webkit-animation: mymove 0.7s none;
-          animation: mymove 0.7s none;
+  animation: mymove 0.7s none;
 }
 .project--nav > a {
   width: auto;
   margin-bottom: 5px;
   min-width: 120px;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   font-size: 12px;
@@ -1751,14 +1636,6 @@ a:hover {
     margin: 10px 0;
   }
 }
-@-webkit-keyframes mymove {
-  from {
-    top: 0px;
-  }
-  to {
-    top: 101px;
-  }
-}
 @keyframes mymove {
   from {
     top: 0px;
@@ -1842,7 +1719,6 @@ a:hover {
   position: relative;
 }
 .details--date {
-  height: -webkit-fit-content !important;
   height: -moz-fit-content !important;
   height: fit-content !important;
   width: 100px !important;
@@ -1850,7 +1726,6 @@ a:hover {
   background-color: rgba(102, 102, 102, 0.4);
   display: flex;
   flex-direction: column;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   overflow: hidden;
@@ -2079,17 +1954,6 @@ a:hover {
   .location-title {
     font-size: 40px;
     text-align: center;
-  }
-}
-@-webkit-keyframes movedown {
-  0% {
-    -webkit-transform: translateY(-10px);
-  }
-  50% {
-    -webkit-transform: translateY(10px);
-  }
-  100% {
-    -webkit-transform: translateY(-10px);
   }
 }
 @keyframes movedown {
@@ -2591,9 +2455,9 @@ a:hover {
     width: 100%;
   }
   .recruit--apply__list .itemJob--title a,
-.recruit--apply__list .itemJob--title h3, .recruit--apply__list .itemJob--deadline a,
-.recruit--apply__list .itemJob--deadline h3, .recruit--apply__list .itemJob--address a,
-.recruit--apply__list .itemJob--address h3 {
+  .recruit--apply__list .itemJob--title h3, .recruit--apply__list .itemJob--deadline a,
+  .recruit--apply__list .itemJob--deadline h3, .recruit--apply__list .itemJob--address a,
+  .recruit--apply__list .itemJob--address h3 {
     font-size: 17px;
     color: #333;
     font-weight: 300;
@@ -2874,7 +2738,6 @@ body.modal-open {
 .badge {
   white-space: normal !important;
   text-align: start;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 0.5rem;

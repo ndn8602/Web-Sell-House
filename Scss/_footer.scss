@@ -35,6 +35,10 @@
     &__img {
       width: 100px;
     }
+    &__img2 {
+      width: 50px;
+      margin-right: 10px;
+    }
     p {
       font-size: 16px;
       color: #fff;
@@ -60,7 +64,9 @@
     margin: 0 auto;
   }
 }
-
+.rowLinkBottom {
+  display: flex;
+}
 @media screen and (max-width: 968px) {
   .footer {
     &--head {
@@ -82,6 +88,11 @@
         .btn {
           color: #fff;
         }
+      }
+    }
+    &--body {
+      &__img2 {
+        width: 30px;
       }
     }
   }
