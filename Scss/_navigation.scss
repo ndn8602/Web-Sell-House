@@ -89,22 +89,22 @@
     }
     &-search {
       position: absolute;
-      bottom: 2px;
+      bottom: -20px;
       right: 5px;
     }
     &-input {
-      width: 100px;
+      width: 150px;
       outline: none;
       border: none;
       border-radius: 5px 0 0 5px;
-      height: 25px;
+      height: 40px;
       padding: 10px;
-      background-color: #5da1e9;
+      background-color: rgb(241, 207, 143);
       color: #fff;
-      font-size: 13px;
+      font-size: 14px;
     }
     &-button {
-      background-color: #007bff;
+      background-color: orange;
       border-radius: 0 5px 5px 0;
       padding: 3px;
       &:focus {

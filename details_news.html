@@ -333,10 +333,8 @@
                 ><i class="bx bx-search"></i
               ></a>
               <div class="collapse nav-search" id="collapseExample">
-                <div class="d-flex">
-                  <input class="nav-input" />
-                  <button class="nav-button btn-primary">Search</button>
-                </div>
+                <input class="nav-input" />
+                <button class="nav-button btn-primary">Search</button>
               </div>
             </li>
           </ul>
@@ -385,9 +383,21 @@
     </div>
     <div class="menu" id="myMenu">
       <div class="menu--header">
-        <a class="nav-link rounded" href="#">VN</a>
-        <a class="nav-link rounded" href="#">X</a>
-        <a class="nav-link rounded" href="#"><i class="bx bx-search"></i></a>
+        <a
+          class="nav-link nav-rounded"
+          data-toggle="collapse"
+          href="#collapseExample"
+          role="button"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+          ><i class="bx bx-search"></i
+        ></a>
+        <div class="collapse nav-search" id="collapseExample">
+          <div class="d-flex">
+            <input class="nav-input" />
+            <button class="nav-button btn-primary">Search</button>
+          </div>
+        </div>
         <a
           onclick="closeMenu()"
           class="nav-link rounded"
