@@ -333,6 +333,32 @@ body {
   color: #fff;
   background-color: #000;
 }
+.navbar .nav-search {
+  position: absolute;
+  bottom: 2px;
+  right: 5px;
+}
+.navbar .nav-input {
+  width: 100px;
+  outline: none;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  height: 25px;
+  padding: 10px;
+  background-color: #5da1e9;
+  color: #fff;
+  font-size: 13px;
+}
+.navbar .nav-button {
+  background-color: #007bff;
+  border-radius: 0 5px 5px 0;
+  padding: 3px;
+}
+.navbar .nav-button:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
 .navbar button {
   outline: none;
   border: none;
@@ -2096,6 +2122,9 @@ a:hover {
   display: none;
   padding: 1rem;
 }
+.box-contact.active .box-btnContact:last-child {
+  margin-bottom: 20px;
+}
 .box-contactIcon {
   width: 100%;
   display: flex;
@@ -2112,6 +2141,9 @@ a:hover {
   background-size: cover;
   margin: 1rem;
   cursor: pointer;
+}
+.box-contactIcon:last-child {
+  margin-bottom: 10px;
 }
 
 .value-title {

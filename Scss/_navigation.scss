@@ -87,6 +87,32 @@
       color: #fff;
       background-color: #000;
     }
+    &-search {
+      position: absolute;
+      bottom: 2px;
+      right: 5px;
+    }
+    &-input {
+      width: 100px;
+      outline: none;
+      border: none;
+      border-radius: 5px 0 0 5px;
+      height: 25px;
+      padding: 10px;
+      background-color: #5da1e9;
+      color: #fff;
+      font-size: 13px;
+    }
+    &-button {
+      background-color: #007bff;
+      border-radius: 0 5px 5px 0;
+      padding: 3px;
+      &:focus {
+        border: none;
+        outline: none;
+        box-shadow: none;
+      }
+    }
   }
   button {
     outline: none;
