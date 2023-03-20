@@ -1287,7 +1287,7 @@ a:hover {
 }
 .footer--head {
   position: relative;
-  height: calc(100vh - 300px);
+  height: calc(100vh - 350px);
 }
 .footer--head img {
   height: inherit;
