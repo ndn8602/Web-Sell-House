@@ -326,6 +326,12 @@
               <a class="nav-link nav-rounded py-3" href="#"
                 ><i class="bx bx-search"></i
               ></a>
+              <div class="collapse nav-search" id="collapseExample">
+                <div class="d-flex">
+                  <input class="nav-input" />
+                  <button class="nav-button btn-primary">Search</button>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -362,9 +368,21 @@
     </div>
     <div class="menu" id="myMenu">
       <div class="menu--header">
-        <a class="nav-link rounded" href="#">VN</a>
-        <a class="nav-link rounded" href="#">X</a>
-        <a class="nav-link rounded" href="#"><i class="bx bx-search"></i></a>
+        <a
+          class="nav-link rounded"
+          data-toggle="collapse"
+          href="#collapseExample"
+          role="button"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+          ><i class="bx bx-search"></i
+        ></a>
+        <div class="collapse nav-search" id="collapseExample">
+          <div class="d-flex">
+            <input class="nav-input" />
+            <button class="nav-button btn-primary">Search</button>
+          </div>
+        </div>
         <a
           onclick="closeMenu()"
           class="nav-link rounded"
@@ -751,7 +769,7 @@
         </div>
       </div>
       <!--Footer-->
-      <footer class="footer" >
+      <footer class="footer">
         <div class="footer--body bg-transparent d-flex justify-content-center">
           <div class="row py-3">
             <div
@@ -769,33 +787,33 @@
                 class="footer--info d-flex flex-column justify-content-start align-items-start"
                 data-aos="fade-down"
               >
-                <p  data-aos="fade-down">
+                <p data-aos="fade-down">
                   <span>Trụ sở: </span> 158 Ngô Gia Tự, Khu 11, P. Chánh Nghĩa,
                   TP. Thủ Dầu Một, Bình Dương.
                 </p>
-                <p  data-aos="fade-down">
+                <p data-aos="fade-down">
                   <span>Chi nhánh: </span> Số 12C, Đại Lộ Bình Dương, Kp. Đông
                   Nhì, P. Lái Thiêu, TP. Thuận An, Bình Dương.
                 </p>
-                <p  data-aos="fade-down">
+                <p data-aos="fade-down">
                   <span>Chi nhánh: </span> Số 1338 Phạm Văn Đồng, P. Linh Tây,
                   TP. Thủ Đức, TP.HCM.
                 </p>
-                <p  data-aos="fade-down"><span>Hotline:</span> 0938 61 61 61</p>
+                <p data-aos="fade-down"><span>Hotline:</span> 0938 61 61 61</p>
               </div>
             </div>
 
             <div class="col-xl-6 col-md-6 col-sm-12" data-aos="fade-down">
               <h3 class="text-white">THÔNG TIN LIÊN HỆ</h3>
               <form action="">
-                <div class="form-group"  data-aos="fade-down">
+                <div class="form-group" data-aos="fade-down">
                   <input
                     type="text"
                     class="form-control"
                     placeholder="Họ Tên (*)"
                   />
                 </div>
-                <div class="form-group"  data-aos="fade-down">
+                <div class="form-group" data-aos="fade-down">
                   <input
                     type="text"
                     maxlength="10"
@@ -803,14 +821,14 @@
                     placeholder="Số Điện Thoại(*)"
                   />
                 </div>
-                <div class="form-group"  data-aos="fade-down">
+                <div class="form-group" data-aos="fade-down">
                   <input
                     type="email"
                     class="form-control"
                     placeholder="Email"
                   />
                 </div>
-                <div class="form-group"  data-aos="fade-down">
+                <div class="form-group" data-aos="fade-down">
                   <textarea
                     class="form-control"
                     placeholder="Nội Dung (*)"
@@ -818,7 +836,8 @@
                   ></textarea>
                 </div>
                 <div
-                  class="form-btn d-flex justify-content-center align-items-center"  data-aos="fade-down"
+                  class="form-btn d-flex justify-content-center align-items-center"
+                  data-aos="fade-down"
                 >
                   <button type="submit" class="btn btn--hover px-4 shadow-lg">
                     Gửi
