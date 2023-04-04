@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project Website</title>
+    <title>Details News Website</title>
     <!--Animation-->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!--Fullpage-->
@@ -58,7 +58,7 @@
       href="	https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/7.4.1/smooth-scrollbar.css"
     />
   </head>
-  <body>
+  <body id="detailsNews">
     <!--Page Load-->
     <div class="pageload">
       <div class="open-top"></div>
@@ -333,10 +333,8 @@
                 ><i class="bx bx-search"></i
               ></a>
               <div class="collapse nav-search" id="collapseExample">
-                <div class="d-flex">
-                  <input class="nav-input" />
-                  <button class="nav-button btn-primary">Search</button>
-                </div>
+                <input class="nav-input" />
+                <button class="nav-button btn-primary">Search</button>
               </div>
             </li>
           </ul>
@@ -350,24 +348,35 @@
           id="my-header"
         >
           <a
-            href="#!"
-            class="project--nav__btn btn--hover btn btn-xl 1 text-white border rounded-0 shadow-sm active"
-            >TẤT CẢ</a
+            href="#overview"
+            onclick="toOverview()"
+            class="project--nav__btn btn_overview btn--hover btn btn-xl mx-1 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm2 active"
+            >TỔNG QUAN</a
           >
           <a
-            href="#!"
-            class="project--nav__btn btn--hover btn btn-xl mr-1 text-white font-weight-bold border rounded-0 shadow-sm"
-            >TIN THỊ TRƯỜNG</a
+            href="#location "
+            onclick="toLocation()"
+            class="project--nav__btn btn_location btn btn--hover btn-xl mx-1 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
+            >VỊ TRÍ</a
           >
           <a
-            href="#!"
-            class="project--nav__btn btn btn--hover btn-xl mr-1 text-white font-weight-bold border rounded-0 shadow-sm"
-            >TIN DỰ ÁN</a
+            href="#utilities"
+            onclick="toUtilities()"
+            class="project--nav__btn btn_utilities btn btn--hover btn-xl mx-1 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
+            >TIỆN ÍCH</a
           >
           <a
-            href="#!"
-            class="project--nav__btn btn btn--hover btn-xl mr-1 text-white font-weight-bold border rounded-0 shadow-sm"
-            >TIN CÔNG TY</a
+            href="#perspective"
+            onclick="toPerspective()"
+            class="project--nav__btn btn_perspective btn btn--hover btn-xl mx-1 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
+            >PHỐI CẢNH</a
+          >
+          <a
+            href="#contact"
+            id="toContact "
+            onclick="toContact()"
+            class="project--nav__btn btn btn_contact btn--hover btn-xl mx-1 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
+            >LIÊN HỆ</a
           >
         </div>
       </div>
@@ -375,7 +384,7 @@
     <div class="menu" id="myMenu">
       <div class="menu--header">
         <a
-          class="nav-link rounded"
+          class="nav-link nav-rounded"
           data-toggle="collapse"
           href="#collapseExample"
           role="button"
@@ -451,350 +460,280 @@
       </div>
     </div>
 
-    <div id="my-scrollbar" class="my-container" data-scrollbar>
-      <!--Background-->
-      <div class="overviews-background owl-carousel">
-        <div class="item">
-          <img src="Images/pexels-terry-magallanes-2635038.jpg" alt="" />
-        </div>
-        <div class="item">
-          <img src="Images/img1.jpg" alt="" />
-        </div>
-        <div class="item">
-          <img src="Images/img1.jpg" alt="" />
-        </div>
-        <div class="item">
-          <img src="Images/img1.jpg" alt="" />
-        </div>
-      </div>
-      <!--start-->
-      <div class="container project">
-        <div
-          class="project--header header-setTop d-flex justify-content-start flex-column"
-          id="my-header"
-        >
-          <h2
-            class="project--header__title mt-2 display-4 text-warning px-md-5"
-          >
-            DỰ ÁN
-          </h2>
-          <div
-            class="project--nav d-flex justify-content-start flex-wrap align-items-center px-md-5"
-          >
-            <a
-              href="#!"
-              class="project--nav__btn btn--hover btn btn-xl mr-1 text-white border rounded-0 shadow-sm active"
-              >TẤT CẢ</a
-            >
-            <a
-              href="#!"
-              class="project--nav__btn btn--hover btn btn-xl mr-1 text-white font-weight-bold border rounded-0 shadow-sm"
-              >TIN THỊ TRƯỜNG</a
-            >
-            <a
-              href="#!"
-              class="project--nav__btn btn btn--hover btn-xl mr-1 text-white font-weight-bold border rounded-0 shadow-sm"
-              >TIN DỰ ÁN</a
-            >
-            <a
-              href="#!"
-              class="project--nav__btn btn btn--hover btn-xl mr-1 text-white font-weight-bold border rounded-0 shadow-sm"
-              >TIN CÔNG TY</a
-            >
-          </div>
-        </div>
-        <div class="project--list">
-          <div
-            class="row project--item flex-md-row-reverse justify-content-start align-items-start shadow-sm"
-            data-aos="fade-right"
-          >
-            <div class="col-xl-6 col-md-6 col-sm-12 project--item__img p-0">
-              <div class="project--item__image">
-                <img
-                  class="bg-secondary image"
-                  src="https://unilandvietnam.com.vn/pictures/catalog/hinh-du-an/5f-stella/03.jpg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div
-              class="col-xl-6 col-md-6 col-sm-12 p-0 project--item__sub px-md-5 mt-xl-5"
-            >
-              <h3 class="project--item__title">5F STELLA</h3>
-              <p class="project--item__desc">
-                Khu đô thị 5F Stella nằm trên tuyến đường ĐT 741 - trục giao
-                thương chiến lược kết nối hai thành phố lớn là Thủ Dầu Một (Bình
-                Dương) và Đồng Xoài (Bình Phước). Bao quanh dự án là hàng loạt
-                khu công nghiệp sạch, khu khoa học công nghệ cao của Bình Dương,
-                Bình Phước. Đặc biệt, khu vực 5F Stella tọa lạc được định hướng
-                phát triển thành đô thị trung tâm của khu vực cửa ngõ phía Đông
-                Bắc tỉnh Bình Dương, đô thị vệ tinh của TP. Thủ Dầu Một và là
-                trung tâm hành chính, văn hóa, thương mại - dịch vụ, y tế của
-                Phú Giáo.
-              </p>
-              <a href="#" class="project--item__btn btn btn--hover mb-3"
-                >XEM DỰ ÁN</a
-              >
-            </div>
-          </div>
-
-          <div
-            class="row project--item justify-content-start align-items-start shadow-sm"
-            data-aos="fade-left"
-          >
-            <div class="col-xl-6 col-md-6 col-sm-12 project--item__img p-0">
-              <div class="project--item__image">
-                <img
-                  class="bg-secondary image"
-                  src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG91c2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div
-              class="col-xl-6 col-md-6 col-sm-12 p-0 project--item__sub d-flex align-items-start flex-column justify-content-center px-md-5 mt-xl-5"
-            >
-              <h3 class="project--item__title">5F STELLA</h3>
-              <p class="project--item__desc">
-                Khu đô thị 5F Stella nằm trên tuyến đường ĐT 741 - trục giao
-                thương chiến lược kết nối hai thành phố lớn là Thủ Dầu Một (Bình
-                Dương) và Đồng Xoài (Bình Phước). Bao quanh dự án là hàng loạt
-                khu công nghiệp sạch, khu khoa học công nghệ cao của Bình Dương,
-                Bình Phước. Đặc biệt, khu vực 5F Stella tọa lạc được định hướng
-                phát triển thành đô thị trung tâm của khu vực cửa ngõ phía Đông
-                Bắc tỉnh Bình Dương, đô thị vệ tinh của TP. Thủ Dầu Một và là
-                trung tâm hành chính, văn hóa, thương mại - dịch vụ, y tế của
-                Phú Giáo.
-              </p>
-              <a href="#" class="project--item__btn btn btn--hover mb-3"
-                >XEM DỰ ÁN</a
-              >
-            </div>
-          </div>
-          <div
-            class="row project--item flex-md-row-reverse justify-content-start align-items-start shadow-sm"
-            data-aos="fade-right"
-          >
-            <div class="col-xl-6 col-md-6 col-sm-12 project--item__img p-0">
-              <div class="project--item__image">
-                <img
-                  class="bg-secondary image"
-                  src="https://unilandvietnam.com.vn/pictures/catalog/hinh-du-an/5f-stella/03.jpg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div
-              class="col-xl-6 col-md-6 col-sm-12 p-0 project--item__sub d-flex align-items-start flex-column justify-content-center px-md-5 mt-xl-5"
-            >
-              <h3 class="project--item__title">5F STELLA</h3>
-              <p class="project--item__desc">
-                Khu đô thị 5F Stella nằm trên tuyến đường ĐT 741 - trục giao
-                thương chiến lược kết nối hai thành phố lớn là Thủ Dầu Một (Bình
-                Dương) và Đồng Xoài (Bình Phước). Bao quanh dự án là hàng loạt
-                khu công nghiệp sạch, khu khoa học công nghệ cao của Bình Dương,
-                Bình Phước. Đặc biệt, khu vực 5F Stella tọa lạc được định hướng
-                phát triển thành đô thị trung tâm của khu vực cửa ngõ phía Đông
-                Bắc tỉnh Bình Dương, đô thị vệ tinh của TP. Thủ Dầu Một và là
-                trung tâm hành chính, văn hóa, thương mại - dịch vụ, y tế của
-                Phú Giáo.
-              </p>
-              <a href="#" class="project--item__btn btn btn--hover mb-3"
-                >XEM DỰ ÁN</a
-              >
-            </div>
-          </div>
-
-          <div
-            class="row project--item justify-content-start align-items-start shadow-sm"
-            data-aos="fade-left"
-          >
-            <div class="col-xl-6 col-md-6 col-sm-12 project--item__img p-0">
-              <div class="project--item__image">
-                <img
-                  class="bg-secondary image"
-                  src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG91c2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div
-              class="col-xl-6 col-md-6 col-sm-12 p-0 project--item__sub d-flex align-items-start flex-column justify-content-center px-md-5 mt-xl-5"
-            >
-              <h3 class="project--item__title">5F STELLA</h3>
-              <p class="project--item__desc">
-                Khu đô thị 5F Stella nằm trên tuyến đường ĐT 741 - trục giao
-                thương chiến lược kết nối hai thành phố lớn là Thủ Dầu Một (Bình
-                Dương) và Đồng Xoài (Bình Phước). Bao quanh dự án là hàng loạt
-                khu công nghiệp sạch, khu khoa học công nghệ cao của Bình Dương,
-                Bình Phước. Đặc biệt, khu vực 5F Stella tọa lạc được định hướng
-                phát triển thành đô thị trung tâm của khu vực cửa ngõ phía Đông
-                Bắc tỉnh Bình Dương, đô thị vệ tinh của TP. Thủ Dầu Một và là
-                trung tâm hành chính, văn hóa, thương mại - dịch vụ, y tế của
-                Phú Giáo.
-              </p>
-              <a href="#" class="project--item__btn btn btn--hover mb-3"
-                >XEM DỰ ÁN</a
-              >
-            </div>
-          </div>
-          <div
-            class="row project--item flex-md-row-reverse justify-content-start align-items-start shadow-sm"
-            data-aos="fade-right"
-          >
-            <div class="col-xl-6 col-md-6 col-sm-12 project--item__img p-0">
-              <div class="project--item__image">
-                <img
-                  class="bg-secondary image"
-                  src="https://unilandvietnam.com.vn/pictures/catalog/hinh-du-an/5f-stella/03.jpg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div
-              class="col-xl-6 col-md-6 col-sm-12 p-0 project--item__sub d-flex align-items-start flex-column justify-content-center px-md-5 mt-xl-5"
-            >
-              <h3 class="project--item__title">5F STELLA</h3>
-              <p class="project--item__desc">
-                Khu đô thị 5F Stella nằm trên tuyến đường ĐT 741 - trục giao
-                thương chiến lược kết nối hai thành phố lớn là Thủ Dầu Một (Bình
-                Dương) và Đồng Xoài (Bình Phước). Bao quanh dự án là hàng loạt
-                khu công nghiệp sạch, khu khoa học công nghệ cao của Bình Dương,
-                Bình Phước. Đặc biệt, khu vực 5F Stella tọa lạc được định hướng
-                phát triển thành đô thị trung tâm của khu vực cửa ngõ phía Đông
-                Bắc tỉnh Bình Dương, đô thị vệ tinh của TP. Thủ Dầu Một và là
-                trung tâm hành chính, văn hóa, thương mại - dịch vụ, y tế của
-                Phú Giáo.
-              </p>
-              <a href="#" class="project--item__btn btn btn--hover mb-3"
-                >XEM DỰ ÁN</a
-              >
-            </div>
-          </div>
-
-          <div
-            class="row project--item justify-content-start align-items-start shadow-sm"
-            data-aos="fade-left"
-          >
-            <div class="col-xl-6 col-md-6 col-sm-12 project--item__img p-0">
-              <div class="project--item__image">
-                <img
-                  class="bg-secondary image"
-                  src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG91c2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div
-              class="col-xl-6 col-md-6 col-sm-12 p-0 project--item__sub d-flex align-items-start flex-column justify-content-center px-md-5 mt-xl-5"
-            >
-              <h3 class="project--item__title">5F STELLA</h3>
-              <p class="project--item__desc">
-                Khu đô thị 5F Stella nằm trên tuyến đường ĐT 741 - trục giao
-                thương chiến lược kết nối hai thành phố lớn là Thủ Dầu Một (Bình
-                Dương) và Đồng Xoài (Bình Phước). Bao quanh dự án là hàng loạt
-                khu công nghiệp sạch, khu khoa học công nghệ cao của Bình Dương,
-                Bình Phước. Đặc biệt, khu vực 5F Stella tọa lạc được định hướng
-                phát triển thành đô thị trung tâm của khu vực cửa ngõ phía Đông
-                Bắc tỉnh Bình Dương, đô thị vệ tinh của TP. Thủ Dầu Một và là
-                trung tâm hành chính, văn hóa, thương mại - dịch vụ, y tế của
-                Phú Giáo.
-              </p>
-              <a href="#" class="project--item__btn btn btn--hover mb-3"
-                >XEM DỰ ÁN</a
-              >
-            </div>
-          </div>
-          <div
-            class="row project--item flex-md-row-reverse justify-content-start align-items-start shadow-sm"
-            data-aos="fade-right"
-          >
-            <div class="col-xl-6 col-md-6 col-sm-12 project--item__img p-0">
-              <div class="project--item__image">
-                <img
-                  class="bg-secondary image"
-                  src="https://unilandvietnam.com.vn/pictures/catalog/hinh-du-an/5f-stella/03.jpg"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div
-              class="col-xl-6 col-md-6 col-sm-12 p-0 project--item__sub d-flex align-items-start flex-column justify-content-center px-md-5 mt-xl-5"
-            >
-              <h3 class="project--item__title">5F STELLA</h3>
-              <p class="project--item__desc">
-                Khu đô thị 5F Stella nằm trên tuyến đường ĐT 741 - trục giao
-                thương chiến lược kết nối hai thành phố lớn là Thủ Dầu Một (Bình
-                Dương) và Đồng Xoài (Bình Phước). Bao quanh dự án là hàng loạt
-                khu công nghiệp sạch, khu khoa học công nghệ cao của Bình Dương,
-                Bình Phước. Đặc biệt, khu vực 5F Stella tọa lạc được định hướng
-                phát triển thành đô thị trung tâm của khu vực cửa ngõ phía Đông
-                Bắc tỉnh Bình Dương, đô thị vệ tinh của TP. Thủ Dầu Một và là
-                trung tâm hành chính, văn hóa, thương mại - dịch vụ, y tế của
-                Phú Giáo.
-              </p>
-              <a href="#" class="project--item__btn btn btn--hover mb-3"
-                >XEM DỰ ÁN</a
-              >
-            </div>
-          </div>
-
-          <div
-            class="row project--item justify-content-start align-items-start shadow-sm"
-            data-aos="fade-left"
-          >
-            <div class="col-xl-6 col-md-6 col-sm-12 project--item__img p-0">
-              <div class="project--item__image">
-                <img
-                  class="bg-secondary image"
-                  src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG91c2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div
-              class="col-xl-6 col-md-6 col-sm-12 p-0 project--item__sub d-flex align-items-start flex-column justify-content-center px-md-5 mt-xl-5"
-            >
-              <h3 class="project--item__title">5F STELLA</h3>
-              <p class="project--item__desc">
-                Khu đô thị 5F Stella nằm trên tuyến đường ĐT 741 - trục giao
-                thương chiến lược kết nối hai thành phố lớn là Thủ Dầu Một (Bình
-                Dương) và Đồng Xoài (Bình Phước). Bao quanh dự án là hàng loạt
-                khu công nghiệp sạch, khu khoa học công nghệ cao của Bình Dương,
-                Bình Phước. Đặc biệt, khu vực 5F Stella tọa lạc được định hướng
-                phát triển thành đô thị trung tâm của khu vực cửa ngõ phía Đông
-                Bắc tỉnh Bình Dương, đô thị vệ tinh của TP. Thủ Dầu Một và là
-                trung tâm hành chính, văn hóa, thương mại - dịch vụ, y tế của
-                Phú Giáo.
-              </p>
-              <a href="#" class="project--item__btn btn btn--hover mb-3"
-                >XEM DỰ ÁN</a
-              >
+    <div id="my-scrollbar" class="my-container">
+      <!--Content-->
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide hero"
+        data-bs-ride="false"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="Images/pexels-terry-magallanes-2635038.jpg"
+              class="d-block"
+              alt="..."
+            />
+            <div class="carousel-caption d-md-block bg-warning">
+              <h1>5F STELLA</h1>
+              <p href="#overview" class="text-white">Xem Thông Tin Dự Án</p>
+              <a href="#"><i class="bx bx-chevrons-down"></i></a>
             </div>
           </div>
         </div>
       </div>
+      <div class="d-flex justify-content-center p-0">
+        <div class="project--header justify-content-start flex-column">
+          <div
+            class="project--nav header-setTop d-flex justify-content-start flex-wrap align-items-center px-md-5"
+            id="my-header"
+          >
+            <a
+              href="#overview"
+              onclick="toOverview()"
+              id="toOverview"
+              class="project--nav__btn btn--hover btn btn-xl mx-1 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm2 active"
+              >TỔNG QUAN</a
+            >
+            <a
+              href="#location "
+              onclick="toLocation()"
+              id="toLocation "
+              class="project--nav__btn btn btn--hover btn-xl mx-1 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
+              >VỊ TRÍ</a
+            >
+            <a
+              href="#utilities"
+              onclick="toUtilities()"
+              id="toUtilities "
+              class="project--nav__btn btn btn--hover btn-xl mx-1 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
+              >TIỆN ÍCH</a
+            >
+            <a
+              href="#perspective"
+              onclick="toPerspective()"
+              id="toPerspective "
+              class="project--nav__btn btn btn--hover btn-xl mx-1 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
+              >PHỐI CẢNH</a
+            >
+            <a
+              href="#contact"
+              onclick="toContact()"
+              id="toContact "
+              class="project--nav__btn btn btn--hover btn-xl mx-1 px-4 text-white font-weight-bold border rounded-0 py-2 shadow-sm"
+              >LIÊN HỆ</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="overview overflow-hidden" id="overview" data-aos="fade-down">
+        <div class="row m-0 py-5">
+          <div class="col-sm-12 col-md-6" data-aos="flip-up">
+            <img src="Images/logo.png" alt="" class="m-auto" />
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <div class="overview-title display-4 text-warning">TỔNG QUAN</div>
+            <div class="overview-sub">
+              <p>
+                <span>Vị trí: </span>Đường ĐT 741, trung tâm thị trấn Phước
+                Vĩnh, Phú Giáo, Bình Dương
+              </p>
+              <p>
+                <span>Quy mô: </span>5,9 ha, gồm hơn 400 căn nhà phố thương mại
+              </p>
+              <p><span>Pháp lý: </span>Hoàn thiện, sở hữu lâu dài</p>
+              <p><span>Phát triển và phân phối: </span> Hệ thống 5F</p>
+              <p>Công ty Cổ phần Uniland</p>
+              <p>Công ty cổ phần Tập đoàn Nam Dương</p>
+              <p>Công ty Cổ phần Phát triển Địa ốc Á Châu</p>
+              <p>Công ty TNHH Đầu tư Phát triển Bất động sản Minh Dương</p>
+              <p>Công ty Cổ phần Kinh doanh Địa ốc Nhất Việt</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="location bg-warning overflow-hidden"
+        id="location"
+        data-aos="fade-up"
+      >
+        <div class="row m-0">
+          <div class="col-sm-12 col-md-6">
+            <div class="location-box">
+              <div class="location-title text-white">VỊ TRÍ</div>
+              <div class="location-desc text-white">
+                Khu đô thị 5F Stella nằm trên tuyến đường ĐT 741 - trục giao
+                thương chiến lược kết nối hai thành phố lớn là Thủ Dầu Một (Bình
+                Dương) và Đồng Xoài (Bình Phước). Bao quanh dự án là hàng loạt
+                khu công nghiệp sạch, khu khoa học công nghệ cao của Bình Dương,
+                Bình Phước. Đặc biệt, khu vực 5F Stella tọa lạc được định hướng
+                phát triển thành đô thị trung tâm của khu vực cửa ngõ phía Đông
+                Bắc tỉnh Bình Dương, đô thị vệ tinh của TP. Thủ Dầu Một và là
+                trung tâm hành chính, văn hóa, thương mại - dịch vụ, y tế của
+                Phú Giáo. Hiện nay, Phú Giáo và khu vực lân cận đang xây dựng
+                một loạt KCN thế hệ mới hứa hẹn trở thành “bến đỗ” của các tập
+                đoàn quốc tế, đưa nơi đây thành “cứ điểm” sản xuất thông minh
+                hàng đầu Việt Nam và Đông Nam Á. Có thể kể đến như các KCN Tam
+                Lập 1-4, VSIP IV 1.000ha, An Linh 1.000ha, An Bình gần 1.000ha,
+                Vĩnh Lập 1 hơn 750ha, Vĩnh Lập 2 với 500ha và Becamex Đồng Phú
+                6.300ha… Công nghiệp và bất động sản luôn song hành. Như vậy,
+                Phú Giáo sắp tới cũng sẽ là “tọa độ kim cương” cực kỳ hấp dẫn
+                cho các nhà phát triển bất động sản.
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6" data-aos="flip-up">
+            <img
+              src="https://unilandvietnam.com.vn/pictures/catalog/hinh-du-an/5f-stella/vi-tri.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="utilities" id="utilities" data-aos="fade-down">
+        <div class="utilities-title">TIỆN ÍCH</div>
+        <div class="utilities-box mt-3" data-aos="fade-down">
+          <h5>Trăm tiện, ngàn lợi</h5>
+          <p>
+            Tọa lạc ngay tâm điểm phát triển của Phú Giáo, 5F Stella được thụ
+            hưởng trọn vẹn hệ thống tiện ích có sẵn như chợ Phước Vĩnh, trung
+            tâm y tế huyện Phú Giáo, bệnh viện đa khoa, trung tâm thể thao,
+            trường học cấp 1,2,3… Hơn nữa, nhờ lợi thế mặt tiền đường lớn và mật
+            độ cư dân xung quanh đông đúc, khu đô thị 5F Stella còn mở ra cơ hội
+            kinh doanh và tiềm năng sinh lời rất lớn. Là một trung tâm sản xuất
+            công nghiệp mới, chắc chắn sắp tới khu vực này sẽ còn được bổ sung
+            hàng loạt dự án về thương mại – dịch vụ cao cấp phục vụ cho lực
+            lượng chuyên gia và người dân cũng được hưởng lợi.
+          </p>
+          <img
+            src="https://unilandvietnam.com.vn/pictures/catalog/hinh-du-an/5f-stella/tien-ich.png"
+            alt=""
+          />
+        </div>
+        <div class="utilities-box mt-5" data-aos="fade-down">
+          <h5>Hạ tầng bứt phá</h5>
+          <p>
+            Bên cạnh các tuyến đường huyết mạch hiện hữu như ĐT 741, ĐT 750,
+            quốc lộ 13, quốc lộ 14, đường Bình Dương - Đồng Phú…, xung quanh khu
+            đô thị 5F Stella đang được đầu tư thêm nhiều dự án mang tính chiến
+            lược. Nổi bật là đường tạo lực Tân Uyên - Phú Giáo - Đồng Xoài, cao
+            tốc TPHCM - Thủ Dầu Một - Đồng Xoài, Vành đai 3, Vành đai 4, cao tốc
+            TPHCM – Thủ Dầu Một – Phú Giáo - Chơn Thành – Hoa Lư, đường sắt Dĩ
+            An - Lộc Ninh, đường sắt Xuyên Á… Đây là những trục giao thông trọng
+            điểm kết nối tất cả các trung tâm đô thị - công nghiệp ở phía Đông
+            Bắc tỉnh Bình Dương và Bình Phước, hình thành trục thương mại – công
+            nghiệp - dịch vụ logistic theo hướng Đông - Tây, mở ra hướng phát
+            triển đưa Phú Giáo lên tầm cao mới.
+          </p>
+          <img
+            src="https://unilandvietnam.com.vn/pictures/catalog/hinh-du-an/5f-stella/05.jpg"
+            alt=""
+          />
+        </div>
+        <div class="utilities-box mt-5" data-aos="fade-down">
+          <h5>Hưởng lợi từ quy hoạch kép</h5>
+          <p>
+            Trong bối cảnh quỹ đất trung tâm ngày càng hạn hẹp, Bình Dương đang
+            hướng đến xây dựng vùng sản xuất thông minh và mở rộng không gian đô
+            thị lên khu vực phía Bắc mà trọng điểm là trục Tân Uyên - Phú Giáo -
+            Đồng Xoài. Tỉnh Bình Phước cũng đang tập trung nguồn lực phát triển
+            công nghiệp, thương mại - dịch vụ tam giác kinh tế Đồng Phú - Chơn
+            Thành - Đồng Xoài, liền kề huyện Phú Giáo. Hai định hướng này kết
+            hợp với cơ sở hạ tầng ngày càng hoàn thiện sẽ tạo thêm “xung lực”
+            mới cho bất động sản Phú Giáo bùng nổ, mà hưởng lợi trực tiếp nhất
+            chính là khu đô thị 5F Stella.
+          </p>
+          <img
+            src="https://unilandvietnam.com.vn/pictures/catalog/hinh-du-an/5f-stella/07.jpg"
+            alt=""
+          />
+        </div>
+        <div class="utilities-box mt-5" data-aos="fade-down">
+          <h5>Phú Giáo - Trung tâm công nghiệp thế hệ mới của Bình Dương</h5>
+          <p>
+            Nắm giữ lợi thế vượt trội khi nằm giữa các KCN thế hệ mới gồm Tam
+            Lập 1-4, VSIP IV 1.000ha, An Linh 1.000ha, An Bình gần 1.000ha, Vĩnh
+            Lập 1 hơn 750ha, Vĩnh Lập 2 với 500ha và Becamex Đồng Phú 6.300 ha…,
+            Phú Giáo là vùng đô thị - công nghiệp đang được tỉnh Bình Dương đầu
+            tư mạnh mẽ về hạ tầng, dịch vụ theo hướng phát triển đô thị thông
+            minh. Đặc biệt, theo đồ án quy hoạch chung của huyện Phú Giáo tầm
+            nhìn đến năm 2030, Phước Vĩnh - Vĩnh Hòa sẽ là đô thị vệ tinh của
+            TP.Thủ Dầu Một, đô thị trung tâm khu vực cửa ngõ Đông Bắc của tỉnh
+            Bình Dương và là trung tâm hành chính, văn hóa, thương mại - dịch
+            vụ, y tế của huyện Phú Giáo. Điều này mở ra cho thị trường bất động
+            sản Phú Giáo cơ hội bứt phá, trở thành những điểm sáng tiếp theo
+            tương tự Dĩ An, Thuận An và Thủ Dầu Một trước đây.
+          </p>
+          <img
+            src="https://unilandvietnam.com.vn/pictures/catalog/hinh-du-an/5f-stella/02.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="perspective" id="perspective" data-aos="fade-up">
+        <div class="perspective-title">PHỐI CẢNH</div>
+        <div class="perspective-box">
+          <div class="perspective-img owl-carousel">
+            <div class="item">
+              <div class="shadow-effect">
+                <img class="img-circle" src="Images/img1.jpg" alt="" />
+              </div>
+            </div>
+            <div class="item">
+              <div class="shadow-effect">
+                <img class="img-circle" src="Images/img2.jpg" alt="" />
+              </div>
+            </div>
+            <div class="item">
+              <div class="shadow-effect">
+                <img class="img-circle" src="Images/img3.jpg" alt="" />
+              </div>
+            </div>
+            <div class="item">
+              <div class="shadow-effect">
+                <img class="img-circle" src="Images/img4.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!--Footer-->
-      <footer class="footer">
+      <footer
+        class="footer contact d-flex flex-column justify-content-center"
+        id="contact"
+      >
+        <div class="footer--head">
+          <img
+            src="Images/pexels-pixabay-147411.jpg"
+            alt=""
+            class="footer--img__top img-fluid"
+          />
+          <div class="footer--head__box">
+            <h2
+              class="footer--head__title shadow bg-white rounded-sm"
+              data-aos="fade-down"
+            >
+              Add captions to your slides easily with the
+            </h2>
+            <a href="" class="btn btn--hover" data-aos="fade-down">contact</a>
+          </div>
+        </div>
         <div class="footer--body bg-transparent d-flex justify-content-center">
           <div class="row py-3">
             <div
               class="col-xl-6 col-md-6 col-sm-12 d-flex justify-content-start flex-column align-items-start"
             >
-              <div class="media-img" data-aos="fade-down">
+              <div class="media-img">
                 <img
                   src="Images/logo.png"
                   alt=""
                   class="footer--body__img mb-3"
                 />
               </div>
-<<<<<<< HEAD
               <h5 class="text-white" data-aos="fade-down">
                 CÔNG TY CỔ PHẦN ABC
               </h5>
-=======
-              <h5 class="text-white" data-aos="fade-down">CÔNG TY CỔ PHẦN ABC</h5>
->>>>>>> parent of e351cde (fix width logo & title bottom center)
               <div
                 class="footer--info d-flex flex-column justify-content-start align-items-start"
                 data-aos="fade-down"
@@ -815,7 +754,7 @@
               </div>
             </div>
 
-            <div class="col-xl-6 col-md-6 col-sm-12" data-aos="fade-down">
+            <div class="col-xl-6 col-md-6 col-sm-12">
               <h3 class="text-white">THÔNG TIN LIÊN HỆ</h3>
               <form action="">
                 <div class="form-group" data-aos="fade-down">
@@ -891,7 +830,6 @@
     <script src="https://unpkg.com/smooth-scrollbar@8.7.4/dist/smooth-scrollbar.js"></script>
     <!--Animation-->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
     <script src="Js/pageload.js"></script>
     <script src="Js/animation.js"></script>
     <script src="Js/app.js"></script>
