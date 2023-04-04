@@ -1303,7 +1303,7 @@ a:hover {
 }
 .footer--head {
   position: relative;
-  height: calc(100vh - 300px);
+  height: calc(100vh - 350px);
 }
 .footer--head img {
   height: inherit;
@@ -2158,6 +2158,9 @@ a:hover {
   display: none;
   padding: 1rem;
 }
+.box-contact.active .box-btnContact:last-child {
+  margin-bottom: 20px;
+}
 .box-contactIcon {
   width: 100%;
   display: flex;
@@ -2174,6 +2177,9 @@ a:hover {
   background-size: cover;
   margin: 1rem;
   cursor: pointer;
+}
+.box-contactIcon:last-child {
+  margin-bottom: 10px;
 }
 
 .value-title {
