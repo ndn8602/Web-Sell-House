@@ -34,9 +34,13 @@ $(".box-contact").click(() => {
 });
 $(document.body).click(() => {
   count++;
-  console.log(`count : ${count}`);
+  
   if (count === 2) {
     $(".box-contact").removeClass("active");
     count = 0;
+  }
+
+  if($('div').hasClass('show')){
+    $('div').removeClass('show')
   }
 });
