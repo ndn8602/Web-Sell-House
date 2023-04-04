@@ -31,6 +31,18 @@
     opacity: 1;
   }
 }
+.nav-input {
+  padding: 10px;
+  outline: none;
+}
+
+.nav-button {
+  background-color: orange;
+  outline: none;
+  border-color: none;
+  border: none;
+}
+
 .pageload {
   width: 100%;
   height: 100vh;
@@ -272,11 +284,16 @@ body {
   animation: background-down 0.7s none;
 }
 
+.name-company h1 {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
 .navbar-brand {
   margin-left: 70px;
 }
 .navbar-brand img {
-  width: 20%;
+  width: 40%;
 }
 .navbar-nav-tool {
   display: flex;
@@ -332,6 +349,32 @@ body {
 .navbar .nav-rounded:hover {
   color: #fff;
   background-color: #000;
+}
+.navbar .nav-search {
+  position: absolute;
+  bottom: -20px;
+  right: 5px;
+}
+.navbar .nav-input {
+  width: 150px;
+  outline: none;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  height: 40px;
+  padding: 10px;
+  background-color: rgb(241, 207, 143);
+  color: #fff;
+  font-size: 14px;
+}
+.navbar .nav-button {
+  background-color: orange;
+  border-radius: 0 5px 5px 0;
+  padding: 3px;
+}
+.navbar .nav-button:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 .navbar button {
   outline: none;
@@ -396,7 +439,7 @@ body {
     margin-left: 20px;
   }
   .navbar-brand img {
-    width: 15%;
+    width: 25%;
   }
 }
 /** sidebar
@@ -462,6 +505,17 @@ body {
 }
 .menu--body .nav-item--hover:hover:after {
   transform: scale(1, 1);
+}
+.menu--body .nav-input {
+  width: 150px;
+  outline: none;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  height: 40px;
+  padding: 10px;
+  background-color: rgb(241, 207, 143);
+  color: #fff;
+  font-size: 14px;
 }
 .menu--body .nav-link {
   font-size: 12px;
@@ -1310,6 +1364,11 @@ a:hover {
   display: flex;
 }
 
+.form-group .form-control {
+  border-bottom: none !important;
+  border-radius: 5px !important;
+}
+
 @media screen and (max-width: 968px) {
   .footer--head {
     position: relative;
@@ -1333,6 +1392,9 @@ a:hover {
   }
   .footer--body__img2 {
     width: 30px;
+  }
+  .footer--body .row {
+    width: 100%;
   }
 }
 .my-container {
