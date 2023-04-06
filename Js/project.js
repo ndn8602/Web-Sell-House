@@ -34,13 +34,21 @@ $(".box-contact").click(() => {
 });
 $(document.body).click(() => {
   count++;
-  
+
   if (count === 2) {
     $(".box-contact").removeClass("active");
     count = 0;
   }
-
-  if($('div').hasClass('show')){
-    $('div').removeClass('show')
-  }
 });
+window.onload = function () {
+  document.onclick = function (e) {
+    if (
+      e.target.className == "bx bx-search" ||
+      e.target.className == "nav-link nav-rounded"
+    ) {
+      $("div .nav-search").show();
+    } else {
+      $("div .nav-search").hide();
+    }
+  };
+};

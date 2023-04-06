@@ -3,7 +3,6 @@ function openMenu() {
   document.body.style.backgroundColor = "rgba(0,0,0,0.5)";
   if (w > 450) {
     document.getElementById("myMenu").style.width = "450px";
-    document.getElementById("myDIV").style.opacity = "0.5";
   } else {
     document.getElementById("myMenu").style.width = "100%";
   }
@@ -19,11 +18,13 @@ $(".close").click(() => {
   $(".modal").css("display", "none");
   $(".modal").css("transition", "0.7s ease");
 });
-$(".modal").on("show", function () {
-  $("body").addClass("modal-open");
-}).on("hidden", function () {
-  $("body").removeClass("modal-open")
-});
+$(".modal")
+  .on("show", function () {
+    $("body").addClass("modal-open");
+  })
+  .on("hidden", function () {
+    $("body").removeClass("modal-open");
+  });
 // <!-- Start of Tawk.to Script-->
 
 var Tawk_API = Tawk_API || {},
