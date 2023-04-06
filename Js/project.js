@@ -44,7 +44,10 @@ window.onload = function () {
   document.onclick = function (e) {
     if (
       e.target.className == "bx bx-search" ||
-      e.target.className == "nav-link nav-rounded"
+      e.target.className == "nav-link nav-rounded" ||
+      e.target.className == "collapse nav-search" ||
+      e.target.className == "nav-input" ||
+      e.target.className == "nav-button btn-primary"
     ) {
       $("div .nav-search").show();
     } else {
