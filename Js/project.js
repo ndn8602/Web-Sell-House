@@ -51,7 +51,8 @@ window.onload = function () {
     ) {
       $("div .nav-search").show();
     } else {
-      $("div .nav-search").hide();
+      $("a").attr("aria-expanded", false);
+      $("div .nav-search").removeClass("show");
     }
   };
 };
