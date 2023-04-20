@@ -40,7 +40,7 @@ $(document.body).click(() => {
     count = 0;
   }
 });
-window.onload = function () {
+window.onload  = function () {
   document.onclick = function (e) {
     if (
       e.target.className == "bx bx-search" ||

@@ -1365,7 +1365,6 @@ a:hover {
 }
 
 .form-group .form-control {
-  border-bottom: none !important;
   border-radius: 5px !important;
 }
 
@@ -1471,6 +1470,14 @@ a:hover {
   -o-object-fit: cover;
      object-fit: cover;
   background-position: center;
+  transition: transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translateX(30px);
+  overflow: hidden;
+}
+.my-container .project--item__image .image:hover {
+  transform: translateX(0);
+  transition: transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0.8;
 }
 .my-container .project--item__desc {
   display: -webkit-box;
