@@ -1470,14 +1470,18 @@ a:hover {
   -o-object-fit: cover;
      object-fit: cover;
   background-position: center;
-  transition: transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transform: translateX(30px);
+}
+.my-container .project--item__img {
   overflow: hidden;
 }
-.my-container .project--item__image .image:hover {
-  transform: translateX(0);
+.my-container .project--item__img .project--item__image:nth-child(odd) {
+  transform: translateX(30px);
   transition: transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   opacity: 0.8;
+}
+.my-container .project--item__img:hover .project--item__image:nth-child(odd) {
+  transition: transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translateX(0);
 }
 .my-container .project--item__desc {
   display: -webkit-box;
@@ -1811,8 +1815,6 @@ a:hover {
 .details--img {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 15px;
 }
 .details--img img {
