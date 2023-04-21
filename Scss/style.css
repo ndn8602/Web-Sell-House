@@ -1536,6 +1536,9 @@ a:hover {
   height: 100%;
   margin-top: -100px;
 }
+.project--header {
+  align-items: center;
+}
 .project--nav {
   position: relative;
 }
