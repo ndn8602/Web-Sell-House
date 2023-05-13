@@ -2710,6 +2710,30 @@ a:hover {
   font-weight: 700;
 }
 
+.manager-containerTab {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+.manager-containerTab .nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.manager-containerTab .nav li {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.manager-containerTab .nav li.active {
+  background-color: #fff;
+  border-radius: 0 0 1rem 1rem;
+}
+
 @media screen and (max-width: 993px) {
   .manager--intro {
     margin-top: 0;
