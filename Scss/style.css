@@ -1821,12 +1821,13 @@ a:hover {
   margin-bottom: 15px;
 }
 .details--img img {
-  width: auto !important;
   min-height: auto !important;
   max-height: 400px;
   max-width: 100%;
   margin: 10px auto;
   display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .details--img__comment {
   font-style: italic;
@@ -2645,7 +2646,7 @@ a:hover {
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   height: 500px;
-  width: 350px;
+  width: 300px;
   margin: 20px 40px;
   display: flex;
   justify-content: center;
@@ -2680,7 +2681,6 @@ a:hover {
      object-fit: cover;
 }
 .manager-person {
-  width: 98%;
   margin-bottom: 40px;
   display: flex;
   flex-wrap: wrap;
@@ -2727,6 +2727,15 @@ a:hover {
   justify-content: center;
   align-items: center;
   background-color: #fff;
+}
+.manager-containerTab .tab-content > .tab-pane {
+  width: 100%;
+}
+.manager-containerTab .tab-content > .tab-pane.show {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 .manager-containerTab .tab-content .manager-person {
   margin: 1.2rem 0 0 0;

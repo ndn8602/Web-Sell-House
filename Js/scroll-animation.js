@@ -43,7 +43,6 @@ function toContact(params) {
 scrollbar.setPosition(0, 0);
 scrollbar.track.xAxis.element.remove();
 const header_setTop = $(".header-setTop").offset().top - 100; // distance top
-const footerTop = $(".footer").offset().top;
 
 function listener(status) {
   let scroll = scrollbar.offset.y;

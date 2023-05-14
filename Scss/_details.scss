@@ -40,12 +40,12 @@
     // align-items: center;
     margin-bottom: 15px;
     img {
-      width: auto !important;
       min-height: auto !important;
       max-height: 400px;
       max-width: 100%;
       margin: 10px auto;
       display: block;
+      object-fit: contain;
     }
     &__comment {
       font-style: italic;
