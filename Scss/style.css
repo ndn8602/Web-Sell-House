@@ -2711,10 +2711,25 @@ a:hover {
 }
 
 .manager-containerTab {
+  width: 90%;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.manager-containerTab .tab-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+.manager-containerTab .tab-content .manager-person {
+  margin: 1.2rem 0 0 0;
 }
 .manager-containerTab .nav {
   width: 100%;
@@ -2723,15 +2738,32 @@ a:hover {
   align-items: center;
   flex-direction: row;
 }
+.manager-containerTab .nav-tabs .nav-item .nav-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.manager-containerTab .nav-tabs .nav-item .nav-link p {
+  margin: 0.5rem 0;
+}
+.manager-containerTab .nav-tabs .nav-item .nav-link.active {
+  width: 100%;
+}
 .manager-containerTab .nav li {
   width: 33%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: orange;
 }
 .manager-containerTab .nav li.active {
-  background-color: #fff;
-  border-radius: 0 0 1rem 1rem;
+  border-radius: 1rem 1rem 0 0;
+  width: 100%;
+}
+.manager-containerTab .nav li.active button p > strong {
+  color: orange;
 }
 
 @media screen and (max-width: 993px) {
