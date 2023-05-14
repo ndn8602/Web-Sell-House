@@ -1826,8 +1826,6 @@ a:hover {
   max-width: 100%;
   margin: 10px auto;
   display: block;
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 .details--img__comment {
   font-style: italic;
