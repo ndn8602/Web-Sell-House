@@ -159,7 +159,6 @@
 }
 @media screen and (max-width: 968px) {
   .container {
-    margin-top: 40px;
     padding: 0 15px;
   }
   .service-box {
@@ -175,6 +174,12 @@
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
       }
+    }
+  }
+  .section {
+    height: fit-content !important;
+    .fp-tableCell {
+      height: inherit !important;
     }
   }
 }

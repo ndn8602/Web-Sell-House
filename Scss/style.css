@@ -1018,7 +1018,6 @@ body {
 
 @media screen and (max-width: 968px) {
   .container {
-    margin-top: 40px;
     padding: 0 15px;
   }
   .service-box-title {
@@ -1033,6 +1032,13 @@ body {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+  }
+  .section {
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+  }
+  .section .fp-tableCell {
+    height: inherit !important;
   }
 }
 /** Section 3 - resort
