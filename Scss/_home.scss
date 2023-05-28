@@ -136,7 +136,10 @@
     color: orange;
   }
 }
-
+iframe[title~="YouTube"] {
+  width: 560px;
+  height: 315px;
+}
 @media screen and (max-width: 1200px) {
   .carousel {
     &-item {
@@ -195,7 +198,7 @@
   }
 
   @media screen and (max-width: 564px) {
-    iframe[title~="YouTube video player"] {
+    iframe[title~="YouTube"] {
       width: 310px;
       height: 174.15px;
     }
