@@ -798,7 +798,7 @@ body {
   }
 }
 @media screen and (max-width: 1200px) and (max-width: 564px) {
-  iframe[title="YouTuBe video player"] {
+  iframe[title="YouTube video player"] {
     width: 310px;
     height: 174.15px;
   }
