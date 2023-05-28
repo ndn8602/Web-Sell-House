@@ -798,6 +798,10 @@ body {
   }
 }
 @media screen and (max-width: 1200px) and (max-width: 564px) {
+  iframe[title="YouTuBe video player"] {
+    width: 310px;
+    height: 174.15px;
+  }
   .header {
     position: fixed;
     z-index: 10;
